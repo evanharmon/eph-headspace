@@ -7,6 +7,11 @@
 }
 ```
 
+## Make Lodash available across app
+`var _ = require('lodash');`
+
+`new webpack.ProvidePlugin({ _: 'lodash' })`
+
 ## Debug In Chrome Dev Tools
 https://medium.com/webpack/webpack-bits-learn-and-debug-webpack-with-chrome-dev-tools-da1c5b19554#.runij6tay
 
@@ -119,5 +124,34 @@ module.exports = {
     failOnError: true
   }
 }
+```
+### Config is in your .eslintrc .eslint.json file
+```
+---
+extends:
+  - eslint:recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+```
+
+### or configure manually:
+```
+plugins:
+  - import
+rules:
+  import/no-unresolved: [2, {commonjs: true, amd: true}]
+  import/named: 2
+  import/namespace: 2
+  import/default: 2
+  import/export: 2
+```
+
+## Vendor Bundling
+```
+module.exports = {
+  entry: {
+    index: './index.js',
+    vendor: ['react', 'react-dom', 'rxjs'],
+  },
 ```
 

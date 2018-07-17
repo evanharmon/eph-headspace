@@ -1,4 +1,5 @@
-# Process Sass
+# WEBPACK CSS / SASS
+## Process Sass
 ```
 module: {
     loaders: [
@@ -11,7 +12,7 @@ plugins: [
 ]
 ```
 
-# Working SASS for src:url images
+## Working SASS for src:url images
 ```
 module.exports = {
     entry: {
@@ -52,7 +53,7 @@ module.exports = {
 };
 ```
 
-# Create Two Separate Bundles
+## Create Two Separate Bundles
 ```
 const extractVendor = new ExtractTextPlugin('vendor.css');
 const extractApp = new ExtractTextPlugin('app.css');
@@ -113,7 +114,7 @@ const extractApp = new ExtractTextPlugin('app.css');
     ]
 ```
 
-# Use URL-loader and default to file-loader below certain size
+## Use URL-loader and default to file-loader below certain size
 ```
 {
   test: /\.(eot|svg|ttf|png|jpg|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
@@ -133,16 +134,16 @@ const Artwork = () => (
 );
 ```
 
-# Use in CSS / SASS file
-# relative to sass file location in directories
+## Use in CSS / SASS file
+relative to sass file location in directories
 ```
 .scrollpic:nth-of-type(2) {
   background-image: url('assets/img/ThomasFitzsimmons.jpg')
 }
 ```
 
-# Use in HTML
-## can also do import or require up top
+## Use in HTML
+can also do import or require up top
 ```
 const Artwork = () => (
   <div className="content-container">
@@ -153,7 +154,7 @@ const Artwork = () => (
 );
 ```
 
-# Include a font file
+## Include a font file
 ```
 @font-face {
     font-family: 'Roboto';
@@ -162,3 +163,54 @@ const Artwork = () => (
     font-style: normal;
 }
 ```
+## stop minification
+had to set all defaults to false...
+```
+{ loader: 'postcss-loader',
+     options: {
+          plugins: function () {
+               return [
+                    require('cssnano')({
+                         autoprefixer: false,
+                         calc: false,
+                         colormin: false,
+                         convertValues: false,
+                         core: false,
+                         discardComments: { removeAll: true },
+                         discardDuplicates: false,
+                         discardEmpty: false,
+                         discardOverridden: false,
+                         discardUnused: false,
+                         filterOptimiser: false,
+                         filterPlugins: false,
+                         funtionOptimiser: false,
+                         mergeIdents: false,
+                         mergeLongHand: false,
+                         mergeRules: false,
+                         minifyFontValues: false,
+                         minifyGradients: false,
+                         minifyParams: false,
+                         minifySelectors: false,
+                         normalizeCharset: false,
+                         normalizeUnicode: false,
+                         normalizeString: false,
+                         normalizeUri: false,
+                         reduceBackgroundRepeat: false,
+                         orderedValues: false,
+                         reduceDisplayValues: false,
+                         reduceIdents: false,
+                         reduceInitial: false,
+                         reducePositions: false,
+                         reduceTimingFunctions: false,
+                         reduceTransforms: false,
+                         svgo: false,
+                         styleCache: false,
+                         uniqueSelector: false,
+                         zindex: false
+                    })
+               ]
+          }
+     }
+},
+```
+
