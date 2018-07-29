@@ -98,3 +98,11 @@ ORDER BY doc.Loc asc
 
 ## Get records in last day
 `DATE_DIFF_STR(NOW_UTC(), doc.lastEditedTime, "day") <= 30`
+
+## Join Example
+```
+SELECT doc1.*, doc2.*
+FROM mybucket doc1 JOIN mybucket doc2 ON KEYS "mydoctype2-" || doc1.mymatchingid
+WHERE doc1.type = "mydoctype1"
+AND doc2.type = "mydoctype2"
+```
