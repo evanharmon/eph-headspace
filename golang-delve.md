@@ -2,8 +2,7 @@
 `brew install go-delve/delve/delve`
 
 ## Run Debugger from main.go file location
-dlv debug
+`dlv debug main.go`
 
 ## Set an exact breakpoint line number
-dlv debug
-$ b endpoints.go:22
+`$ b endpoints.go:22`
