@@ -9,6 +9,10 @@ Change Directory
 :cd
 ```
 
+## Files / Buffers
+Close File / Kill current Buffer
+`C-x k`
+
 ### Change Windows
 [Change Windows](https://www.gnu.org/software/emacs/manual/html_node/emacs/Change-Window.html#Change-Window)
 
