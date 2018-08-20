@@ -2,8 +2,8 @@
 ## Simple Query
 `SELECT * FROM mytable doc WHERE doc.type = "city" LIMIT 5`
 
-## Command line queries on machine
-`cbq`
+## Command Line Queries On Machine
+`cbq --script="SELECT DISTINCT raw doc.myfield FROM mybucket doc"`
 
 ## Example array distinct
 ```
