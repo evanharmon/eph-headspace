@@ -19,8 +19,9 @@ Has Target Groups
 ## End User Browser Experience
 Monitor the latency of the elb
 
-## Metric For Scaling
+## Metrics For Scaling
 SurgeQueueLength
+SpillOverCount - actively being rejected
 
 ## SSL Certificates
 DOES NOT support multiple SSL certs to host multiple sites

@@ -1,4 +1,8 @@
 # AWS ELASTIC BLOCK STORAGE
+(http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html)
+(http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html)
+
+## Summary
 SSD, General Purpose - GP2 (Up to 10,000 IOPS)
 SSD, Provisioned IOPS - IO1 (More than 10,000 IOPS)
 HDD, Throughput Optimized - ST1 - frequently accessed workloads
