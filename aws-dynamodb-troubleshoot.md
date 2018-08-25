@@ -1,4 +1,7 @@
-# AWS DYNAMODB GOTCHAS
+# AWS DYNAMODB TROUBLESHOOT
+
+## 400 HTTP Status Code - ProvisionedThroughputExceededException
+- exceeded maximum throughput of a table or one or more secondary indexes
 
 ## Global Secondary Index (GSI)
 You can only query on GSI, you cannot delete or update on GSI. Use primary index

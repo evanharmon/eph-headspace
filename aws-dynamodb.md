@@ -42,3 +42,18 @@ Map (think JSON)
 
 ## Atomic Counters
 are NOT idempotent, use when data can accept some margin of error
+
+## Exports
+CSV - table or individual items
+
+## Scaling - Push Button
+still available while scaling up
+
+## Access Control Lists
+identity provider control over get / put / delete / update
+
+# Streams
+think triggers for lambda
+used to capture modifications to tables
+- stores for max 24 hours
+
