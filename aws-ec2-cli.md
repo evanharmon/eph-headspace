@@ -1,4 +1,12 @@
 # AWS EC2 CLI
+do not confuse START-INSTANCES which starts a stopped instance
+
+# CLI
+## Create An Instance
+`$ aws ec2 run-instances`
+
+## Start A Stopped Instance
+`$ aws ec2 start-instances`
 
 ## Show Private Images
 `$ aws ec2 describe-images --owners self`
