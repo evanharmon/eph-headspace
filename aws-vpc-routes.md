@@ -1,4 +1,6 @@
 # AWS VPC ROUTES
+All subnets automatically hooked up to main route table. Don't put a path in
+public internet in the main route table
 
 ## EC2
 Instances do NOT retain their private IP

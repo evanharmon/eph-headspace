@@ -1,4 +1,5 @@
 # AWS VPC SUBNETS
+1 Subnet = 1 AZ
 
 ## Instances In Public Subnets
 Don't have internet access unless you give them an EIP (Elastic IP address) or
