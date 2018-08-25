@@ -1,10 +1,10 @@
 # AWS S3 VERSIONING LIFECYCLE
-versioning Integrates with Lifecycle rules
-versioning Supports MFA Delete capability
+versioning integrates with lifecycle rules
+versioning supports MFA delete capability
 
 ## Limitations
-- versioning Can not be turned off, can only be suspended
-- lifecycle Mgmt policies cannot move to RRS
+- versioning can not be turned off, can only be suspended
+- lifecycle management policies cannot move to RRS
 - expire does not delete - just adds delete marker
 
 ### Deduplication
@@ -12,6 +12,7 @@ versioning Supports MFA Delete capability
 - every file has it's own version ID
 
 ## Transitions
+Archive to Infrequently accessed then Glacier or straight to Glacier
 
 ### S3 to S3 IA
 Minimum is 30 day's after creation

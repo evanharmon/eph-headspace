@@ -1,4 +1,4 @@
-# AWS S3 CHARGES
+# AWS S3 BILLING
 
 ## Charged For:
 - storage

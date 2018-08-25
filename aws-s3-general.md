@@ -4,7 +4,11 @@ Storage is theoretically unlimited
 ## General Info
 Key / Value Pair
 Object based storage - not an OS or Database
-Uploads are private by default
+
+## Headers
+x-amz-content-sha256
+x-amz-date
+x-amz-security-token
 
 ## Consistency
 - read after write consistency for PUTS of new Objects
@@ -30,15 +34,12 @@ Names must be lowercase
 Universal Namespace (like DNS)
 
 ## Limitations
-
-## Limited To 100 Buckets By Default
-Can submit a service limit increase for more
-
-### File Size Limits
-PUT limited to 0 Byte to 5GB
+- 100 buckets by default
+- PUT limited to 0 Byte to 5GB
 
 ## Invalid Bucket Names
+capitalization only works in US-Standard-Region US-EAST-1
 `.myawsbucket`
 `myawsbucket.`
 `my..awsbucket`
-`myAwsBucket` ## capitalization only works in US-Standard-Region US-EAST-1
+`myAwsBucket`

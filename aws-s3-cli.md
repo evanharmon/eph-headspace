@@ -33,7 +33,7 @@ S3 Object must be uploaded first, then tagged
 ## Get Version Of Objects
 use --prefix to search nested folders
 ```
-  $ aws s3api list-object-versions \
+$ aws s3api list-object-versions \
     --bucket "cf-templates-us-west-2" \
     --prefix "hss"
 ```

@@ -4,6 +4,10 @@
 Bucket Policies
 Access Control Lists (ACL)
 
+## Security
+Uploads are private by default
+new buckets are private by default
+
 ## Logs
 buckets can log to another bucket, even another AWS account
 
