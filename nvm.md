@@ -18,5 +18,5 @@ export NVM_DIR="$HOME/.nvm"
 or this version to avoid nvm use being called on shell load
 ```bash
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh --no-use"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 ```
