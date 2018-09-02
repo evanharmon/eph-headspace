@@ -5,16 +5,18 @@ started manually
 ## SETUP
 
 ### Install
-`go get -u github.com/gomods/athens/cmd/proxy`
+```console
+go get -u github.com/gomods/athens/cmd/proxy
+```
 
 ### Environmental Variables
-```
+```bash
 export GO111MODULE=auto
 export GOPROXY=http://127.0.0.1:3000
 ```
 
 ### Script To Install
-```
+```bash
 if [ -d $GOPATH/src/github.com/gomods/athens ]; then
   go get -u github.com/gomods/athens/cmd/proxy
 fi
@@ -23,10 +25,12 @@ fi
 ## Manually Run Proxy
 
 ### Start Proxy
-`proxy`
+```console
+proxy
+```
 
 ### Script To Start Proxy
-```
+```bash
 if lsof -i :3000; then
   echo "Gomods Proxy already running"
 else
@@ -38,7 +42,11 @@ fi
 Manually set `export GO111MODULE=on` in your shell
 
 ## Download Dependencies
-`go run .`
+```console
+go run .
+```
 
 ## Clear Cache
-`sudo rm -fr $(go env GOPATH)/pkg/mod`
+```console
+sudo rm -fr $(go env GOPATH)/pkg/mod
+```
