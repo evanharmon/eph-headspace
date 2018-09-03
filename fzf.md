@@ -1,4 +1,5 @@
 # FZF
+[tips](https://mike.place/2017/fzf-fd/)
 
 ## Install Via Homebrew
 ```bash
