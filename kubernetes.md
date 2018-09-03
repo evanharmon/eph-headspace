@@ -13,5 +13,5 @@
 
 ### Create And Start A K*8S Cluster On MacOS
 ```console
-$minikube start --kubernetes-version v1.10.0 --vm-driver=hyperkit
+$ minikube start --kubernetes-version v1.10.0 --vm-driver=hyperkit
 ```
