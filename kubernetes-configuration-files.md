@@ -1,7 +1,7 @@
 # KUBERNETES CONFIGURATION FILES
-(https://raw.githubusercontent.com/mhausenblas/kbe/master/specs/pods/constraint-pod.yaml)
 
 ## Single Deployment Configuration
+[Example](https://raw.githubusercontent.com/mhausenblas/kbe/master/specs/pods/constraint-pod.yaml)
 ```YML
 apiVersion: v1
 kind: Pod
