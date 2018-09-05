@@ -1,0 +1,45 @@
+# IT TERMS
+
+## Time To Live (TTL)
+an object that is created but only alive for a set amount of time
+- 86400 is 24 hours
+
+## Long Term Support (LTS)
+
+## Domain Name Server (DNS)
+
+## Level of Effort (LOE)
+
+# Minimum Viable Product (MVP)
+
+## Tech Debt
+When a repository, or application, contains many applications that need to be
+broken out in to separate applications
+
+## Software Development Lifecycle (SDLC)
+
+## Security Information and Event Management (SIEM)
+
+## Key Management Service (KMS)
+
+## Host-based Intrusion Detection System (HIDS)
+
+## File Integrity Monitoring (FIM)
+
+## Don't Repeat Yourself (DRY)
+
+## Recovery Time Objective (RTO)
+Restore business to operational status / slas
+
+## Recovery Point Objective (RPO)
+acceptable data loss as measured in time
+
+## Distaster recovery (DR)
+
+## Web Application Firewall (WAF)
+
+## Mash / Mung until no good
+irrevocable destruction of data
+
+## Realtime Media Processing (RTMP)
+Used for Media Streaming like: Adobe flash
