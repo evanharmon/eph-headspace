@@ -1,6 +1,11 @@
-# List pci hardware
-# you can view bus speed
-`$ lspci`
+# LIST PCI HARDWARE
 
-# view verbose
-`$ lspci -vvv`
+## View Bus Speed
+```console
+$ lspci
+```
+
+## View Verbose
+```console
+$ lspci -vvv
+```

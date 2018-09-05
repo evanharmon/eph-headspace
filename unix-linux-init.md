@@ -1,12 +1,21 @@
 # INIT
 First process run when Linux starts
 
-## inittab
-`$ /etc/inittab`
-showed what run level to use
+## Full Path
+`/sbin/init`
 
-## change run level
-`$ telinit 6`
+## Inittab
+show what run level to use
+```console
+$ /etc/inittab
+```
 
-## Get list of services
-`$ initctl list`
+## Change Run Level
+```console
+$ telinit 6
+```
+
+## Get List Of Services
+```console
+$ initctl list
+```

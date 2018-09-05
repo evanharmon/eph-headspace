@@ -1,20 +1,32 @@
-# General
+# SYSTEMCTL
 used to control systemd
 
-# show what systemd is using
-`$ systemctl`
+## Show What Systemd Is Using
+```console
+$ systemctl
+```
 
-# Check status of a systemd script
-`$ sudo systemctl status sound.target`
+## Check Status Of A Systemd Script
+```console
+$ sudo systemctl status sound.target
+```
 
-# start a systemd script
-`$ sudo systemctl start sound.target`
+## Start A Systemd Script
+```console
+$ sudo systemctl start sound.target
+```
 
-# stop a systemd script
-`$ sudo systemctl stop sound.target`
+## Stop A Systemd Script
+```console
+$ sudo systemctl stop sound.target
+```
 
-# enable a target / run level
-`$ sudo systemctl enable multi-user.target`
+## Enable A Target / Run Level
+```console
+$ sudo systemctl enable multi-user.target
+```
 
-# set default run level
-`$ sudo systemctl default multi-user.target`
+## Set Default Run Level
+```console
+$ sudo systemctl default multi-user.target
+```
