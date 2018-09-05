@@ -14,6 +14,9 @@ shutdown save
 shutdown nosave
 ```
 
+## Default Port
+6379
+
 ## Check Redis
 `redis-cli ping`
 

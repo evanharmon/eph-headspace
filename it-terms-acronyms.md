@@ -43,3 +43,15 @@ irrevocable destruction of data
 
 ## Realtime Media Processing (RTMP)
 Used for Media Streaming like: Adobe flash
+
+## Transactions Per Second (TPS)
+
+## IT Service Management (ITSM)
+
+## Percent Complete And Accurate (%C/A)
+
+## Confidentiality, Integrity, Availability Triangle (CIA)
+
+## Root Cause Analysis (RCA)
+
+## Redundant Array Of Independent Disks (RAID_)

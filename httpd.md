@@ -3,16 +3,24 @@
 ## Config File Location
 `/etc/httpd/conf/httpd.conf`
 
-## Start / Stop / etc
-`$ httpd -k start`
+## Start / Stop / Etc
+```console
+$ httpd -k start
+```
 or
-`$ apachctl -k start`
+```console
+$ apachctl -k start
+```
 
-## Override Config and Start on Specific Port
+## Override Config And Start On Specific Port
+```console
 `$ httpd -c "listen 8080"`
+```
 
-## Check What Port httpd is Running On
+## Check What Port Httpd Is Running On
+```console
 `$ netstat -anp |grep 80`
+```
 
 ## Kill HTTPD
 Only way i've found to do this is to kill the process id
