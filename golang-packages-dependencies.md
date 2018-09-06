@@ -1,0 +1,19 @@
+# GOLAND PACKAGES - DEPENDENCIES
+
+## Install All Dependencies
+```console
+$ go get -d ./...
+```
+
+## Install Dependencies Just For Repo
+```console
+$ go get -d .
+```
+
+## Init And Unused Packages
+unused packages should be prepended with `_`. Any `init()` functions will be run
+within the package imported
+```
+import _ "packagename"
+````
+`init()` functions are run before `main()`
