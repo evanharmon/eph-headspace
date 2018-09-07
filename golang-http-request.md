@@ -6,6 +6,13 @@ r.ParseForm()
 id := r.Form["id"]
 ```
 
+## Check Response Codes
+```golang
+if resp.StatusCode != 200 {
+  return nil, fmt.Errorf("HTTP Response error status: %d\n", resp.StatusCode)
+}
+```
+
 ## Example
 ```
 package main
