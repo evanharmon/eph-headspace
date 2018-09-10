@@ -5,7 +5,7 @@
 ## Command Line Queries On Machine
 `cbq --script="SELECT DISTINCT raw doc.myfield FROM mybucket doc"`
 
-## Example array distinct
+## Example Array Distinct
 ```
 SELECT ARRAY_DISTINCT(doc.myarray[*].Location) as Locations
 FROM mybucket doc
@@ -19,7 +19,7 @@ FROM mybucket doc UNNEST doc.myarray r
 WHERE doc.OrderNo = "123456"
 ```
 
-## Query by doc id
+## Query By Doc ID
 ```
 SELECT doc.type
 FROM mybucket doc
@@ -32,7 +32,7 @@ LIMIT 1
 SUBSTR(doc.startDate, 4) || "-" || SUBSTR(doc.startDate, 0, 2) || "-" || SUBSTR(doc.startDate, 2, 2) as startDate
 ```
 
-## Multiple let
+## Multiple Let
 ```
 Let a = (SELECT FROM ETC), b = (SELECT FROM ETC)
 SELECT t.name,
@@ -47,7 +47,7 @@ LET mbrs = (SELECT META(m).id,m.name FROM default m USE KEYS t.members[*].userID
 projs = (SELECT META(p).id,p.title FROM default p USE KEYS t.projects[*].projectID)
 ```
 
-## In select, check if array item exists
+## In Select, Check If Array Item Exists
 ```
 SELECT meta(doc).id as id, wo.OrderNo as OrderNo,
   CASE WHEN ARRAY_CONTAINS(doc.myarray[*].GroupType, "GROUND") = true THEN "GROUND" END as isGround
@@ -58,7 +58,7 @@ AND doc.City = "Stamford"
 LIMIT 100
 ```
 
-## Select statement append field value from another table
+## Select Statement Append Field Value From Another Table
 ```
 SELECT DISTINCT doc.Employee_Name, doc.Employee_ID, doc.City,
   FIRST y.Division FOR y IN wc WHEN y.City = doc.Work_City END AS DIVISION
@@ -75,6 +75,13 @@ LIMIT 10
 ```
 
 ## WHERE IN
+```
+SELECT doc.*
+FROM mybucket doc
+WHERE "myValue" IN doc.myArray[*].myProperty
+```
+
+## WHERE IN LET
 ```
 SELECT
   doc.LOCATION,
@@ -93,10 +100,10 @@ GROUP BY doc.Loc
 ORDER BY doc.Loc asc
 ```
 
-## Get all id's as an array
+## Get All ID's As An Array
 `ARRAY item.specialID FOR item IN mydoc END AS test`
 
-## Get records in last day
+## Get Records In Last Day
 `DATE_DIFF_STR(NOW_UTC(), doc.lastEditedTime, "day") <= 30`
 
 ## Join Example
