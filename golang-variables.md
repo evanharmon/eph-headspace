@@ -7,6 +7,13 @@ unnested, then available to entire package
 var port = ":1234"
 ```
 
+## Declare Multiple Variables
+```golang
+var (
+  port = ":1234"
+  domain = "localhost"
+)
+```
 ## Unexported Variables
 lowercase letter variables cannot be directly accessed outside package
 ```golang
