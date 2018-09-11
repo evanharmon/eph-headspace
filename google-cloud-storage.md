@@ -1,38 +1,27 @@
 # GOOGLE CLOUD STORAGE
+Object store like AWS S3 and Glacier combined
+same 11 9's durability
+Strongly consisent
 
-## Local SSD
-375GB drives. Zonal resource
+fully managed and versioned
 
-### Shutdown
-local SSD drive data is LOST on instance shut down
+## Lifecycle classes
+Multi-Region
+Region
+Nearline
+Coldline
 
-### Charges
-charged by the GB per month prorated
-
-## Persisent Disk Service
-similar to EBS. Replicated for durability
+## Comparisons to S3
+Does not suffer from the flaw where S3 performs is related to the filename
 
 ## Charges
-pay per GB per month
+per GB per month prorated
+per GB retrieved from Nearline or Coldline
+per operation
+per GB network traffic egress
 
-### Data Transfer
-data is still encrypted when in transit between the drive and the instance
+## Updates
+supports conditional-updates based on versioning
 
-### Performance
-Slower than Local SSD. Max read is about 40k IOPS
-
-### Resizing
-Can resize up to 10TB but have to manually update VM just like AWS
-
-### Snapshots
-Incremental. Can use / delete full backups auto magically as if they were
-complete
-
-### Snapshots And Regions
-Snapshots are available globally. Pay network transfer cost if between zones
-
-### Snapshots Charges
-pay per GB per month
-
-### Mounting
-PD drive can be mounted to multiple instances ONLY if they are all read-only
+## Resources
+offered as region or multi-region
