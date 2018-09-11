@@ -8,7 +8,7 @@
 `myURL["local"].(string)`
 
 ## Catch Type Assertion Errors
-```
+```golang
 s, ok := someData.([]string)
 if !ok {
   log.Printf("got data of type %T but wanted []string", someData)
