@@ -6,5 +6,20 @@ All golang variables are initialized to their respective zero values
 func getProjectID() { ... }
 ```
 ```console
-go test -run GetProjectID
+$ go test -run GetProjectID
+```
+
+## Run All Tests In Project
+```console
+$ go test ./...
+```
+
+## Ignore Package
+```console
+$ go test `go list ./... | grep -v 'testhelper'`
+```
+
+## Check Code Coverage
+```console
+$ go test --cover
 ```
