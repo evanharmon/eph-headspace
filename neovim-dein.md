@@ -13,5 +13,13 @@ Close nvim and reopen
 # Install
 `:call dein#install()`
 
-# Check for Updates
+# Check For Updates
 `:call dein#check_update()`
+
+# Use Specific Plugin Branch
+```vim
+call dein#add('autozimu/LanguageClient-neovim', {
+  \ 'rev': 'next',
+  \ 'build': 'bash install.sh',
+  \ })
+```
