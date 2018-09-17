@@ -23,3 +23,6 @@ $ go test `go list ./... | grep -v 'testhelper'`
 ```console
 $ go test --cover
 ```
+
+## Run Tests As Package User
+Use `*_test` package doesn’t allow unexported identifiers
