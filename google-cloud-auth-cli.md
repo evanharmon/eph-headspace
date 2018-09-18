@@ -12,3 +12,8 @@ $ gcloud auth activate-service-account \
 ```console
 $ gcloud auth login
 ```
+
+## Switch Accounts
+```console
+$ gcloud config set account myaccount
+```
