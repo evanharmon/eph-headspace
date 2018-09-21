@@ -26,3 +26,19 @@ $ go test --cover
 
 ## Run Tests As Package User
 Use `*_test` package doesn’t allow unexported identifiers
+
+## Separate Out Integration Tests
+name the file `storage_integration_test.go`
+
+add tag to first line of file and test file
+```golang
+// +build integration
+
+// Package ...
+package mypkg
+```
+
+run tests with tag
+```console
+$ go test --tags=integration
+```
