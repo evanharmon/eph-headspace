@@ -113,3 +113,12 @@ FROM mybucket doc1 JOIN mybucket doc2 ON KEYS "mydoctype2-" || doc1.mymatchingid
 WHERE doc1.type = "mydoctype1"
 AND doc2.type = "mydoctype2"
 ```
+
+## Convert String To Number
+TO_NUMBER()
+```
+SELECT meta(doc).id, SUM(TO_NUMBER(doc.myfield)) AS SUM
+FROM mybucket doc
+WHERE doc.order = "12343455"
+GROUP BY doc.myfield, meta(doc).id
+```

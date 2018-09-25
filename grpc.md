@@ -11,3 +11,16 @@ function directly on a server, no matter what the language
 
 ## Proto File
 This is the contract that is the same across any language
+
+## Types of APIs
+unary
+server streaming
+client streaming
+bi-directional streaming
+
+## Security
+first class citizen
+
+## Methodology
+REST is more about CRUD
+gRPC is open ended and api oriented. Think graphql - data driven design
