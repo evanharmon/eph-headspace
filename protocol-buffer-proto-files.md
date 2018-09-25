@@ -94,3 +94,14 @@ message SearchResponse {
 
 ## Imports
 use fully qualified dir from root of project
+
+## No Parameters
+service functions cannot have zero parameters for PROTO. Must use empty proto
+object as below
+```
+service MyService {
+  rpc Create(CreateParams) returns (Response) {}
+}
+message CreateParams {}
+message Response {}
+```
