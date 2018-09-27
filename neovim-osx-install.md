@@ -1,11 +1,18 @@
 # NEOVIM OS X
 
-## INSTALL
-```
+## Install
+```console
 $ brew update
 $ brew tap neovim/neovim
 $ brew install --HEAD neovim
 ```
 
-## PYTHON 3
-`$ brew install python3`
+## Update
+```console
+$ brew upgrade neovim
+```
+
+## Python 3
+```console
+$ brew install python3
+```
