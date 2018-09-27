@@ -9,7 +9,7 @@ if err != nil {
   return err
 }
 defer func(file *os.File) {
-  if err := f.Close(); err != nil {
+  if err := file.Close(); err != nil {
     log.Fatal(err)
   }
 }(f)
