@@ -3,15 +3,15 @@
 ## Standard YML File Name
 docker-compose.yml
 
-## Use Links instead of ports
-```
+## Use Links Instead Of Ports
+```YAML
 links:
 - mysql
 - redis
 ```
 
 ## Example Compose file
-```
+```YAML
 ---
 version: '3.2'
 
@@ -28,10 +28,12 @@ services:
       - "4984-4985:4984-4985”
 ```
 
-## Bash in to compose service
-`$ docker-compose exec service_name bash`
+## Bash In To Compose Service
+```console
+$ docker-compose exec service_name bash
+```
 
-## Environment variables
+## Environment Variables
 ```
 services:
   master:
@@ -39,4 +41,27 @@ services:
     environment:
       GITHUB_USER: ${GITHUB_USER}
       GITHUB_TOKEN: ${GITHUB_TOKEN}
+```
+
+## Tail And Follow Logs
+```console
+$ docker-compose logs --tail 50 -f hss-sync-gateway
+```
+
+## Persisent Volumes Example
+```YAML
+version: '3.2'
+services:
+  database:
+    build: docker-database
+    ...
+    volumes:
+     - db-data:/data
+volumes:
+  db-data
+```
+
+## Destroy Persistent Volumes
+```console
+$ docker-compose down -v
 ```
