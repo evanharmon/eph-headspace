@@ -10,3 +10,13 @@ if [ -d "$HOME/.pyenv" ]; then
         eval "$(pyenv virtualenv-init -)"
 fi
 ```
+
+## Install Python Versions
+```console
+pyenv install 2.7.11
+```
+
+## Set Up Virtual Env
+```console
+$ pyenv virtualenv 2.7.11 gcloud
+```
