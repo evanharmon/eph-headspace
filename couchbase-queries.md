@@ -122,3 +122,17 @@ FROM mybucket doc
 WHERE doc.order = "12343455"
 GROUP BY doc.myfield, meta(doc).id
 ```
+
+## Query By Date Range
+```
+SELECT meta(doc).id
+FROM mybucket doc
+WHERE doc.Timestamp between '2018-06-07T00:00:000Z' and '2018-07-07T00:00:000Z'
+```
+
+## Query Past Timestamp to Now
+```
+SELECT meta(doc).id
+FROM mybucket doc
+WHERE doc.Timestamp between '2018-06-07T00:00:000Z' and NOW_UTC()
+```
