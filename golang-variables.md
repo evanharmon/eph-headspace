@@ -44,3 +44,10 @@ go func(mytype MyType, feed *Feed) {
 
 }(mytype, feed)
 ```
+
+## Shorthand Declare Return Variables
+```golang
+func NewClientGRPC() (c ClientGRPC, err error) {
+  c.chunkSize = 1024
+}
+```
