@@ -6,6 +6,11 @@
 # Remove Whitespace / Line Breaks
 `const cleanString = "\nSome data\n".replace(/(\r\n|\n|\r|\t)/g, "").trim();`
 
+# Remove Spaces
+```javascript
+"test phrase".replace(/\s/g, '');
+```
+
 # Compare property value to array of values indexOf
 ## avoids long if/ternary statements
 `['Open', 'Closed'].indexOf(varName) !== -1`
