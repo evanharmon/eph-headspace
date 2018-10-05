@@ -1,9 +1,9 @@
 # NODE FILE
 
-## Get Buffer Instead of Text
+## Get Buffer Instead Of Text
 `fs.readFileSync(file);`
 
-## Get text instead of buffer
+## Get Text Instead Of Buffer
 Have to specify encoding
 `fs.readFileSync(file, 'utf-8');`
 
@@ -20,5 +20,15 @@ const createDocs = (cnt = 0) => {
 createDocs(1);
 ```
 
-## Write a file to disk
+## Write A File To Disk
 `fs.writeFileSync('data.json', JSON.stringify(data));`
+
+## Read And Write With JSON
+Remember to `JSON.parse()` and then `JSON.stringify()`
+```javascript
+const fs = require('fs');
+const file = fs.readFileSync('./my-file.json', 'utf-8'); // without utf-8 you get a buffer
+const records = JSON.parse(file);
+const docs = records.docs.map(i => ({ ...i, myNewProperty: 'test' }));
+fs.writeFileSync('my-updated-file.json', JSON.stringify(docs));
+```
