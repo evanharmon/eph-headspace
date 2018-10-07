@@ -1,6 +1,8 @@
 # GOLANG BINARY SHIFT
-`<<` shift left
-`>>` shift right
+[bitshift hacking](https://medium.com/learning-the-go-programming-language/bit-hacking-with-go-e0acee258827)
+[calculator](https://www.miniwebtool.com/bitwise-calculator/)
+`a << n` shift all bits in `a` to the left `n` times
+`a >> n` shift all bits in `a` to the right `n` times
 
 ## Shift Left By 1
 same as multiplying by 2

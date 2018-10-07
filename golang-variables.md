@@ -51,3 +51,8 @@ func NewClientGRPC() (c ClientGRPC, err error) {
   c.chunkSize = 1024
 }
 ```
+
+## Template String Style Port
+```golang
+":"+strconv.Itoa(s.port)
+```

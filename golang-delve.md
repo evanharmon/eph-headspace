@@ -39,3 +39,8 @@ Set breakpoint and run delve
 :DlvToggleBreakpoint
 :DlvDebug
 ```
+
+## Passing CLI Flags For Application
+```golang
+:DlvDebug -- ./eph-music upload --file upload-file.txt
+```

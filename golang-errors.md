@@ -34,3 +34,8 @@ if err != nil && ok && gerr.Code != 409 {
 
 return nil
 ```
+
+## Add String Context To Error
+```golang
+errors.wrap(err, "read failed")
+```
