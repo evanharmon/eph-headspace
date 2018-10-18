@@ -33,3 +33,14 @@ type Service interface {
       -source core/client.go \
       -destination core/mock_client/mock_client.go
 ```
+
+## Use Go Generate
+Before import statement
+```golang
+//go:generate mockgen -destination core/mocks/mock_client.go -package mocks github.com/evanharmon/eph-music-micro/storage/core ClientService
+```
+
+## Run Go Generate On Files
+```console
+go generate ./...
+```

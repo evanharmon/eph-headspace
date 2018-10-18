@@ -1,46 +1,48 @@
 # GOLANG DELVE
 
-## Install Delve
+## Setup
+### Install Delve
 ```console
-$ brew install go-delve/delve/delve
+$ go get -u github.com/derekparker/delve/cmd/dlv
 ```
 
-## Run Debugger From Main.Go File Location
-```Console
-$ dlv debug main.go
-```
-
-## Set An Exact Breakpoint Line Number
-```console
-$ b endpoints.go:22
-```
-
-## CLI Commands
-[CLI](https://github.com/derekparker/delve/tree/master/Documentation/cli)
-
-Print Function Arguments
-```console
-$ args
-```
-
-Print Struct Properties
-```console
-$ print req.Chunk.Content
-```
-
-Run Until Next Breakpoint / Program End
-```console
-$ continue
-```
-
-## Vim-Delve
+### Vim-Delve
 Set breakpoint and run delve
 ```console
 :DlvToggleBreakpoint
 :DlvDebug
 ```
 
-## Passing CLI Flags For Application
+## Running Delve
+[CLI](https://github.com/derekparker/delve/tree/master/Documentation/cli)
+### Run Debugger From Main.Go File Location
+```Console
+$ dlv debug main.go
+```
+
+### Passing CLI Flags For Application
+from package main file if in Neovim
 ```golang
 :DlvDebug -- ./eph-music upload --file upload-file.txt
+```
+
+## Debugging
+### Set An Exact Breakpoint Line Number
+```console
+$ b endpoints.go:22
+```
+
+### Print Function Arguments
+```console
+$ args
+```
+
+### Print Struct Properties
+```console
+$ print req.Chunk.Content
+```
+
+### Run Until Next Breakpoint / Program End
+```console
+$ continue
 ```
