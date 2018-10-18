@@ -3,7 +3,7 @@
 
 `cat file.json | jq '.results[].doc'`
 
-## Exclude keys example
+## Exclude Keys Example
 ```
 cat ~/Downloads/myfile.json |\
   jq '.results[].doc' |\
@@ -13,10 +13,10 @@ cat ~/Downloads/myfile.json |\
 
 `jq 'del(._id, ._rev)'`
 
-## Map and Filter array of JSON to inner object
+## Map And Filter Array Of JSON To Inner Object
 `cat file.json | jq '.docs' | jq 'map(.payload)' | more`
 
-## Exclude keys but keep commas for array of objects
+## Exclude Keys But Keep Commas For Array Of Objects
 ```
 cat new.json |\
   jq '.results' |\
@@ -24,7 +24,7 @@ cat new.json |\
   test.json
 ```
 
-## Exclude nulls so you can map
+## Exclude Nulls So You Can Map
 `cat file.json | jq '.results' | jq 'map(select(.doc != null) | .doc)' | more`
 
 ```
@@ -34,7 +34,7 @@ cat file.json |\
   export.json
 ```
 
-## Copy deep nested object and use as outer id
+## Copy Deep Nested Object And Use As Outer Id
 `{ "docs": [{ "payload": { "d": { "Field": "XYZ" } } }] }`
 
 ```
@@ -44,10 +44,10 @@ cat file.json |\
   more
 ```
 
-## convert number to string
+## Convert Number To String
 `jq '{ docs: map(. + { _id: ((.payload.OBJECTID|tostring) + "-" + .payload.LOCATION) }) }'`
 
-## to lowercase
+## To Lowercase
 ```
 cat myfile.json |\
      jq '.docs' |\
@@ -55,14 +55,14 @@ cat myfile.json |\
      less
 ```
 
-## Move property out of a nesting level and delete parent property
+## Move Property Out Of A Nesting Level And Delete Parent Property
 ```
 cat myfile.json |\
   jq 'map(. + { payload: .results[0] } | del(.d))' |\
   less
 ```
 
-## Add new object with array of objects
+## Add New Object With Array Of Objects
 ```
 cat myfile.json |\
     jq '.results' |\
@@ -80,14 +80,14 @@ cat myfile.json |\
      jq -r @csv > myfile.csv
 ```
 
-## Parse and get length of key
+## Parse and Get Length Of Key
 `cat file.json | jq '.results' | jq 'map(select(.id != null)| .) | length'`
 
-## Assign JQ result to a bash variable
+## Assign JQ Result To A Bash Variable
 `FILE_SYSTEM_ID=$(aws efs describe-file-systems|jq '.FileSystems[0].FileSystemId)`
 
-## Get list of properties
+## Get List Of Properties
 `cat myfile.json | jq 'map(keys) | add | unique'`
 
-## Get Max of a key value in array
+## Get Max Of A Key Value In Array
 `cat myfile.json | jq 'map(.OrderNo) | max'`
