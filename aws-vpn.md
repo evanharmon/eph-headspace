@@ -13,6 +13,10 @@ directly to public subnet instead of out over the internet
 Assign public IP address to VPC Gateway
 
 ## Setup
+[How To](https://medium.com/@mda590/aws-routing-101-67879d23014d) scroll down
+to `Routing via a VPN`
 - On-Premise Customer Gateway
 - Virtual Private Gateway
 - VPC with Hardware VPN Access
+
+Route Propogation must be turned on in every route table

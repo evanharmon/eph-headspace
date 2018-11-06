@@ -12,3 +12,8 @@ Only available on new network interface with device index eth0
 - spread instances across multiple AZs to minimize traffic concentration and
 maximize fault tolerance
 - only go for Placement Groups if the above option doesn't help
+
+## Route Tables
+[Routing 101](https://medium.com/@mda590/aws-routing-101-67879d23014d)
+Best practice is to create a route table for every subnet. Provides resilience
+in case an AZ goes down.
