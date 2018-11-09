@@ -15,6 +15,7 @@
 23 TELNET: TCP remote login
 25 SMTP: TCP email
 37 DAYTIME: returns binary time
+53 UDP
 69 TFTP: UDP trivial file transfer
 79 FINGER: TCP info on users
 80 HTTP

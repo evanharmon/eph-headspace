@@ -1,17 +1,26 @@
 # KUBERNETES (K8S)
 
-## Setup
+## Requirements / Installation
+The easiest method for using Kubernetes locally is through Docker Community
+Edition.
 
-### Install Hyperkit
-[](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md)
+[Create An Account And Install Docker Community Edition](https://store.docker.com/editions/community/docker-ce-desktop-mac)
 
-### Install Kubectl
-[](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+[Enable Kubernetes on Docker](https://docs.docker.com/docker-for-mac/#kubernetes)
+or use [Minikube](https://github.com/kubernetes/minikube)
 
-### Install Minikube
-[](https://github.com/kubernetes/minikube/releases)
+## Documentation
+[Kubernetes.io Docs](https://kubernetes.io/docs/home/?path=users&persona=app-developer&level=foundational)
 
-### Create And Start A K*8S Cluster On MacOS
-```console
-$ minikube start --kubernetes-version v1.10.0 --vm-driver=hyperkit
-```
+[Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)
+
+[Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+
+[Services](https://kubernetes.io/docs/concepts/services-networking/service)
+
+## Tutorials / Learning
+[Udemy Learn DevOps: The Complete Kubernetes Course](https://www.udemy.com/learn-devops-the-complete-kubernetes-course/learn/v4/overview)
+
+
+[Kubernetes By Example](http://kubernetesbyexample.com/)
+
