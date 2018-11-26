@@ -1,12 +1,11 @@
 # GOLANG DELVE
 
-## Setup
 ### Install Delve
 ```console
 $ go get -u github.com/derekparker/delve/cmd/dlv
 ```
 
-### Vim-Delve
+### Using Vim-Delve
 Set breakpoint and run delve
 ```console
 :DlvToggleBreakpoint
@@ -15,6 +14,7 @@ Set breakpoint and run delve
 
 ## Running Delve
 [CLI](https://github.com/derekparker/delve/tree/master/Documentation/cli)
+
 ### Run Debugger From Main.Go File Location
 ```Console
 $ dlv debug main.go
@@ -27,22 +27,29 @@ from package main file if in Neovim
 ```
 
 ## Debugging
-### Set An Exact Breakpoint Line Number
-```console
-$ b endpoints.go:22
-```
-
-### Print Function Arguments
+Print Function Arguments
 ```console
 $ args
 ```
 
-### Print Struct Properties
+Print Struct Properties
 ```console
 $ print req.Chunk.Content
 ```
 
-### Run Until Next Breakpoint / Program End
+Run Until Next Breakpoint / Program End
 ```console
 $ continue
 ```
+
+## Breakpoints
+Set breakpoint on Main function
+```console
+$ break main.main
+```
+
+Set An Exact Breakpoint Line Number
+```console
+$ b endpoints.go:22
+```
+

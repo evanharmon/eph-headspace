@@ -4,7 +4,9 @@
 `RUN DEBIAN_FRONTEND=noninteractive apt-get update`
 
 ## Send Arguments to Dockerfile on Build
-`$ docker build --build-arg userHome=$HOME .`
+```console
+$ docker build --build-arg userHome=$HOME .
+```
 
 ## Use Argument in DockerFile
 ```
