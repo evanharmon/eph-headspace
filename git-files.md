@@ -2,50 +2,87 @@
 
 ## Adds All New or Changed (as long as not ignored)
 but no rm actions
-`$ git add .`
+```console
+git add .
+```
 
 ## Look at already Tracked Files and Stage Changes
 Including rm Actions
-`$ git add -u`
+```console
+git add -u
+```
 
 ## shortcut for: git add .;git add -u
-`$ git add -A`
+```console
+git add -A
+```
 
 ## List Files Being Tracked
-`$ git ls-tree -r master --name-only`
+```console
+git ls-tree -r master --name-only
+```
 
 ## List Git-ignored Files
-`$ git ls-files . --ignored --exclude-standard --others`
+```console
+git ls-files . --ignored --exclude-standard --others
+```
 
 ## List Files in Another Branch
-`$ git ls-tree -r --name-only develop helpers/`
+```console
+git ls-tree -r --name-only develop helpers/
+```
 
 ## List Untracked Files
-`$ git ls-files . --exclude-standard --others`
+```console
+git ls-files . --exclude-standard --others
+```
 
 ## Remove Folder From Being Tracked by Git
-`$ git rm --cached -r .config/nvim/plugged/`
+```console
+git rm --cached -r .config/nvim/plugged/
+```
 
 ## Remove File Without Deleting
-`$ git rm --cached file`
+```console
+git rm --cached file
+```
 
 ## List Files Changed in Commit
-`$ git show --pretty="format:" --name-only {git commit hash}`
+```console
+git show --pretty="format:" --name-only {git commit hash}
+```
 
 ## Diff of a File Between Branches
-`$ git diff branch1 branch2 -- {file}`
+```console
+git diff branch1 branch2 -- {file}
+```
 
 ## View a File From Another Branch
-`$ git show branch:filename`
+```console
+git show branch:filename
+```
 
 ## Checkout File from Another Branch
-`$ git checkout {branch} -- {filepath}`
+```console
+git checkout {branch} -- {filepath}
+```
 
 ## Checkout File From Another Commit
-`$ git checkout {commit-hash} file/to/restore`
+```console
+git checkout {commit-hash} file/to/restore
+```
 
 ## Remove All Un-tracked Files
-`$ git clean -i`
+```console
+git clean -i
+```
 
 ## View Commit History by Specific File
-`$ git log -- /directory/file.js`
+```console
+git log -- /directory/file.js
+```
+
+## List unique current directory commit changes
+```console
+$(git ls-files --directory <directory-name> | sed 's/\(.*\)\/.*/\1/' | uniq)
+```

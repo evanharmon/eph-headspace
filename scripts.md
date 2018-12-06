@@ -5,11 +5,13 @@
 
 Run And Execute Commands From Current Shell Enviroment
 ```console
-$ source ./script.sh
+source ./script.sh
 ```
 
 Run script in new shell
-`$ ./script.sh`
+```console
+./script.sh
+```
 
 ## Writing Scripts
 [Single Quote Double Quote In Scripts](http://mywiki.wooledge.org/Quotes)
@@ -55,4 +57,23 @@ if [ -d "$DIR" ]; then
     printf '%s\n' "Removing Lock ($DIR)"
     rm -rf "$DIR"
 fi
+```
+
+## Variables
+
+#### Set Default Variables
+```bash
+BUCKET="${BUCKET:-mydefaultvalue}"
+```
+
+#### Set Current Directory Name With Only Basename
+```bash
+CURR_DIR="${CURR_DIR:-${PWD##*/}}"
+```
+
+## Parameters
+
+#### Append / Pass parameters from script call
+```bash
+aws s3 cp . s3://$BUCKET "${@}"
 ```
