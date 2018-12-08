@@ -32,9 +32,12 @@ SNS topics
 API Gateway
 SDK invocation
 
+## Sample Events
+[AWS Sample Events Published](https://docs.aws.amazon.com/lambda/latest/dg/eventsources.html#eventsources-api-gateway-request)
+
 ## Limitations
 lowest RAM setting is 128MB
-up to 1536MB RAM
+up to 3008MB RAM
 CPU scales with RAM increase
 
 ## Logs
