@@ -1,11 +1,30 @@
 # RUST CARGO
 
-## Start a new project with Cargo
+## Start A New Project With Binary
 [Guide](http://doc.crates.io/guide.html)
-`cargo new hello_world --bin`
+Creates a .git folder as well
+```console
+cargo new hello_world --bin
+```
 
-## Add a Package to Cargo.toml
-`rustfmt = "0.9.0"`
+## Start A New Project As Library
+[Guide](http://doc.crates.io/guide.html)
+Creates a .git folder as well
+```console
+cargo new hello_world --bin
+```
+
+## Start Project With No .git Folder
+```console
+cargo new myproject --bin --vcs none
+```
+
+## Add A Package To Cargo.toml
+```console
+rustfmt = "0.9.0"
+```
 
 ## Install Dependencies
-`cargo build`
+```console
+cargo build
+```
