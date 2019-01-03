@@ -20,3 +20,8 @@ let mut iter = a.into_iter().filter(|&x| *x > 1); // both & and *
 let a = [0, 1, 2];
 let mut iter = a.into_iter().filter(|&&x| x > 1); // two &s
 ```
+
+## Turn Vector In To Iterator
+Borrow reference to item `iter()`
+Editable borrowed reference to item `iter_mut()`
+Take / Consume ownership `into_iter()`

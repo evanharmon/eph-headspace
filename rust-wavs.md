@@ -97,7 +97,7 @@ fn read_wav_wave_format_extensible_pcm_24bit() {
 }
 ```
 
-## Create Signal From Mono WAV
+## Create Stereo Signal From Mono WAV
 ```rust
     let filename = "assets/user_single_clap.wav";
     let reader = WavReader::open(filename).unwrap();
