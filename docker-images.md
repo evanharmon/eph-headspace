@@ -1,19 +1,31 @@
 # DOCKER IMAGES
 
 ## Rename an Image
-`$ docker tag <oldname/id> <newname>`
+```console
+docker tag myimage:latest mynewimage:latest
+```
 
 ## Stop Docker Image <hash>
-`$ docker stop <hash>`
+```console
+docker stop <hash>
+```
 
 ## Build Image
-`$ docker build -t "neovim-docker" .`
+```console
+docker build -t "neovim-docker" .
+```
 
 ## List Docker Images
-`$ docker images`
+```console
+docker images
+```
 
 ## Download Image
-`$ docker pull image-name`
+```console
+docker pull image-name
+```
 
 ## Delete Docker Image <hash> from Downloaded Images
-`$ docker rmi <hash>`
+```console
+docker rmi <hash>
+```
