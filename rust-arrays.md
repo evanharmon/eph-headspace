@@ -14,3 +14,16 @@ A slice must be passed NOT a vector
 let frames: Vec<[f64; 2]> = signal.map(|f| f).collect();
 let trimmed_samples = find_start(frames.as_slice());
 ```
+
+## Iterate Over Slice Of Vector
+[SO](https://stackoverflow.com/questions/40613725/iterating-over-a-slices-values-instead-of-references-in-rust/40613870)
+```rust
+fn main() {
+    let v = vec![1, 2, 3];
+    let slice = &v[..];
+    for u in slice.iter().cloned() {
+        let u: usize = u; // prove it's really usize, not &usize
+        println!("{}", u);
+    }
+}
+```
