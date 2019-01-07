@@ -28,3 +28,10 @@ rustfmt = "0.9.0"
 ```console
 cargo build
 ```
+
+## Use Of Unstable Library Feature
+External crate needs to be added to Cargo.toml
+```rust
+#[macro_use]
+extern crate log;
+```
