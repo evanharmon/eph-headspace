@@ -24,13 +24,6 @@
 ## Push New Local Branch to Remote
 `$ git push -u origin <branchName>`
 
-## Set Remote for Tracking
-```
-$ git branch -u origin/branchname
-$ git remote add origin https://github.com/GetLevvel/siemens.git
-$ git push -u origin master
-```
-
 ## Delete Local Branch
 `$ git branch -d branch_name`
 
