@@ -3,6 +3,10 @@
 ## Summary
 Notes on using referencing and de-referencing in Rust
 
+
+## Borrowing
+`as_ref()` returns a reference instead of taking ownership
+
 ## Common Mistakes
 
 
