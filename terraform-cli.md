@@ -9,3 +9,8 @@ Notes on using the terraform CLI
 ```console
 terraform state rm aws_iam_service_linked_role.autoscaling
 ```
+
+#### Taint module
+```console
+terraform taint --module=my-module aws_iam_role.my_role
+```
