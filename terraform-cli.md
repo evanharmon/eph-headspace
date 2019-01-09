@@ -10,7 +10,7 @@ Notes on using the terraform CLI
 terraform state rm aws_iam_service_linked_role.autoscaling
 ```
 
-#### Remove Entire Module
+#### Remove entire module
 ```console
 terraform state rm module.mymod
 ```
@@ -18,4 +18,11 @@ terraform state rm module.mymod
 #### Taint module
 ```console
 terraform taint --module=my-module aws_iam_role.my_role
+```
+
+## Resources
+
+#### Destroy entire module
+```console
+terraform destroy --target=module.mymod
 ```
