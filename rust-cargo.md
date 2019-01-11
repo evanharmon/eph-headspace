@@ -11,12 +11,13 @@ cargo new hello_world --bin
 [Guide](http://doc.crates.io/guide.html)
 Creates a .git folder as well
 ```console
-cargo new hello_world --bin
+cargo new hello_world --lib
 ```
 
 ## Start Project With No .git Folder
 ```console
-cargo new myproject --bin --vcs none
+cargo new mybin --bin --vcs none
+cargo new mylib --lib --vcs none
 ```
 
 ## Add A Package To Cargo.toml
