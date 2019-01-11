@@ -4,7 +4,7 @@
 `cat file.json | jq '.results[].doc'`
 
 ## Exclude Keys Example
-```
+```console
 cat ~/Downloads/myfile.json |\
   jq '.results[].doc' |\
   jq 'del(._id, ._rev)' |\
@@ -91,3 +91,13 @@ cat myfile.json |\
 
 ## Get Max Of A Key Value In Array
 `cat myfile.json | jq 'map(.OrderNo) | max'`
+
+## Get AMI ID From Packer Manifest.json
+```console
+cat manifest.json | jq '.builds | last | .artifact_id | split(":") | last'
+```
+
+## Read Directly From File
+```console
+jq -n --slurpfile f manifest.json '$f[]|.builds | last | .artifact_id | split(":") | last'
+```
