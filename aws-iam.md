@@ -2,11 +2,11 @@
 
 
 ## Policies
-[Action Lists per Service]
-(http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actionsconditions.html)
+[Action Lists per Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actionsconditions.html)
+[Full List](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html)
 
 ## Best Practices
-(http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+[AWS](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 - lock away your AWS account (root) access keys
 - create individual IAM users
 - use groups to assign permissions to IAM users
@@ -35,7 +35,9 @@ allowed actions and resources
 ## Instance Roles
 - provides access key information in output
 - more secure than using access keys on instances
-`$ curl http://169.254.169.254/latest/meta-data/iam/security-credentials/role-name`
+```console
+$ curl http://169.254.169.254/latest/meta-data/iam/security-credentials/role-name
+```
 
 ### Assignment
 Can only be assigned at instance creation
