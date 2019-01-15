@@ -3,9 +3,22 @@
 ## Summary
 Notes on using referencing and de-referencing in Rust
 
+## Links
+[Guide](https://words.steveklabnik.com/pointers-in-rust-a-guide)
 
 ## Borrowing
 `as_ref()` returns a reference instead of taking ownership
+
+## Dereference 2d Array Of Pointers
+```rust
+let slice = &frames[start_frame_index..];
+// Frame sample values are pointers: *[ [*0.0, *0.01], [*0.1, *0.1]  ]
+for _frame in slice {
+  for &s in _frame {
+		writer.write_sample(s as f32)?;
+	}
+}
+```
 
 ## Common Mistakes
 

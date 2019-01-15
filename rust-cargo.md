@@ -29,3 +29,10 @@ rustfmt = "0.9.0"
 ```console
 cargo build
 ```
+
+## Use Private Crate
+in Cargo.toml
+```toml
+[dependencies]
+filer = {version = "0.1.0", path = "./filer"}
+```
