@@ -58,3 +58,11 @@ for _frame in frames.clone() {
     writeln!(file, "{:?}", _frame).expect("write line to file");
 }
 ```
+
+## Cannot Index Into A Value Of Type `std::result::Result<std::vec::Vec<u8>, std::io::Error>`
+need to use `?`
+```rust
+if b"WAVE" != &reader.read_bytes(4)?[..] {
+    return Err(Error::FormatError("no WAVE tag found"))?;
+}
+```
