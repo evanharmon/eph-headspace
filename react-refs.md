@@ -1,6 +1,12 @@
 # REACT REFS
 Requires stateful component
 
+## Summary
+Notes on the use of refs in React
+
+## Resources
+[React Doc](https://reactjs.org/docs/refs-and-the-dom.html)
+
 ## Get DOM Node of component
 ```
 class Hand extends React.Component {
