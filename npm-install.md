@@ -1,16 +1,34 @@
 # NPM INSTALL
 
-## Install specific version
-`npm install {package}@{version}`
+## Summary
+Notes on installing npm modules / packages via the CLI
+
+## Install Specific Version
+```console
+npm install {package}@{version}
+```
 
 ## Install Private Module
-`npm install @company/private-package`
+```console
+npm install @company/private-package
+```
 
-## Install from github
-`npm install git://github.com/evanharmon/eslint-config-harmonsoft`
+## Install Module From Github
+```console
+npm install git://github.com/evanharmon/eslint-config-harmonsoft
+```
 
-## Speed up in Production
-`npm install --production`
+## Speed Up In production
+```console
+npm install --production
+```
 
-## output only whats necessary for logging
-`npm install --loglevel warn`
+## Output Only Whats Necessary For Logging
+```console
+npm install --loglevel warn
+```
+
+## Install As Continuous Integration
+```console
+npm ci
+```

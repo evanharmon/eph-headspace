@@ -1,16 +1,29 @@
 # NPM MODULES
 
+## Summary
+Notes on interacting with npm modules / packages via the CLI
+
 ## View Versions
-`npm view {package} versions`
+```console
+npm view {package} versions
+```
 
-## View packages installed globally
-`npm ls --global --depth 0`
+## View Packages Installed Globally
+```console
+npm ls --global --depth 0
+```
 
-## Inspect module for malicious hooks
-`npm show $module scripts`
+## Inspect Module For Malicious Hooks
+```console
+npm show $module scripts
+```
 
-## Make package available locally
-`npm link`
+## Make Package Available Locally
+```console
+npm link
+```
 
-## Use local package
-`npm link package_name`
+## Use Local Package
+```console
+npm link package_name
+```
