@@ -13,6 +13,15 @@ let mut file = File::create("log.txt").expect("create file");
 write!(file, "{}", strings).expect("write to file");
 ```
 
-## Write Line To File 
+## Open File From Path
 ```rust
+read_and_collect_samples<P: AsRef<Path>>(file_path: P) {}
+```
+
+## Open File From String
+```rust
+fn read_spec_from_file(file_path: &str) -> WavSpec {
+    let reader = WavReader::open(file_path).expect("Something went wrong reading the file");
+    reader.spec()
+}
 ```
