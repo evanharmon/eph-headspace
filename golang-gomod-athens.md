@@ -7,6 +7,9 @@ started manually
 ### Install
 ```console
 go get -u github.com/gomods/athens/cmd/proxy
+cd ~/go/src/github.com/gomods/athens/cmd/proxy
+go install
+proxy &
 ```
 
 ### Environmental Variables
@@ -50,3 +53,6 @@ go run .
 ```console
 sudo rm -fr $(go env GOPATH)/pkg/mod
 ```
+
+## Run Athens From Local Disk Storage With Docker
+[Instructions](https://docs.gomods.io/install/shared-team-instance/)
