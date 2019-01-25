@@ -48,3 +48,6 @@ services:
     security_opt:
       - "seccomp:unconfined"
 ```
+
+## Could Not Launch Process Error Fork/Exec
+pass to docker run `--security-opt=seccomp:unconfined`
