@@ -38,3 +38,8 @@ do
     tail -f /dev/null & wait ${!}
 done
 ```
+
+## Extend $PATH
+```console
+ENV PATH="/root/go/bin:${PATH}"
+```
