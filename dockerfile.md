@@ -5,7 +5,7 @@
 
 ## Send Arguments to Dockerfile on Build
 ```console
-$ docker build --build-arg userHome=$HOME .
+docker build --build-arg userHome=$HOME .
 ```
 
 ## Use Argument in DockerFile
@@ -40,6 +40,11 @@ done
 ```
 
 ## Extend $PATH
-```console
+```
 ENV PATH="/root/go/bin:${PATH}"
+```
+
+## Expose Port
+```
+EXPOSE 8080/tcp
 ```
