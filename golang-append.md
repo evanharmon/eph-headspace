@@ -1,6 +1,6 @@
 # GOLANG APPEND
 
-## Append Stramed Chunks
+## Append Streamed Chunks
 ```golang
 content = []byte
 for {
@@ -15,3 +15,10 @@ for {
   content = append(content, chunk...)
 }
 ```
+
+## Append Key / Value (Property) To map[string]interface{}
+Don't need Append!
+```golang
+input := map[string]interface{}{"processor_type": "debugger"}
+input["name"] = "DeBugger1"
+  ```
