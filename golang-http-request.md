@@ -1,20 +1,29 @@
 # GOLANG HTTP REQUEST
 
 ## Get a form field
-```
+
+```golang
 r.ParseForm()
 id := r.Form["id"]
 ```
 
 ## Check Response Codes
+
+avoid `suspect or` by using two separate ifs
+
 ```golang
-if resp.StatusCode != 200 {
+if resp.StatusCode < 200 {
+  return nil, fmt.Errorf("HTTP Response error status: %d\n", resp.StatusCode)
+}
+
+if resp.StatusCode > 201 {
   return nil, fmt.Errorf("HTTP Response error status: %d\n", resp.StatusCode)
 }
 ```
 
 ## Example
-```
+
+```golang
 package main
 
 import (
