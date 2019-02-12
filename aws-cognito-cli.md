@@ -33,3 +33,23 @@ get user pool id first
 aws cognito-idp list-user-pools --max-results 5
 aws cognito-idp list-users --user-pool-id us-west-2_eeeeeeeee
 ```
+
+## Create test user
+
+```console
+aws cognito-idp sign-up \
+  --region $AWS_DEFAULT_REGION \
+  --client-id $AWS_COGNITO_APP_CLIENT_ID \
+  --username admin@example.com \
+  --password TestPassw0rd! \
+  --user-attributes Name=email,Value=admin@example.com
+```
+
+## Confirm user
+
+```console
+aws cognito-idp admin-confirm-sign-up \
+  --region $AWS_DEFAULT_REGION \
+  --user-pool-id $AWS_COGNITO_USER_POOL_ID \
+  --username admin@example.com
+```
