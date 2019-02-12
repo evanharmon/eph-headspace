@@ -39,3 +39,15 @@ BETTER METHOD
 ```bash
 yum -y install $(cat filename cat | tr '\n' ' ')
 ```
+
+## List All Available Group Packages
+
+```console
+yum grouplist
+```
+
+## Get Info On Group Package
+
+```console
+yum groupinfo "Development Tools"
+```
