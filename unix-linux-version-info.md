@@ -1,5 +1,11 @@
 # Get Linux OS Type
-`$ uname -a`
+
+```console
+uname -a
+```
 
 # Check Version
-`$ lsb_release -r`
+
+```console
+lsb_release -r
+```
