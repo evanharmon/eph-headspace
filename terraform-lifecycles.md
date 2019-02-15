@@ -16,3 +16,11 @@ timeouts {
 	delete = "2h"
 }
 ```
+
+## Prevent Resource Destroy
+
+```
+lifecycle {
+  prevent_destroy = true
+}
+```
