@@ -4,7 +4,20 @@
 
 Notes on using hashicorp packer
 
-## Run Provisioner Script Only On Docker
+## Builders
+
+Function in series - so for example the docker image will build, then the ami
+
+## Docker Builds
+
+#### Attach Volume
+
+```
+"volumes": [{ "/tmp/myfolder": "/root/myfolder" }]
+
+```
+
+#### Run Provisioner Script Only On Docker
 
 [SO](https://stackoverflow.com/questions/40132475/packer-sudo-su-condition-for-builders)
 
@@ -15,5 +28,36 @@ Notes on using hashicorp packer
     "apt-get install sudo"
   ],
   "only": ["docker"]
+}
+```
+
+#### Typical Setup For ECR Docker Builds Based On ECR Image
+
+```
+{
+  "builders": [
+    {
+      "type": "docker",
+        "commit": true,
+        "ecr_login": true,
+        "image": "999999999999.dkr.ecr.us-east-1.amazonaws.com/myrepo",
+        "login_server": "999999999999.dkr.ecr.us-east-1.amazonaws.com/",
+        "privileged_mode": true
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "999999999999.dkr.ecr.us-east-1.amazonaws.com/myrepo",
+        "tag": "latest"
+      },
+      {
+        "type": "docker-push",
+        "ecr_login": true,
+        "login_server": "999999999999.dkr.ecr.us-east-1.amazonaws.com/"
+      }
+    ]
+  ]
 }
 ```
