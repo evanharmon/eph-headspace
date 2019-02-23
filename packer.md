@@ -6,8 +6,6 @@ Notes on using hashicorp packer
 
 ## Builders
 
-Function in series - so for example the docker image will build, then the ami
-
 ## Docker Builds
 
 #### Attach Volume
