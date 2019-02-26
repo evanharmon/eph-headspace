@@ -20,8 +20,3 @@ amplify env checkout `env_name` --restore
 ```
 
 This step adds the necessary amplify files that are in the gitgnore and not stored in the repo
-
-## AppSync / GraphQL Schema
-
-Do not add in your own mutations / queries. Let them be generated.
-Otherwise the cloudformation will barf.
