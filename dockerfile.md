@@ -1,7 +1,16 @@
 # DOCKERFILE
 
+## Summary
+Notes on working with Dockefiles
+
+## Resources
+[Docs](https://docs.docker.com/engine/reference/builder/)
+[Multistage Builds](https://docs.docker.com/develop/develop-images/multistage-build/)
+
 ## Quiet Front-End no prompts
-`RUN DEBIAN_FRONTEND=noninteractive apt-get update`
+```
+RUN DEBIAN_FRONTEND=noninteractive apt-get update
+```
 
 ## Send Arguments to Dockerfile on Build
 ```console
@@ -11,7 +20,7 @@ docker build --build-arg userHome=$HOME .
 ## Use Argument in DockerFile
 ```
 ARG userHome
-add $userHome/.config /home/dev
+ADD $userHome/.config /home/dev
 ```
 
 ## Change Directory
@@ -47,4 +56,12 @@ ENV PATH="/root/go/bin:${PATH}"
 ## Expose Port
 ```
 EXPOSE 8080/tcp
+```
+
+## Multistage Builds
+Use multiple images in a Dockerfile and copy files between them
+```
+FROM eph-bin/base:latest AS bins
+FROM eph-nvim/base:latest
+COPY --from=bins /root/bins /root/bins
 ```
