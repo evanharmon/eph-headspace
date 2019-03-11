@@ -9,3 +9,16 @@ Notes on working with git submodules
 ```console
 git submodule add -b master -- https://git@github.com/myorg/myrepo.git
 ```
+
+## List Submodules
+
+```console
+git config --local --list
+```
+
+## Remove Submodule
+
+```console
+git config --local --unset submodule.myfolder/mysubsfolder/submodulename.active
+git config --local --unset submodule.myfolder/mysubsfolder/submodulename.url
+```
