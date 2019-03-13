@@ -38,3 +38,13 @@ or resources not in use.
 ```console
 terraform destroy --target=module.mymod
 ```
+
+#### Move `main.tf` resources in to modules
+
+[Blog](https://ryaneschinger.com/blog/terraform-state-move/)
+
+Remove resource from main.tf file, add to `modules/mymodule/main.tf` file, then:
+
+```console
+terraform state mv aws_elb.weblb module.web.aws_elb.weblb
+```

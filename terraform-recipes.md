@@ -1,10 +1,13 @@
 # TERRAFORM RECIPES
 
 ## Summary
+
 Delicious
 
 ## Get AWS Account ID
+
 [Doc](https://www.terraform.io/docs/providers/aws/d/caller_identity.html)
+
 ```
 data "aws_caller_identity" {}
 module "example" {
@@ -13,6 +16,7 @@ module "example" {
 ```
 
 ## Append Timestamp To Resource Name
+
 ```
 resource "some_resource" "foo" {
     # Change 8 for your desired substring length of timestamp
@@ -22,7 +26,9 @@ resource "some_resource" "foo" {
     }
 }
 ```
+
 or
+
 ```
 locals {
   timestamp = "${replace(timestamp(), "/[-:TZ]/", "")}000000000000000000"
