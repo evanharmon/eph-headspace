@@ -33,6 +33,8 @@ or resources not in use.
 
 ## Resources
 
+[TF Plan](https://www.terraform.io/docs/commands/plan.html)
+
 #### Destroy entire module
 
 ```console
@@ -47,4 +49,22 @@ Remove resource from main.tf file, add to `modules/mymodule/main.tf` file, then:
 
 ```console
 terraform state mv aws_elb.weblb module.web.aws_elb.weblb
+```
+
+## Show Details Of A Resource
+
+```console
+terraform state show module.storage.aws_iam_role_policy.auth
+```
+
+## Pass Variables To Plan
+
+```console
+terraform plan -out=tfplan -var env=sandbox
+```
+
+## Limit Plan To Modules
+
+```console
+terraform plan -out=tfplan --target=module.appsync
 ```
