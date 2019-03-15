@@ -17,3 +17,22 @@ Notes on using VTL with appsync
   $util.error("input object missing required field: id")
 #end
 ```
+
+## Optional Auto-Generated ID
+
+```vtl
+{
+  "version": "2017-02-28",
+  "operation": "PutItem",
+  "key": {
+      "id":     $util.dynamodb.toDynamoDBJson($util.defaultIfNullOrBlank($ctx.args.input.id, $util.autoId()))
+  },
+  "attributeValues": $util.dynamodb.toMapValuesJson($context.args.input),
+  "condition": {
+      "expression": "attribute_not_exists(#id)",
+      "expressionNames": {
+          "#id": "id"
+    }
+  }
+}
+```
