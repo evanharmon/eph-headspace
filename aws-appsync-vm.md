@@ -36,3 +36,21 @@ Notes on using VTL with appsync
   }
 }
 ```
+
+## Query Partiion Key And Sort/Range Key
+
+[SO](https://stackoverflow.com/questions/52580083/aws-app-sync-dynamodb-resolver-usage-with-begin-with-expression-in-sort-key-not)
+
+```vtl
+https://stackoverflow.com/questions/52580083/aws-app-sync-dynamodb-resolver-usage-with-begin-with-expression-in-sort-key-not{
+  "version": "2017-02-28",
+  "operation": "Query",
+  "query": {
+    "expression": "id = :id and begins_with(sortKey, :sortKey)",
+    "expressionValues": {
+      ":id":      $util.dynamodb.toDynamoDBJson($ctx.args.id),
+      ":sortKey": $util.dynamodb.toDynamoDBJson("ssk")
+    },
+  }
+}
+```
