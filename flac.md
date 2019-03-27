@@ -19,3 +19,15 @@ metaflac --list my-file.flac
 ```console
 hexdump my-file.flac| head -n 6
 ```
+
+#### Read Header In Python
+
+```python
+with open("myfile.flac", "rb") as binary_data:
+    # metadata block is first 32 bytes
+    data = binary_data.read(32)
+    metadata = binascii.hexlify(data)
+    print(metadata)
+    numsamples = data[8:16]
+    print("numsamples ",numsamples)
+```
