@@ -10,12 +10,12 @@ Notes on working with FLAC files
 
 #### Read Header Info From File With Metaflac
 
-```sh
+```console
 metaflac --list my-file.flac
 ```
 
 #### Read Header From File As Hex
 
-```sh
+```console
 hexdump my-file.flac| head -n 6
 ```
