@@ -97,8 +97,27 @@ docker run --rm -it --security-opt seccomp=unconfined debian:jessie \
     unshare --map-root-user --user sh -c whoami
 ```
 
-## Mount SSH Folder To Container
+## Mount Folder To Container
+
+[Mount Consistency](https://docs.docker.com/storage/bind-mounts/#configure-mount-consistency-for-macos)
+use delegate consistency on MAC OSX to help performance
+
+SSH folder
 
 ```console
-docker run -it --name nvim --mount type=bind,source="$(pwd)/.ssh",destination=/root/.ssh,readonly eph-nvim/base:latest
+docker run -it --rm --name nvim \
+  --mount type=bind,source="$HOME/.ssh",destination=/root/.ssh,readonly \
+  eph-nvim/base:latest
+```
+
+Git repo folder
+
+```
+PROJECT_DIR="$(basename "$PWD")"; CONTAINER_DIR="/root/code"; \
+docker run -it --rm --name nvim \
+  --mount type=bind,source="$HOME/.ssh",destination=/root/.ssh,readonly \
+  --mount type=bind,source="$(pwd)",destination="$CONTAINER_DIR"/"$PROJECT_DIR",consistency=delegated \
+  -w "$CONTAINER_DIR"/"$PROJECT_DIR" \
+  --env TERM=xterm-256color \
+  eph-nvim/base:latest \
 ```

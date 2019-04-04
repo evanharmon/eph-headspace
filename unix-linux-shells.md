@@ -160,3 +160,9 @@ basename "$PWD"
 ```sh
 printf "%X\n" 1675637
 ```
+
+## Set Variable On Command Line And Use In Command
+
+```console
+PROJECT_DIR="$(basename "$PWD")"; echo "$PROJECT_DIR"
+```
