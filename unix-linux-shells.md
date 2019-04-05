@@ -166,3 +166,11 @@ printf "%X\n" 1675637
 ```console
 PROJECT_DIR="$(basename "$PWD")"; echo "$PROJECT_DIR"
 ```
+
+## Avoid Duplicating \$PATH Entries Between Bash & Zsh
+
+```console
+if [[ ":$PATH:" != *":/usr/local/go/bin:$GOPATH/bin:"* ]]; then
+    export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
+fi
+```
