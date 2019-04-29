@@ -61,3 +61,13 @@ A way to remove objects from the CDN but you pay for it
 ## Grant Read Permissions On Bucket
 
 If yes, updates the S3 files in the new CDN bucket to have read access
+
+## S3 Logging Bucket Settings
+
+Encryption must be AES-256. KMS will prevent Cloudfront from writing any logs to the s3 bucket
+
+## Unzip Logs
+
+```console
+gzip -d 11111111111111.2019-04-25-13.eeeeeeee.gz
+```

@@ -1,6 +1,7 @@
 # AWS IAM CLI
 
 ## Create Role
+
 ```
 {
   "Version": "2012-10-17",
@@ -26,6 +27,7 @@ $ aws iam create-role \
 ```
 
 # Attach An Inline Role Policy
+
 ```
 $ aws iam put-role-policy \
     --role-name hss-auth-unauthorized \
@@ -34,8 +36,18 @@ $ aws iam put-role-policy \
 ```
 
 # Attach Role Policy
+
 ```
 $ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess \
     --role-name LimitCheckRole
+```
+
+## Change Password
+
+```console
+aws iam update-login-profile \
+  --user-name myusername \
+  --password "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" \
+  --no-password-reset-required
 ```
