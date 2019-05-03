@@ -15,3 +15,14 @@ tf state show data.template_file.storage_policy
 ```
 "aws:userId": [%{ if "${env}" == "prod" } "${id_one}" %{ else } "${id_two}, ${id_three}" %{ endif ~}]
 ```
+
+## Debug Generated Template File
+
+```
+resource "null_resource" "debug_policy" {
+  provisioner "local-exec" {
+    command = "echo \"${data.template_file.policy.rendered}\" > policy.generated.json"
+  }
+}
+
+```
