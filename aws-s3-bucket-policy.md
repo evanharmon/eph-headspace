@@ -12,7 +12,8 @@ differs from IAM!
 
 ## Invalid Action Errors
 
-Beware of `s3:PutAccountPublicAccessBlock` and `s3:GetAccountPublicAccessBlock`.
+#### `s3:PutAccountPublicAccessBlock` and `s3:GetAccountPublicAccessBlock`.
+
 Both only support the `*` as Resource
 
 ```json
@@ -28,6 +29,10 @@ Both only support the `*` as Resource
   ]
 }
 ```
+
+#### `s3:PutBucketObjectLockConfiguration`
+
+bucket level resource! does not support sub resources
 
 ## Deny Multiple AND Conditions
 
@@ -64,3 +69,12 @@ different conditions you need to put them in separate statements
   ]
 }
 ```
+
+## Prevent Bucket Lockout
+
+S3 Buckets can be locked out by incorrect / inadvertent changes to the bucket policy
+
+#### Testing / Debugging Best Practices
+
+- Keep a base policy in at all times to prevent lockout
+- Use a separate AWS account for testing where you have ROOT access
