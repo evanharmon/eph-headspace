@@ -47,3 +47,10 @@ install with flags to fix this issue
 ```console
 npm install --global pure-prompt --allow-root --unsafe-perm=true
 ```
+
+## Install Globally And Link
+
+```console
+npm install -g @wdio/cli
+npm link @wdio/cli
+```
