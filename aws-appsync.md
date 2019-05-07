@@ -10,3 +10,7 @@ Notes on using aws appsync
 [Resolver Mapping](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference-overview.html)
 [Resolver VTL Programming](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference-programming-guide.html)
 [VTL Utility Functions](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-util-reference.html)
+
+## Appsync Admin / Public Separate APIs
+
+Note that subscriptions won't be supported
