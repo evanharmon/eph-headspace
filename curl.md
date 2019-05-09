@@ -94,3 +94,6 @@ curl -u <my-api-token>: -H 'Content-Type: '$TYPE''
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
+## Malformed URL On File Download
+try `curl -Lo` instead of `curl -LO`
