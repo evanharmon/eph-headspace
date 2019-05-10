@@ -23,3 +23,13 @@ Assuming a mutation exists in
 add a custom resolver with a similar name like below:
 
 `amplify/backend/api/myprojectname/resolvers/Mutation.createUser.req.vtl`
+
+## Codegen Error Missing Backend
+
+`ENOENT: no such file or directory, open /Users/eharmon/code/izotope/transfer-plus/amplify/#current-cloud-backend/amplify-meta.js`
+copy from backend folder
+
+```console
+mkdir -p ./amplify/#current-cloud-backend
+cp ./amplify/backend/amplify-meta.json ./amplify/\#current-cloud-backend
+```
