@@ -73,3 +73,12 @@ attribute_exists
   }
 }
 ```
+
+## Correctly Throw Error In Response Template Mapping
+
+```vtl
+#if ( $ctx.error )
+    $util.error($ctx.error.message, $ctx.error.type)
+#end
+$util.toJson($ctx.result)
+```
