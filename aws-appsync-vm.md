@@ -54,3 +54,22 @@ https://stackoverflow.com/questions/52580083/aws-app-sync-dynamodb-resolver-usag
   }
 }
 ```
+
+## DynamoDb UpdateItem With Condition
+
+attribute_exists
+
+```vtl
+{
+  "version": "2018-05-29",
+  "operation": "UpdateItem",
+  "key": {
+    "id": { "S": "$id" },
+    "sortKey": { "S": "$sortKey" }
+  },
+  "update": $util.toJson($update),
+  "condition": {
+    "expression": "attribute_exists(id) and attribute_exists(sortKey)"
+  }
+}
+```
