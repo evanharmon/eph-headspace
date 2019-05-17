@@ -60,3 +60,21 @@ new Date()
   .toString()
   .substring(0, 10);
 ```
+
+## Create New Date Object From UNIX Timestamp Int
+
+timestamp will be 10 digits instaed of 14, add padded 0s
+
+```javascript
+const ts = 1559088000;
+new Date(parseInt(`${ts}0000`));
+```
+
+## Check If Date Object
+
+[SO](https://stackoverflow.com/questions/643782/how-to-check-whether-an-object-is-a-date)
+
+```javascript
+const dt = new Date(1557931407000);
+console.log(dt instanceof Date);
+```
