@@ -56,3 +56,17 @@ fireEvent.click(getByLabelText(/create-button/i));
 remember the browser stores the value as `yyyy-MM-dd` not `12/31/2019`!!
 
 working version `https://codesandbox.io/s/rln7q07o0m`
+
+## JEST-DOM Configuration
+
+Provides support for `.toHaveTextContent` and other dom expects
+in package.json
+
+```javascript
+"jest": {
+  "setupFilesAfterEnv": [
+    "jest-dom/extend-expect",
+    "react-testing-library/cleanup-after-each"
+  ]
+},
+```
