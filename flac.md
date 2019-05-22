@@ -4,6 +4,10 @@
 
 Notes on working with FLAC files
 
+## Install
+
+amazon-linux `yum install -y libogg-devel flaclib-devel`
+
 ## Header
 
 [Format](https://xiph.org/flac/format.html#frame_header)
