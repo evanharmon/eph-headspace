@@ -52,3 +52,22 @@ run tests with tag
 ```console
 go test --tags=integration
 ```
+
+## Test Helper
+
+[Golang.org](https://blog.golang.org/go1.9)
+
+```golang
+package p
+
+import "testing"
+
+func failure(t *testing.T) {
+    t.Helper() // This call silences this function in error reports.
+    t.Fatal("failure")
+}
+
+func Test(t *testing.T) {
+    failure(t)
+}
+```

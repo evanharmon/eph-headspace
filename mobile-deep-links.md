@@ -11,3 +11,4 @@ Notes on using mobile deep links with AWS
 [Cloudfront Article](https://customer.io/docs/universal-links)
 [SendGrid Guide](https://sendgrid.com/docs/ui/sending-email/universal-links/)
 [Android assetlinks.json](https://developer.android.com/training/app-links/verify-site-associations.html)
+[Universal Links Hell](https://medium.com/mobile-growth/the-things-i-hate-and-you-should-know-about-apple-universal-links-5beb15f88a29)

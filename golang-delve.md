@@ -8,6 +8,12 @@ cd $GOPATH/src/github.com/go-delve/delve
 make install
 ```
 
+### Install For Linux On Mac
+
+```
+GOARCH=amd64 GOOS=linux go build -o <delve folder path>/dlv github.com/derekparker/delve/cmd/dlv
+```
+
 ### Using Vim-Delve
 
 Set breakpoint and run delve
