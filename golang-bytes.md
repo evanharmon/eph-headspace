@@ -21,3 +21,9 @@ func toBinaryBytes(s string) string {
 	return fmt.Sprintf("%s", buffer.Bytes())
 }
 ```
+
+## Convert Struct To Byte Array
+
+```golang
+[]byte(fmt.Spritnf("%v", struct))
+```

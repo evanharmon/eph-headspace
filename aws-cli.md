@@ -41,6 +41,12 @@ $ aws sts get-session-token \
     --token-code code-from-token
 ```
 
+# Set ENV Variable From Get-Session-Token
+
+```console
+export AWS_SESSION_TOKEN="$(aws sts get-session-token | jq '.Credentials.SessionToken')"
+```
+
 ## Quick Way To Get Account ID
 
 ```console

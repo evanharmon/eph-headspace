@@ -53,3 +53,9 @@ fmt.Println(res)
 fmt.Println(string(body))
 }
 ```
+
+## Recalculate Content Length
+
+```golang
+b, err := io.Copy(ioutil.Discard, req.Body)
+```

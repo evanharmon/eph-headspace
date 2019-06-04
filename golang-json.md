@@ -20,3 +20,12 @@ err := json.Unmarshal([]byte("mybites"), &res)
 ```golang
 spec, err := json.Marshal(chain)
 ```
+
+## Omit Field If Empty
+
+```golang
+type Response2 struct {
+    Page   int      `json:"omitempty"`
+    Fruits []string `json:"fruits"`
+}
+```
