@@ -11,7 +11,8 @@ make install
 ### Install For Linux On Mac
 
 ```
-GOARCH=amd64 GOOS=linux go build -o <delve folder path>/dlv github.com/derekparker/delve/cmd/dlv
+cd $HOME/go
+GOARCH=amd64 GOOS=linux go build -o src/github.com/derekparker/delve/cmd/dlv github.com/derekparker/delve/cmd/dlv
 ```
 
 ### Using Vim-Delve
@@ -95,4 +96,16 @@ show-location-expr     false
 source-list-line-color 34
 debug-info-directories [/usr/lib/debug/.build-id]
 (dlv) config max-string-len 1000
+```
+
+## Delve Go Test
+
+```console
+dlv test
+```
+
+## Delve Go Test Run Specific Tests
+
+```console
+dlv test -- -test.v --test.run TestMyFunction
 ```
