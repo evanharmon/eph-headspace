@@ -1,11 +1,21 @@
-# List routes
+# LINUX ROUTES
+
+## Summary
+
+Notes on working with routes in linux
+
+## List Routes
+
 `$ route`
 
-# Add default gateway
+## Add Default Gateway
+
 `$ sudo route add default gw 192.168.0.254`
 
-# list ip routing without resolves
+## List IP Routing Without Resolves
+
 `$ route -n`
 
-# Edit resolve routes
+## Edit Resolve Routes
+
 `$ vi /etc/resolv.conf`

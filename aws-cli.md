@@ -2,23 +2,29 @@
 
 # Install AWS CLI
 
-`$ brew install awscli`
+```console
+brew install awscli
+```
 
 # Update AWS CLI
 
-`$ pip install --upgrade --user awscli`
+```console
+pip install --upgrade --user awscli
+```
 
 # CLI Shell Variables
 
-```
-$ export AWS_DEFAULT_PROFILE='hss-dev'
-$ export AWS_DEFAULT_REGION='us-east-1'
-$ export AWS_DEFAULT_OUTPUT='json'
+```console
+export AWS_DEFAULT_PROFILE='hss-dev'
+export AWS_DEFAULT_REGION='us-east-1'
+export AWS_DEFAULT_OUTPUT='json'
 ```
 
 # Check Current Profile
 
-`$ aws configure list`
+```console
+aws configure list
+```
 
 # Set Up Role Switching
 
@@ -35,10 +41,10 @@ mfa_serial = arn:aws:iam::devaccount#:mfa/username
 
 (https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/)
 
-```
-$ aws sts get-session-token \
-    --serial-number arn-of-the-mfa-device \
-    --token-code code-from-token
+```console
+aws sts get-session-token \
+  --serial-number arn-of-the-mfa-device \
+  --token-code code-from-token
 ```
 
 # Set ENV Variable From Get-Session-Token
