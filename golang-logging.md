@@ -16,3 +16,19 @@ Notes on using log methods and logging across packages
 //*s is something the actual value
 fmt.Printf("%v %p %v\n", &s, s, *s)
 ```
+
+## Pretty Print Struct
+
+[Printing struct with property names](https://stackoverflow.com/questions/24512112/how-to-print-struct-variables-in-console)
+
+```golang
+fmt.Printf("%+v\n", yourProject)
+```
+
+## FatalF
+
+Log error and then exit. FatalF is followed by an automatic call to os.Exit(1)
+
+```golang
+log.Fatalf("Abort Abort error", err)
+```
