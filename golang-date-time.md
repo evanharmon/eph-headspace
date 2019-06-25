@@ -1,13 +1,16 @@
 # GOLANG DATE TIME
 
 ## Current Time
+
 `t := time.Now()`
 
 ## Formatting
+
 ```
 t := time.Now()
 fmt.Println(t.Format("20060102150405"))
 ```
+
 as Go uses following constants to format date,refer here
 
 ```
@@ -42,4 +45,12 @@ const (
 ```
 
 ## Current Zulu Time
+
 `t.Format(time.RFC3339)`
+
+## Timer
+
+```golang
+duration := time.Duration(10) * time.Second
+time.Sleep(duration)
+```

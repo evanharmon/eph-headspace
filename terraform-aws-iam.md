@@ -17,3 +17,8 @@ resource "aws_iam_role_policy_attachment" "sto-readonly-role-policy-attach" {
   policy_arn = "${data.aws_iam_policy.ReadOnlyAccess.arn}"
 }
 ```
+
+## Potential Cause aws_iam_role Continually Updated
+
+[GH Issue](https://github.com/hashicorp/terraform/issues/11873)
+Multiple role policy attachments can clobber?

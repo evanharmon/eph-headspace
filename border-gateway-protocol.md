@@ -1,21 +1,28 @@
 # BORDER GATEWAY PROTOCOL (BGP)
 
 ## Summary
+
 Primary routing protocol of the internet operating over TCP.
 Path routing protocol via path-vectors.
 
-## Links
+## Resources
+
 [Wiki](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)
+[BGP Explanation By CloudFlare](https://blog.cloudflare.com/how-verizon-and-a-bgp-optimizer-knocked-large-parts-of-the-internet-offline-today/)
 
 ## Types
+
 External BGP (EBGP)
 Internal BGP (IBGP)
 
 ## Discovery
+
 BGP has no auto discovery system
 
 ## Sharing
+
 Only shares best path
 
 ## Autonomous System (AS)
+
 set of routers

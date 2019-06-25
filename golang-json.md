@@ -29,3 +29,10 @@ type Response2 struct {
     Fruits []string `json:"fruits"`
 }
 ```
+
+## Marshal String Escaped JSON
+
+[SO](https://stackoverflow.com/questions/16846553/how-to-unmarshal-an-escaped-json-string-in-go/38684420)
+[Go Playground](http://play.golang.org/p/id4f4r9tEr)
+
+use `strconv.Unquote()` first

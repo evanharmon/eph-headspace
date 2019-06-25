@@ -6,6 +6,11 @@ Cheap for reads - expensive for writes
 
 Notes on dynamodb pricing
 
+## On Demand
+No scaling setup necessary
+Remember not to specify read or write capacity units on global indexes if table
+is set to on demand
+
 ## Provisioned Throughput Capacity
 
 - write throughput \$0.0065 per hour for every 10 units

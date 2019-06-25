@@ -4,15 +4,21 @@
 
 Notes on testing with Jest
 
-## Error watching file for changes: EMFILE
-
-`brew install watchman`
-
 ## Resources
 
 [Github Cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
 
-## Error Your Test Suite Must Contain At Least One Test
+## Error watching file for changes: EMFILE
+
+`brew install watchman`
+
+## Run Single Test File
+
+```console
+jest --testRegex MyComponent.test.js
+```
+
+## Error: Your Test Suite Must Contain At Least One Test
 
 jest cli testRegex is probably including snapshots
 
@@ -24,4 +30,10 @@ should be
 
 ```console
 jest --testRegex MyComponent/MyComponent.test.js
+```
+
+## Debug Jest Test With Inspector
+
+```console
+node --inspect node_modules/.bin/jest --runInBand
 ```
