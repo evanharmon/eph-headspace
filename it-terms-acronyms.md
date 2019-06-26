@@ -1,7 +1,9 @@
 # IT TERMS
 
 ## Time To Live (TTL)
+
 an object that is created but only alive for a set amount of time
+
 - 86400 is 24 hours
 
 ## Long Term Support (LTS)
@@ -13,6 +15,7 @@ an object that is created but only alive for a set amount of time
 # Minimum Viable Product (MVP)
 
 ## Tech Debt
+
 When a repository, or application, contains many applications that need to be
 broken out in to separate applications
 
@@ -29,9 +32,11 @@ broken out in to separate applications
 ## Don't Repeat Yourself (DRY)
 
 ## Recovery Time Objective (RTO)
+
 Restore business to operational status / slas
 
 ## Recovery Point Objective (RPO)
+
 acceptable data loss as measured in time
 
 ## Distaster recovery (DR)
@@ -39,9 +44,11 @@ acceptable data loss as measured in time
 ## Web Application Firewall (WAF)
 
 ## Mash / Mung until no good
+
 irrevocable destruction of data
 
 ## Realtime Media Processing (RTMP)
+
 Used for Media Streaming like: Adobe flash
 
 ## Transactions Per Second (TPS)
@@ -54,4 +61,18 @@ Used for Media Streaming like: Adobe flash
 
 ## Root Cause Analysis (RCA)
 
-## Redundant Array Of Independent Disks (RAID_)
+## Redundant Array Of Independent Disks (RAID\_)
+
+## Enterprise Network Operations Center (ENOC)
+
+## Route Object Authorization (ROA)
+
+simple X.509 certificates
+
+## Autonomous System Number (ASN)
+
+## Internet Routing Registries (IRR)
+
+## Resource Public Key Infrastructure (RPKI)
+
+## Local Internet Registry (LIR)

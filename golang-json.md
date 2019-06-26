@@ -25,7 +25,7 @@ spec, err := json.Marshal(chain)
 
 ```golang
 type Response2 struct {
-    Page   int      `json:"omitempty"`
+    Page   int      `json:"page,omitempty"`
     Fruits []string `json:"fruits"`
 }
 ```

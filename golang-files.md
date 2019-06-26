@@ -21,22 +21,6 @@ if err != nil {
 w.Flush()
 ```
 
-## Get Filename Without Extension
-
-[Github](https://siongui.github.io/2018/02/25/go-get-file-name-without-extension/)
-
-```golang
-func FilenameWithoutExtension(fn string) string {
-      return strings.TrimSuffix(fn, path.Ext(fn))
-}
-```
-
-## Split FileName And Directory
-
-```golang
-dir, file := filepath.Split(fpath)
-```
-
 ## Open File With Read And Write Access
 
 often causes 'bad file descriptor' error if you try and read from a write only

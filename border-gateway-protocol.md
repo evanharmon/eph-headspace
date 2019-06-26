@@ -9,6 +9,8 @@ Path routing protocol via path-vectors.
 
 [Wiki](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)
 [BGP Explanation By CloudFlare](https://blog.cloudflare.com/how-verizon-and-a-bgp-optimizer-knocked-large-parts-of-the-internet-offline-today/)
+[RPKI and BGP By CloudFlare](https://blog.cloudflare.com/rpki-details/)
+[Mutually Agreed Norms For Routing Security](https://www.manrs.org/)
 
 ## Types
 

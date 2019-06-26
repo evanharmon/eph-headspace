@@ -7,10 +7,11 @@ Notes on using golang's http response methods
 ## Dump Response For Debugging
 
 ```golang
-postdump, err := httputil.DumpRequestOut(r, true)
+requestDump, err := httputil.DumpRequest(req, true)
 if err != nil {
-    return false, err
+  fmt.Println(err)
 }
+fmt.Println(string(requestDump))
 ```
 
 ## Runtime Error: Invalid Memory Address Or Nil Pointer Dereference

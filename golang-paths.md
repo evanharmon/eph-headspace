@@ -2,7 +2,7 @@
 
 ## Summary
 
-Notes on using paths with go
+Notes on using paths with go. Includes notes on filepaths
 
 ## Get Absolute Path From Relative Path
 
@@ -11,4 +11,26 @@ Notes on using paths with go
 ```golang
 base := "/home/bob"
 fmt.Println(path.Join(base, "work/go", "src/github.com"))
+```
+
+## Get Filename Without Extension
+
+[Github](https://siongui.github.io/2018/02/25/go-get-file-name-without-extension/)
+
+```golang
+func FilenameWithoutExtension(fn string) string {
+      return strings.TrimSuffix(fn, path.Ext(fn))
+}
+```
+
+## Split FileName And Directory
+
+```golang
+dir, file := filepath.Split(fpath)
+```
+
+## Create All Subdirectories
+
+```golang
+err := os.MkdirAll("dirname", 0700)
 ```
