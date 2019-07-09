@@ -8,6 +8,7 @@ Notes on working with Dockefiles
 
 [Docs](https://docs.docker.com/engine/reference/builder/)
 [Multistage Builds](https://docs.docker.com/develop/develop-images/multistage-build/)
+[Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 ## Quiet Front-End no prompts
 
@@ -87,4 +88,13 @@ COPY --from=bins /root/bins /root/bins
 ```docker
 ARG A_VARIABLE
 ENV an_env_var=$A_VARIABLE
+```
+
+## Build Dockerfile From Std In With No Build Context
+
+[Guide](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#pipe-dockerfile-through-stdin)
+can speed up builds by not using files in the directory
+
+```console
+cat Dockerfile | docker build my-image/base:latest -
 ```

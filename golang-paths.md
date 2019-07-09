@@ -23,6 +23,12 @@ func FilenameWithoutExtension(fn string) string {
 }
 ```
 
+## Get Directory From Filepath
+
+```golang
+dir, fname := path.Split(keyPath)
+```
+
 ## Split FileName And Directory
 
 ```golang
@@ -33,4 +39,10 @@ dir, file := filepath.Split(fpath)
 
 ```golang
 err := os.MkdirAll("dirname", 0700)
+```
+
+## Test Path
+
+```golang
+startPath != path.Match(key, fmt.Sprintf("%s/%s"))
 ```
