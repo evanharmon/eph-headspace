@@ -33,6 +33,32 @@ MFA can be added to specific roles
 
 who is allowed to assume role
 
+example trust relationship
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codebuild.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    },
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": ["arn:aws:iam::111111111111:user/myname"]
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
 ### Permissions Policy
 
 allowed actions and resources

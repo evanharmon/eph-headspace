@@ -22,7 +22,12 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update
 docker build --build-arg userHome=$HOME .
 ```
 
-## Use Argument in DockerFile
+## ARG In Dockerfiles
+
+[Docs](https://docs.docker.com/engine/reference/builder/#arg)
+ENV overrides ARG
+
+#### Use Argument in DockerFile
 
 ```
 ARG userHome
@@ -37,7 +42,12 @@ ADD $userHome/.config /home/dev
 
 `USER dev2`
 
-## Set Environment Variable In Dockerfile
+## ENV In Dockerfiles
+
+[Docs](https://docs.docker.com/engine/reference/builder/#arg)
+ENV overrides ARG
+
+#### Set Environment Variable In Dockerfile
 
 `ENV HOSTNAME nvim`
 
@@ -97,4 +107,24 @@ can speed up builds by not using files in the directory
 
 ```console
 cat Dockerfile | docker build my-image/base:latest -
+```
+
+## Fail On Any Stage In Pipe Command
+
+```
+If you want the command to fail due to an error at any stage in the pipe, prepend set -o pipefail && to ensure that an unexpected error prevents the build from inadvertently succeeding. For example:
+
+RUN set -o pipefail && wget -O - https://some.site | wc -l > /number
+```
+
+## Unset ENV Variables Not To Persist In Container
+
+Every `ENV` docker command creates a layer and will exist in the resulting
+docker container. To create a non-persisting env variable, use a chained `RUN`
+command.
+
+```dockerfile
+RUN export ADMIN_USER="mark" \
+    && echo $ADMIN_USER > ./mark \
+    && unset ADMIN_USER
 ```

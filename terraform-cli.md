@@ -68,3 +68,7 @@ terraform plan -out=tfplan -var env=sandbox
 ```console
 terraform plan -out=tfplan --target=module.appsync
 ```
+
+## Outputs Not Updating
+
+`terraform plan` will show no changes. Instead run `terraform refresh`

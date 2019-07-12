@@ -7,6 +7,8 @@ Notes on using the aws SQS service
 ## Resources
 
 [IAM Policy Lambda -> SNS](https://stackoverflow.com/questions/32211246/aws-sqs-permissions-for-aws-lambda)
+[Monitoring](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-monitoring-using-cloudwatch.html)
+[Cloudwatch Alarm Suggestions](https://www.bluematador.com/blog/how-to-monitor-amazon-sqs-with-cloudwatch)
 
 ## Use
 
@@ -85,3 +87,31 @@ queries all servers
 helps reduce costs
 eliminates false empty responses
 Set ReceiveMessageWaitTime to betweeen 1 and 20 seconds
+
+## SQS Messages Arriving Slowly
+
+[Delay Seconds Docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-delay-queues.html)
+
+Check the delivery delay. `DelaySeconds` is probably 90 seconds instead of 0 seconds
+
+## SQS Message Being Processed Too Many Times
+
+[Visiliby Timeout Docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html)
+
+Adjust the `VisibilityTimeout`. If the processing application / lambda takes 60
+seconds to process the message, the default setting of `VisibilityTimeout: 30s`
+will result in the message being processed multiple times.
+
+## SQS ReceiveMessages API Call Taking Too Long
+
+adjust the `waitTimeSeconds` to 1 second, so the api call will return in 1
+second with any messages. 0 seconds will return messages in the queue
+immediately.
+
+## CloudWatch Metrics
+
+Monitor `NumberOfMessagesSent` to determine if producer of messages has stopped
+working.
+
+Monitor `ApproximateAgeOfOldestMessage` to determine if messages are not being
+processed quickly enough.
