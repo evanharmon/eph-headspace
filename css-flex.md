@@ -60,3 +60,14 @@ flex: <flex-grow> <flex-shrink> <flex-basis>;
   flex: 1 1 0px;
 }
 ```
+
+## Flex Item Rendering Too High / At Top
+
+[SO](https://stackoverflow.com/questions/46270117/css-align-items-center-flexbox-visual-bug-in-firefox)
+
+happens in firefox / safari
+add this css
+
+```css
+top: 50%;
+```

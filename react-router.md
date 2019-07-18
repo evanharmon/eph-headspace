@@ -1,16 +1,20 @@
 # REACT-ROUTER
 
 ## Index Route
+
 - doesn't take a path - just a component
 - default component to show when path matches that of our parent route path
 
 ## Link
+
 - Renders as an <a> anchor element
 - css classes can be passed to Link
-`<Link to="/cart" className="btn btn-success">Cart</Link>`
+  `<Link to="/cart" className="btn btn-success">Cart</Link>`
 
 ## Navigate programatically
+
 use `<Redirect />` in combination with `setState()`
+
 ```
 class Login extends React.Component {
   state = {
@@ -43,3 +47,7 @@ class Login extends React.Component {
   }
 }
 ```
+
+## Authenticated Routes
+
+[Docs Example](https://reacttraining.com/react-router/web/example/auth-workflow)

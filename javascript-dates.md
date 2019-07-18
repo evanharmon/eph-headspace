@@ -46,7 +46,7 @@ const sapFormat = ‘YYYYMMDD’;
 moment(startDate, cbFormat).format(sapFormat)
 ```
 
-## Get Unix Timestamp
+## Get Unix Timestamp / Epoch
 
 ```javascript
 new Date().valueOf();
