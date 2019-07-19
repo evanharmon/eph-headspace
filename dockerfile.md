@@ -128,3 +128,13 @@ RUN export ADMIN_USER="mark" \
     && echo $ADMIN_USER > ./mark \
     && unset ADMIN_USER
 ```
+
+## Inspect `.dockerignore` And Build Context
+[SO](https://stackoverflow.com/questions/43808558/docker-command-option-to-display-or-list-the-build-context)
+Note: won't show dotfiles
+
+install `ncdu`. `brew install ncdu` or `yum install -y ncdu`
+
+```console
+ncdu -X .dockerignore
+```
