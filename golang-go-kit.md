@@ -20,3 +20,12 @@ Remember they are post requests - need to do post as JSON
 Transports.go
 Endpoints.go
 Middleware.go
+
+## Logging
+Seeing `MISSING` message in logs? Remember to pass a variable if the logger is expecting one.
+
+
+```golang
+logger := log.NewJSONLogger(os.Stderr)
+logger.Log("no .env file found, falling back to environment variables.", err)
+```
