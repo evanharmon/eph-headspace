@@ -1,5 +1,9 @@
 # KUBERNETES (K8S)
 
+## Summary
+
+General notes on working with Kubernetes
+
 ## Requirements / Installation
 
 The easiest method for using Kubernetes locally is through Docker Community
@@ -23,9 +27,11 @@ or use [Minikube](https://github.com/kubernetes/minikube)
 [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
 [Services](https://kubernetes.io/docs/concepts/services-networking/service)
+[Labels / Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
 
 ## Tutorials / Learning
 
+[Interactive Tutorial](https://kubernetes.io/docs/tutorials/kubernetes-basics/expose/expose-interactive/)
 [Udemy Learn DevOps: The Complete Kubernetes Course](https://www.udemy.com/learn-devops-the-complete-kubernetes-course/learn/v4/overview)
 
 [Kubernetes By Example](http://kubernetesbyexample.com/)
