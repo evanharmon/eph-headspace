@@ -1,6 +1,10 @@
 # GOLANG DELVE
 
-### Install Delve
+## Summary
+
+Notes on working with the `delve` debugger in golang
+
+## Installation
 
 ```console
 go get -u github.com/derekparker/delve/cmd/dlv
@@ -8,14 +12,14 @@ cd $GOPATH/src/github.com/go-delve/delve
 make install
 ```
 
-### Install For Linux On Mac
+#### Install For Linux On Mac
 
 ```
 cd $HOME/go
 GOARCH=amd64 GOOS=linux go build -o src/github.com/derekparker/delve/cmd/dlv github.com/derekparker/delve/cmd/dlv
 ```
 
-### Using Vim-Delve
+## Using Vim-Delve
 
 Set breakpoint and run delve
 
@@ -28,13 +32,13 @@ Set breakpoint and run delve
 
 [CLI](https://github.com/derekparker/delve/tree/master/Documentation/cli)
 
-### Run Debugger From Main.Go File Location
+#### Run Debugger From Main.Go File Location
 
 ```Console
 dlv debug main.go
 ```
 
-### Passing CLI Flags For Application
+#### Passing CLI Flags For Application
 
 from package main file if in Neovim
 
@@ -43,12 +47,6 @@ from package main file if in Neovim
 ```
 
 ## Debugging
-
-Print Function Arguments
-
-```console
-args
-```
 
 Print Struct Properties
 
@@ -59,7 +57,7 @@ print req.Chunk.Content
 Run Until Next Breakpoint / Program End
 
 ```console
-$ continue
+continue
 ```
 
 ## Breakpoints
@@ -82,7 +80,17 @@ Set breakpoint in code [SO](https://stackoverflow.com/questions/35856911/how-can
 runtime.Breakpoint()
 ```
 
-## Print Long Strings In Debugger
+## Variables / Arguments
+
+##### Print Function Arguments
+
+`args`
+
+#### Print Local Variables
+
+`locals`
+
+#### Print Long Strings In Debugger
 
 [SO](https://stackoverflow.com/questions/52416263/how-do-i-print-the-full-value-of-a-string-variable-in-delve)
 

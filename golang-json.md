@@ -36,3 +36,37 @@ type Response2 struct {
 [Go Playground](http://play.golang.org/p/id4f4r9tEr)
 
 use `strconv.Unquote()` first
+
+## Example Interfaces And JSON
+
+#### Map of String Interface
+
+```json
+{
+  "payload": {
+    "item": "shirt",
+    "orderType": "air"
+  }
+}
+```
+
+```golang
+res := map[string]interface{}{"payload": map[string]interface{}{"item": "shirt", "orderType": "air"}}
+```
+
+#### Array Of Objects
+
+```json
+{
+  "payload": [
+    {
+      "item": "shirt",
+      "orderType": "air"
+    }
+  ]
+}
+```
+
+```golang
+res := map[string]interface{}{"payload": []map[string]interface{}{map[string]interface{}{"item": "shirt", "orderType": "air"}}}
+```

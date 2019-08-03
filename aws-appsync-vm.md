@@ -10,7 +10,9 @@ Notes on using VTL with appsync
 [Context](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-context-reference.html)
 [VTL Utility Functions](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-util-reference.html)
 
-## Check For Input Field And Throw Error
+## Request Mapping
+
+#### Check For Input Field And Throw Error
 
 ```
 #if( $util.isNullOrEmpty($context.args.input.id) )
@@ -18,7 +20,7 @@ Notes on using VTL with appsync
 #end
 ```
 
-## Optional Auto-Generated ID
+#### Optional Auto-Generated ID
 
 ```vtl
 {
@@ -37,7 +39,7 @@ Notes on using VTL with appsync
 }
 ```
 
-## Query Partiion Key And Sort/Range Key
+#### Query Partition Key And Sort / Range Key
 
 [SO](https://stackoverflow.com/questions/52580083/aws-app-sync-dynamodb-resolver-usage-with-begin-with-expression-in-sort-key-not)
 
@@ -55,7 +57,7 @@ https://stackoverflow.com/questions/52580083/aws-app-sync-dynamodb-resolver-usag
 }
 ```
 
-## DynamoDb UpdateItem With Condition
+#### DynamoDb UpdateItem With Condition
 
 attribute_exists
 
@@ -74,11 +76,55 @@ attribute_exists
 }
 ```
 
-## Correctly Throw Error In Response Template Mapping
+#### Prevent Overwriting Create Timestamp Type Field
+
+[SO](https://stackoverflow.com/questions/53666369/how-to-upsert-item-in-dynamodb-and-maintain-createdat-and-updatedat-fields)
+
+```vtl
+// use if_not_exists()
+UpdateExpression: `SET #QQ_ID = :answer, #updatedAt = :updatedAt, #createdAt = if_not_exists(#createdAt, :createdAt)`,
+ExpressionAttributeNames: {
+    '#QQ_ID'   : `QQ_${question_id}`,
+    '#updatedAt': 'UpdatedAt',
+    '#createdAt': 'CreatedAt',
+},
+ExpressionAttributeValues: {
+    ':answer': answer,
+    ':updatedAt' : now.toISOString(),
+    ':createdAt' : now.toISOString(),
+}
+```
+
+via if statement using AWS boilerplate vtl for upserts
+
+```vtl
+#if( $entry.key == "#createdAt" )
+  #set( $expression = "$expression $entry.key = if_not_exists($entry.key, $entry.value)" )
+#else
+  #set( $expression = "$expression $entry.key = $entry.value" )
+#end
+```
+
+## Response Mapping
+
+use `$ctx`. `$context` references won't work!
+
+#### Correctly Throw Error In Response Template Mapping
 
 ```vtl
 #if ( $ctx.error )
     $util.error($ctx.error.message, $ctx.error.type)
 #end
+$util.toJson($ctx.result)
+```
+
+#### Stash In Response Mapping
+
+```vtl
+
+#if ( $ctx.error )
+    $util.error($ctx.error.message, $ctx.error.type)
+#end
+$util.qr($context.stash.put("latestVersionNumber", $ctx.result.versionNumber))
 $util.toJson($ctx.result)
 ```

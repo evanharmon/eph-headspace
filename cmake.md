@@ -14,3 +14,9 @@ project (Tutorial)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_executable(person Person.cc Pirate.cc main.cc)
 ```
+
+### Export CMAKE Variable
+
+```console
+export DCMAKE_EXPORT_COMPILE_COMMANDS=1
+```

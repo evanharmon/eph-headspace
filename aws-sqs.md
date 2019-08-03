@@ -10,6 +10,10 @@ Notes on using the aws SQS service
 [Monitoring](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-monitoring-using-cloudwatch.html)
 [Cloudwatch Alarm Suggestions](https://www.bluematador.com/blog/how-to-monitor-amazon-sqs-with-cloudwatch)
 
+## Tools
+
+[Copy Messages Between Queues](https://github.com/scottjbarr/sqsmv)
+
 ## Use
 
 - helps de-couple/loosely couple the environment

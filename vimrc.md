@@ -16,3 +16,9 @@ if exists(':SpeedDatingFormat')
     SpeedDatingFormat %-d %B %Y
 endif
 ```
+
+## Set Terminal Scrollback Size In Neovim
+
+```
+set scrollback=100000
+```
