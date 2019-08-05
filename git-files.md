@@ -100,7 +100,7 @@ git checkout {commit-hash} file/to/restore
 separate steps
 
 ```console
-git checkout backup/non-cra-master public/assets
+git checkout backup/non-cra-master -- public/
 git mv public/ src/
 ```
 
