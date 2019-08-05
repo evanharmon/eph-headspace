@@ -6,10 +6,10 @@ Notes on setting git remotes
 
 ## Set Remote for Tracking
 
-```
-$ git branch -u origin/branchname
-$ git remote add origin https://github.com/evanharmon/my-repo.git
-$ git push -u origin master
+```console
+git branch -u origin/branchname
+git remote add origin https://github.com/evanharmon/my-repo.git
+git push -u origin master
 ```
 
 ## Add Additional Mirror To Remote

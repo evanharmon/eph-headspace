@@ -94,6 +94,16 @@ git checkout {branch} -- {filepath}
 git checkout {commit-hash} file/to/restore
 ```
 
+## Checkout Entire Folder From Another Branch
+
+\*\*Note: You can't checkout a folder to a new folder path. Has to be done in
+separate steps
+
+```console
+git checkout backup/non-cra-master public/assets
+git mv public/ src/
+```
+
 ## Remove All Un-tracked Files
 
 ```console
