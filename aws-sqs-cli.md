@@ -4,6 +4,12 @@
 
 Notes on using the SQS cli tool
 
+## Create LIFO Queue
+
+```console
+aws sqs create-queue --queue-name my-new-queue
+```
+
 ## Download SQS Messages To JSON
 
 ```console

@@ -1,14 +1,42 @@
 # LOCAL STACK
-(https://github.com/localstack/localstack)
+
+## Summary
+
+Notes on using local stack docker containers with k8s
+
+## Resources
+
+[Docs](https://localstack.cloud/)
+[Github](https://github.com/localstack/localstack)
 
 ## INSTALL
-git clone to avoid installing all the dependencies locally
+
+Installation involves git cloning and running docker-compose up to pull images
+
 ```console
-$ git clone https://github.com/localstack/localstack.git $HOME/code
+git clone https://github.com/localstack/localstack.git $HOME/code
+cd $HOME/code/localstack
+TMPDIR=/private$TMPDIR docker-compose up
 ```
 
-## USE
+## AWS SERVICES
+
+#### SQS Create Queue
+
+create queue
+
 ```console
-$ cd $HOME/code/localstack
-$ docker-compose up
+aws --endpoint-url=http://localhost:4576 sqs create-queue --queue-name my-best-queue
+```
+
+#### SQS Send Messages
+
+note the queue fully qualified domain name with `/queue/` in path.
+`aws --endpoint-url=http://localhost:31000 --profile="default" sqs list-queues` to get queue url's
+
+```console
+aws --endpoint-url=http://localhost:31000 --profile="default" \
+	sqs send-message-batch \
+	--queue-url http://localhost:31000/queue/my-queue-name \
+	--entries file://cli-input-10.json
 ```

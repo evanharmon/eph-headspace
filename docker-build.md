@@ -21,3 +21,11 @@ COPY somefile.txt .
 RUN cat /somefile.txt
 EOF
 ```
+
+## Debug Using Multi-Stage Builds
+
+[Stop At Stage](https://docs.docker.com/develop/develop-images/multistage-build/#stop-at-a-specific-build-stage)
+
+```console
+docker build --target builder -t alexellis2/href-counter:latest .
+```

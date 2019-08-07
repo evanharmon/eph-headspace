@@ -54,3 +54,11 @@ npm install --global pure-prompt --allow-root --unsafe-perm=true
 npm install -g @wdio/cli
 npm link @wdio/cli
 ```
+
+## Xcode Dependencies
+
+some npm packages need xcode tools, to install them run:
+
+```console
+xcode-select --install
+```
