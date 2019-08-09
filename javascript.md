@@ -1,46 +1,76 @@
 # JAVASCRIPT
 
-# Check for non-empty Strings
-`const check = password.length > 0;`
+## Summary
 
-# Remove Whitespace / Line Breaks
-`const cleanString = "\nSome data\n".replace(/(\r\n|\n|\r|\t)/g, "").trim();`
+General notes on javascript
 
-# Remove Spaces
+## Check for non-empty Strings
+
 ```javascript
-"test phrase".replace(/\s/g, '');
+const check = password.length > 0;
 ```
 
-# Compare property value to array of values indexOf
-## avoids long if/ternary statements
-`['Open', 'Closed'].indexOf(varName) !== -1`
+## Remove Whitespace / Line Breaks
 
-# Perform same action for multiple switch cases
-## works by omitting break on case
+```javascript
+const cleanString = "n".replace(/(\r\n|\n|\r|\t)/g, "").trim();
 ```
-switch(TARGET) {
-  case 'test':
-  case 'test:tdd':
-      config = merge(common, {});
-      break;
+
+## Remove Spaces
+
+```javascript
+"test phrase".replace(/\s/g, "");
+```
+
+## Compare property value to array of values indexOf
+
+avoids long if/ternary statements
+
+```javascript
+["Open", "Closed"].indexOf(varName) !== -1;
+```
+
+## Perform same action for multiple switch cases
+
+works by omitting break on case
+
+```javascript
+switch (TARGET) {
+  case "test":
+  case "test:tdd":
+    config = merge(common, {});
+    break;
 }
 ```
 
-# Front-end Change readable-stream Response From Server to Object
-(https://developer.mozilla.org/en-US/docs/Web/API/Response)
-`res.body.json()`
+## Front-end Change readable-stream Response From Server to Object
 
-# Interpolate Strings
-`http://${url}`
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 
-# String replaceAll
-`target.split(search).join(replacement)`
+```javascript
+res.body.json();
+```
 
-# Remove Leading 0's
-`parseInt("010", 10)`
+## Interpolate Strings
 
-# Contains
-`use indexOf()`
+```javascript
+http://${url}
+```
 
-# Pretty Print JSON
-`console.log('newArr %s', JSON.stringify(newArr, null, '\t'));`
+## String replaceAll
+
+```javascript
+target.split(search).join(replacement);
+```
+
+## Remove Leading 0's
+
+```javascript
+target.split(search).join(replacement);
+```
+
+parseInt("010", 10)
+
+## Contains
+
+use `indexOf()`

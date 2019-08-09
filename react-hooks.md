@@ -34,3 +34,10 @@ rerender unless they also need the application state.
 [Audisho.Sada Medium Example](https://medium.com/@audisho.sada/using-react-hooks-to-asynchronously-make-api-requests-1fdf52f797ce
 
 In the future, `react-cache` and `suspense` will be used for data fetching
+
+## Common Errors
+
+#### UseCustom Hook Undefined
+
+Set initial state `const [collection, setCollection] = useState({})` in the
+custom hook
