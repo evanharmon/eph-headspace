@@ -49,10 +49,14 @@ moment(startDate, cbFormat).format(sapFormat)
 ## Get Unix Timestamp / Epoch
 
 ```javascript
+Date.now();
+```
+
+```javascript
 new Date().valueOf();
 ```
 
-may need to limit to 10 digits for int
+may need to limit to 10 digits for int / aws dynamodb, etc
 
 ```javascript
 new Date()
@@ -78,3 +82,8 @@ new Date(parseInt(`${ts}0000`));
 const dt = new Date(1557931407000);
 console.log(dt instanceof Date);
 ```
+
+## Common Epoch Time Values
+
+60 Minutes Ago `new Date(Date.now() - 1000 * 60 * 60)`
+60 Seconds Ago `new Date(Date.now() - 1000 * 60)`

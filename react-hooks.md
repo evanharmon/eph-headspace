@@ -41,3 +41,7 @@ In the future, `react-cache` and `suspense` will be used for data fetching
 
 Set initial state `const [collection, setCollection] = useState({})` in the
 custom hook
+
+## Testing Hooks
+
+[react-hooks-testing-library](https://react-hooks-testing-library.com/usage/advanced-hooks)
