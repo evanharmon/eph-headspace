@@ -4,6 +4,10 @@
 
 Notes on using aws amplify sdk's, cli, etc
 
+## Resources
+
+[React Router Amplify Auth](https://www.rockyourcode.com/custom-react-hook-use-aws-amplify-auth/)
+
 ## Get Environment After Git Clone
 
 ```console

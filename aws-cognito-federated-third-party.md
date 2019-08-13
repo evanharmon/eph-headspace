@@ -48,3 +48,39 @@ facebook, google, and amazon
 
 In a web browser, visit
 `https://my-awesome-app-dev.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=aaaaaaaa11111111111111111&redirect_uri=http://localhost:3000`
+
+## Google
+
+#### Google Developer Console Setup
+
+API & Services, Credentials section:
+
+- Create Project
+- Configure OAuth Consent Screen
+
+#### OAuth Consent Screen
+
+- add cognito user pool domain id to `Authorized Domains` and PRESS ENTER
+
+#### Create OAuth Credentials
+
+- in dropdown, choose `OAuth client ID`, choose web application
+
+In form:
+
+- select `web application`
+- name of application
+- `Authorized Javascript Origins` add user pool domain. This can be found in the
+  Cognito, User Pools, App integration, Domain name section of the amazon web
+  console
+- `Authorized redirect URIs` will be your user pool domain with
+  `oauth2/idpresponse` added to the path
+
+#### Cognito Setup
+
+Make sure Cognito setup above in `faceobok` section is complete. Go in to
+`User Pools, Federation, Attribute mapping`, click `Google` tab and set
+attributes to capture and associated user pool attributes
+
+Under `App integration, App client settings` turn on Google for
+`Enabled Identity Providers`

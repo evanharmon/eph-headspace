@@ -51,3 +51,9 @@ aws iam update-login-profile \
   --password "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" \
   --no-password-reset-required
 ```
+
+## Get Account Alias
+
+```console
+aws sts list-account-aliases
+```
