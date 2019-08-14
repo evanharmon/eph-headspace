@@ -24,3 +24,23 @@ amplify env checkout `env_name` --restore
 ```
 
 This step adds the necessary amplify files that are in the gitgnore and not stored in the repo
+
+## Pinpoint Errors
+
+[GH Issue](https://github.com/aws-amplify/amplify-js/issues/3489)
+
+disable Analytics in Amplify configure:
+
+```javascript
+Amplify.configure({
+  Auth: {
+    region: config.region,
+    userPoolId: config.userPoolId,
+    userPoolWebClientId: config.userPoolWebClientId,
+    authenticationFlowType: "USER_PASSWORD_AUTH"
+  },
+  Analytics: {
+    disabled: true
+  }
+});
+```
