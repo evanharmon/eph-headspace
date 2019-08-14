@@ -1,5 +1,17 @@
-# Zip a directory
-`$ zip -r UI.zip ./UI`
+# ZIP / UNZIP
 
-# Unzip
-`$ unzip`
+## Summary
+
+Notes on using `zip` and `unzip` CLI tools
+
+## Zip a directory
+
+```console
+zip -r UI.zip ./UI
+```
+
+## Unzip
+
+```console
+unzip
+```
