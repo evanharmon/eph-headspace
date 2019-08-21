@@ -31,7 +31,7 @@ rerender unless they also need the application state.
 ## Fetch Data With React Hooks
 
 [Robin Weiruch Blog](https://www.robinwieruch.de/react-hooks-fetch-data/)
-[Audisho.Sada Medium Example](https://medium.com/@audisho.sada/using-react-hooks-to-asynchronously-make-api-requests-1fdf52f797ce
+[Audisho.Sada Medium Example](https://medium.com/@audisho.sada/using-react-hooks-to-asynchronously-make-api-requests-1fdf52f797ce)
 
 In the future, `react-cache` and `suspense` will be used for data fetching
 

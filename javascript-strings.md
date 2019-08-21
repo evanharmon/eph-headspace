@@ -22,3 +22,11 @@ function getBinarySize(string) {
 }
 getBinarySize("ta-daaaaa");
 ```
+
+## Escape Double Quotations
+
+```javascript
+`email = \\${JSON.stringify(email)}\\`;
+```
+
+prints `"email = \"eharmon@gmail.com"\"`

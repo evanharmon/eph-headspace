@@ -1,24 +1,20 @@
-# TERRAFORM AWS IAM
+# TERRAFORM AWS COGNITO
 
 ## Summary
 
-Notes on using terraform with AWS IAM service
+Notes on using terraform with AWS COGNITO service
 
-## Attach Managed Policy To Role
+## Create Cognito User Pool
 
-[SO](https://stackoverflow.com/questions/45002292/terraform-correct-way-to-attach-aws-managed-policies-to-a-role)
+default is `Username` attribute section. To use `Email Address or phone number`
+attribute setting, use `username_attributes` property in the resource as below
 
-```
-data "aws_iam_policy" "ReadOnlyAccess" {
-  arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
+```terraform
+resource "aws_cognito_user_pool" "mycribspool" {
+  name = "mycribspool"
+
+  username_attributes = ["email", "phone_number"]
+
+  ...
 }
-resource "aws_iam_role_policy_attachment" "sto-readonly-role-policy-attach" {
-  role       = "${aws_iam_role.sto-test-role.name}"
-  policy_arn = "${data.aws_iam_policy.ReadOnlyAccess.arn}"
-}
 ```
-
-## Potential Cause aws_iam_role Continually Updated
-
-[GH Issue](https://github.com/hashicorp/terraform/issues/11873)
-Multiple role policy attachments can clobber?

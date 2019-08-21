@@ -17,7 +17,7 @@ Notes on using AWS EKS kubernetes service
 set your `AWS_PROFILE` to your iam user that creates the EKS cluster.
 `export AWS_PROFILE="myname"`
 
-If you create the cluser user an assumed role, you'll have to set that up in
+If you create the cluster using an assumed role, you'll have to set that up in
 `/.aws/config`
 
 ## EKS Cluster Creation Via Console
@@ -26,7 +26,10 @@ Important on security / initial login on public access. It's limited to
 IAM user / role used to create cluster on console
 
 ```
-When an Amazon EKS cluster is created, the IAM entity (user or role) that creates the cluster is added to the Kubernetes RBAC authorization table as the administrator (with system:master permissions. Initially, only that IAM user can make calls to the Kubernetes API server using kubectl.
+When an Amazon EKS cluster is created, the IAM entity (user or role) that
+creates the cluster is added to the Kubernetes RBAC authorization table as the
+administrator (with system:master permissions. Initially, only that IAM user can
+make calls to the Kubernetes API server using kubectl.
 ```
 
 [Authorization fails or no such host](https://docs.aws.amazon.com/eks/latest/userguide/troubleshooting.html#unauthorized)
@@ -34,7 +37,7 @@ When an Amazon EKS cluster is created, the IAM entity (user or role) that create
 EKS cluster created via iam user
 
 ```console
-aws eks update-kubeconfig --name cluster_name
+aws eks update-kubeconfig --name "$CLUSTER_NAME"
 ```
 
 EKS cluster created via assumed-role
@@ -56,4 +59,18 @@ aws eks update-kubeconfig --name my-eks-cluster
 ```
 enableDnsSupport: true
 enableDnsHostnames: true
+```
+
+## Create Nodegroup
+
+```console
+aws eksctl create nodegroup \
+  --cluster "$CLUSTER_NAME" \
+  --version auto \
+  --name standard-workers \
+  --node-type t3.medium \
+  --node-ami auto \
+  --nodes 1 \
+  --nodes-min 1 \
+  --nodes-max 4
 ```

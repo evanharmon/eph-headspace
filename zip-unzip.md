@@ -12,6 +12,8 @@ zip -r UI.zip ./UI
 
 ## Unzip
 
+#### Unzip To Specific Directory
+
 ```console
-unzip
+unzip eh.zip -d my-new-folder
 ```

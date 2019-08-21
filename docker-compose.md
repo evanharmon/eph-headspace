@@ -1,9 +1,15 @@
 # DOCKER COMPOSE
 
+## Summary
+
+Notes on using the `docker-compose` tool
+
 ## Standard YML File Name
+
 docker-compose.yml
 
 ## Use Links Instead Of Ports
+
 ```YAML
 links:
 - mysql
@@ -11,6 +17,7 @@ links:
 ```
 
 ## Example Compose file
+
 ```YAML
 ---
 version: '3.2'
@@ -29,11 +36,13 @@ services:
 ```
 
 ## Bash In To Compose Service
+
 ```console
 $ docker-compose exec service_name bash
 ```
 
 ## Environment Variables
+
 ```
 services:
   master:
@@ -44,11 +53,13 @@ services:
 ```
 
 ## Tail And Follow Logs
+
 ```console
 $ docker-compose logs --tail 50 -f hss-sync-gateway
 ```
 
 ## Persisent Volumes Example
+
 ```YAML
 version: '3.2'
 services:
@@ -62,6 +73,11 @@ volumes:
 ```
 
 ## Destroy Persistent Volumes
+
 ```console
 $ docker-compose down -v
 ```
+
+## Force Exit On Container Exit
+
+`docker-compose up --abort-on-container-exit`

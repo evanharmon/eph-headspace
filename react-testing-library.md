@@ -70,3 +70,13 @@ in package.json
   ]
 },
 ```
+
+## Button Click Issues
+
+use dispatchEvent instead
+
+```javascript
+cancelBtn.dispatchEvent(
+  new MouseEvent("click", { bubbles: true, cancelable: true })
+);
+```

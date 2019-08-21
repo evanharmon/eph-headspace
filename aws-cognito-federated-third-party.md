@@ -10,6 +10,7 @@ facebook, google, and amazon
 [Amplify Oauth2 Setup](https://aws-amplify.github.io/docs/js/cognito-hosted-ui-federated-identity#facebook-instructions)
 [Amplify Code Example](https://aws-amplify.github.io/docs/js/authentication)
 [AWS Facebook Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-configuring-federation-with-social-idp.html)
+[OAuth 2.0 Grants](https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/)
 
 ## Facebook
 
@@ -84,3 +85,16 @@ attributes to capture and associated user pool attributes
 
 Under `App integration, App client settings` turn on Google for
 `Enabled Identity Providers`
+
+## Scopes
+
+The phone, email, and profile scopes can only be requested if openid is also requested.
+
+## Implicit Grant
+
+Only use the implicit grant when there’s a specific reason that the
+authorization code grant can’t be used. This exposes the user pool tokens.
+
+However, if your setup doesn’t contain any server-side logic, you may want to
+use the implicit grant to prevent refresh tokens from being exposed to the
+client, as the implicit grant does not generate refresh tokens.

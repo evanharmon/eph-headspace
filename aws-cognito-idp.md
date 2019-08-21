@@ -1,17 +1,8 @@
-# AWS COGNITO IDP CLI
+# AWS COGNITO IDENTITY CLI
 
 ## Summary
 
-Notes on using the `aws cognito-identity` cli for AWS Cognito Federated Identities service
-
-## Create New Pool
-
-```console
-aws cognito-identity create-identity-pool \
-  --identity-pool-name hssauth \
-  --allow-unauthenticated-identities \
-  --supported-login-providers KeyName1=accounts.google.com
-```
+Notes on using the `aws cognito-idp` cli for AWS Cognito User Pools Identity Provider service
 
 ## Create Unauthorized Role
 

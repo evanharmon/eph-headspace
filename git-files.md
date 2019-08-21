@@ -127,3 +127,16 @@ $(git ls-files --directory <directory-name> | sed 's/\(.*\)\/.*/\1/' | uniq)
 ```console
 git diff --name-status firstbranch..secondbranch
 ```
+
+## Correctly Symlink Folders With `bindfs`
+
+[SO at the bottom](https://stackoverflow.com/questions/86402/how-can-i-get-git-to-follow-symlinks)
+
+On Mac:
+
+```console
+brew install bindfs
+cd /path/to/git_controlled_dir
+mkdir local_copy_dir
+bindfs <source_dir> local_copy_dir
+```

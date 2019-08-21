@@ -121,3 +121,10 @@ docker run -it --rm --name nvim \
   --env TERM=xterm-256color \
   eph-nvim/base:latest \
 ```
+
+## Override Entrypoint
+[Docs](https://docs.docker.com/engine/reference/run/#entrypoint-default-command-to-execute-at-runtime)
+
+```console
+docker run -it --entrypoint="" mysql bash
+```
