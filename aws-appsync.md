@@ -10,20 +10,7 @@ Notes on using aws appsync
 [Resolver Mapping](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference-overview.html)
 [Resolver VTL Programming](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference-programming-guide.html)
 [VTL Utility Functions](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-util-reference.html)
-[Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html)
-[Authorization Use Cases](https://docs.aws.amazon.com/appsync/latest/devguide/security-authorization-use-cases.html)
-[Resoure For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
-
-## Auth
-
-[Cognito Scenarios](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-scenarios.html#scenario-appsync)
-Can be Cognito User Pool or Identity Pool
-
-[Resource For Mobile Auth]([Resoure For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
-
-## Appsync Admin / Public Separate APIs
-
-Note that subscriptions won't be supported
+[Resource For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
 
 ## Subscriptions
 

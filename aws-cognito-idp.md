@@ -19,3 +19,22 @@ aws iam create-role \
   --role-name hss-auth-authorized \
   --assume-role-policy-document file://policies/cognito-authorized-trust.json
 ```
+
+## Admin Create User Shortcut
+
+```console
+aws cognito-idp sign-up \
+  --client-id 11111111111111111111111111 \
+  --username eharmon@gmail.com \
+  --password password! \
+  --user-attributes Name=email,Value=eharmon@gmail.com
+
+aws cognito-idp admin-confirm-sign-up \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --username eharmon@gmail.com
+
+aws cognito-idp admin-update-user-attributes \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --username eharmon@gmail.com \
+  --user-attributes Name=email_verified,Value=true
+```

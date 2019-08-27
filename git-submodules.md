@@ -25,8 +25,8 @@ git submodule
 ## Remove Submodule
 
 ```console
-git config --local --unset submodule.myfolder/mysubsfolder/submodulename.active
-git config --local --unset submodule.myfolder/mysubsfolder/submodulename.url
+git submodule deinit mymodule
+git rm --cached mymodule
 ```
 
 ## Location Of Git Submodule Commit Hashes
@@ -34,4 +34,15 @@ git config --local --unset submodule.myfolder/mysubsfolder/submodulename.url
 ```console
 ls -la .git/modules
 cat .git/modules/mysubmodule/HEAD
+```
+
+## Move / Rename Submodule Folder on Mac
+
+[SO](https://stackoverflow.com/questions/4526910/rename-a-git-submodule)
+
+do a temporary move
+
+```console
+git mv Common commontemp
+git mv commontemp common
 ```

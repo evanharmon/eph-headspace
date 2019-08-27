@@ -7,6 +7,8 @@ Notes on using DynamoDB
 ## Resources
 
 [Hash / Range Keys](https://stackoverflow.com/questions/29178855/what-is-the-use-of-a-hash-range-in-a-dynamodb-table)
+[Medium TimeHop Dynamodb Strategies](https://www.timehop.com/news/2018/5/25/one-year-of-dynamodb-at-timehop)
+[NAB Tech Design Patterns](https://medium.com/@nabtechblog/advanced-design-patterns-for-amazon-dynamodb-354f97c96c2)
 
 ## Features
 

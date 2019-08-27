@@ -174,3 +174,11 @@ if [[ ":$PATH:" != *":/usr/local/go/bin:$GOPATH/bin:"* ]]; then
     export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 fi
 ```
+
+## Check What Shell Is Being Used
+
+helpful to check for /bin/dash on debian, etc
+
+```console
+readlink -f $(which sh)
+```
