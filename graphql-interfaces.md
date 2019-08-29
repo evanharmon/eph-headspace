@@ -1,20 +1,25 @@
 # GRAPHQL INTERFACES
 
+## Resources
+
+[Unions And Interfaces](https://graphqlmastery.com/blog/graphql-interfaces-and-unions-how-to-design-graphql-schema)
+
 ## Nested Interfaces
+
 ```
 const interfaces = `
   interface MetadataInterface {
-  appName: String
+    appName: String
   }
 
   interface DBlockInterface {
-  OrderNo: String
+    OrderNo: String
   }
 
   interface PayloadInterface {
-  d: DBlockInterface
+    d: DBlockInterface
   }
-`;
+`
 
-module.exports = interfaces;
+module.exports = interfaces
 ```

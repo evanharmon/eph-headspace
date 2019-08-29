@@ -98,3 +98,17 @@ authorization code grant can’t be used. This exposes the user pool tokens.
 However, if your setup doesn’t contain any server-side logic, you may want to
 use the implicit grant to prevent refresh tokens from being exposed to the
 client, as the implicit grant does not generate refresh tokens.
+
+## Grant Types
+
+[AWS Blog](https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/)
+
+#### Authorization Code Grant
+
+Benefit is that user pool token is never shared with end user.
+
+#### Implicit Grant
+
+- Does not generate refresh tokens.
+- This is the preferred method for security on
+  Single-Page Applications (SPA) which reveal the Client Secret.
