@@ -45,3 +45,8 @@ custom hook
 ## Testing Hooks
 
 [react-hooks-testing-library](https://react-hooks-testing-library.com/usage/advanced-hooks)
+
+## isMounted Technique
+
+only needs to be used AFTER an `await` statement checking `if (isMounted)` or
+in the `catch` block of a try catch like `if (isMounted) console.log(error)`
