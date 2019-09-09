@@ -74,3 +74,28 @@ Encryption must be AES-256. KMS will prevent Cloudfront from writing any logs to
 ```console
 gzip -d 11111111111111.2019-04-25-13.eeeeeeee.gz
 ```
+
+## Debug CORS issues
+
+[AWS Advice](https://aws.amazon.com/premiumsupport/knowledge-center/no-access-control-allow-origin-error/)
+
+Origin must allow OPTIONS requests and return `Access-Control-Allow-Origin` header.
+
+```console
+curl -H "origin: example.com" -v "https://www.anything.net/video/call/System.generateId.dwr"
+```
+
+In CloudFront `behaviors` tab, edit the behavior setting
+`Cache Based on Selected Request Headers` to the value `Whitelist`
+
+and whitelist the below headers
+
+```
+Access-Control-Request-Headers
+Access-Control-Request-Method
+Origin
+```
+
+## Error Pages on Single Page Apps
+
+SPAs must have 404 index.html error settings set up in CloudFront

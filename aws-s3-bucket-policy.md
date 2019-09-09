@@ -78,3 +78,39 @@ S3 Buckets can be locked out by incorrect / inadvertent changes to the bucket po
 
 - Keep a base policy in at all times to prevent lockout
 - Use a separate AWS account for testing where you have ROOT access
+
+## Default CORS
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+  <CORSRule>
+      <AllowedOrigin>*</AllowedOrigin>
+      <AllowedMethod>GET</AllowedMethod>
+      <MaxAgeSeconds>3000</MaxAgeSeconds>
+      <AllowedHeader>*</AllowedHeader>
+  </CORSRule>
+</CORSConfiguration>
+```
+
+## Limit Bucket Access To CloudFront
+
+[AWS Bucket Policy Example](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-6)
+
+```json
+{
+  "Version": "2012-10-17",
+  "Id": "PolicyForCloudFrontPrivateContent",
+  "Statement": [
+    {
+      "Sid": " Grant a CloudFront Origin Identity access to support private content",
+      "Effect": "Allow",
+      "Principal": {
+        "CanonicalUser": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::examplebucket/*"
+    }
+  ]
+}
+```

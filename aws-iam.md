@@ -4,6 +4,7 @@
 
 [Action Lists per Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actionsconditions.html)
 [Full List](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html)
+[Policy Evaluation Logic](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html#policies_evaluation_example)
 
 ## Best Practices
 
@@ -75,3 +76,17 @@ $ curl http://169.254.169.254/latest/meta-data/iam/security-credentials/role-nam
 ### Assignment
 
 Can only be assigned at instance creation
+
+## Implicit Denial
+
+An implicit denial occurs when there is no applicable Deny statement but also
+no applicable Allow statement. Because an IAM user, role, or federated user is
+denied access by default, they must be explicitly allowed to perform an action.
+Otherwise, they are implicitly denied access.
+
+## Explicit Denial
+
+A request results in an explicit deny if an applicable policy includes a Deny
+statement. If policies that apply to a request include an Allow statement and a
+Deny statement, the Deny statement trumps the Allow statement. The request is
+explicitly denied.

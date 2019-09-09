@@ -39,3 +39,9 @@ const createdTodo = await API.graphql({
   authMode: "AMAZON_COGNITO_USER_POOLS"
 });
 ```
+
+## Sign Out Error
+
+missing redirect_uri
+check for mispellings on AWS console, cognito user pools, `Callback URLs` and
+`Sign out URLs`
