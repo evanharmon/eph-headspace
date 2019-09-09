@@ -9,6 +9,7 @@ Notes on using react router
 [RWeiruch UnMounted Component Set State Warning](https://www.robinwieruch.de/react-warning-cant-call-setstate-on-an-unmounted-component/)
 [React Hooks And Context Router](https://medium.com/trabe/implementing-private-routes-with-react-router-and-hooks-ed38d0cf93d5)
 [React Router Amplify Auth](https://www.rockyourcode.com/custom-react-hook-use-aws-amplify-auth/)
+[Testing](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/testing.md)
 
 ## Index Route
 
@@ -68,3 +69,13 @@ class Login extends React.Component {
 ## Auth Api Call PrivateRoute
 
 [SO](https://stackoverflow.com/questions/49309071/react-private-router-with-async-fetch-request)
+
+## Pass Router Information Through Custom Component
+
+```javascript
+const MyRouteComponent = ({ ...options }) => (
+  <>
+    <MyComponent {...options} />
+  </>
+);
+```
