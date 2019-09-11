@@ -8,6 +8,7 @@ Notes on writing linux scripts
 
 [Linter](http://www.shellcheck.net)
 [Single Quote Double Quote In Scripts](http://mywiki.wooledge.org/Quotes)
+[Exit Status](https://www.tldp.org/LDP/abs/html/exit-status.html)
 
 ## Safe Way To Run Bash
 
@@ -133,5 +134,31 @@ not equals
 if [[ rv -ne 0 ]]; then
     echo "should be 0" 1>&2
     return exit 1
+fi
+```
+
+## Check Exit Status
+
+```bash
+#!/bin/bash
+
+echo hello
+echo $?    # Exit status 0 returned because command executed successfully.
+
+lskdf      # Unrecognized command.
+echo $?    # Non-zero exit status returned -- command failed to execute.
+
+echo
+
+exit 113   # Will return 113 to shell.
+           # To verify this, type "echo $?" after script terminates.
+```
+
+## Get Length / Number Of Characters
+
+```bash
+result="$(rg 'awscli')"
+if [${#result} > 0]; then
+	echo "found it"
 fi
 ```

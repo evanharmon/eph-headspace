@@ -13,7 +13,7 @@ echo "$(aws ecr get-authorization-token | \
   jq -r '.authorizationData[].authorizationToken' | \
   base64 -D | cut -d: -f2)" | \
   docker login -u AWS \
-    "https://$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_REPO" \
+    "https://$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_REPO" \
     --password-stdin
 ```
 
