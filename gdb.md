@@ -14,6 +14,12 @@ Notes on using GDB
 backtrace
 ```
 
+## Run
+
+```console
+run
+```
+
 ## Set Breakpoint
 
 ```console
@@ -31,6 +37,12 @@ ni
 
 ```console
 ptype myStruct
+```
+
+## Print Variable
+
+```console
+print pSampleData
 ```
 
 ### Print Struct Member
