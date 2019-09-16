@@ -73,7 +73,7 @@ source account s3 bucket policy
           "arn:aws:iam::333333333333:root"
         ]
       },
-      "Action": ["s3:List*", "s3:Get*", "s3:PutObject"],
+      "Action": ["s3:List*", "s3:Get*"],
       "Resource": ["arn:aws:s3:::mybucket", "arn:aws:s3:::mybucket/*"]
     }
   ]

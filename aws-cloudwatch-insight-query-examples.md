@@ -23,3 +23,12 @@ fields @message
 | sort @timestamp desc
 | limit 20
 ```
+
+## Filter To Web UnAuth Role CognitoIdentity
+
+```
+fields @timestamp, @message
+| filter userIdentity.arn like /(?i)(arn:aws:sts::111111111111:assumed-role\/myrole-unauth\/CognitoIdentityCredentials)/
+| sort @timestamp desc
+| limit 200
+```
