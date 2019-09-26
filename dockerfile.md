@@ -55,6 +55,19 @@ ENV overrides ARG
 
 `CMD ["/bin/zsh"]`
 
+## Leveraging Build Cache / COPY
+
+[Docker](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#leverage-build-cache)
+
+```
+For the ADD and COPY instructions, the contents of the file(s) in the image are
+examined and a checksum is calculated for each file. The last-modified and
+last-accessed times of the file(s) are not considered in these checksums. During
+the cache lookup, the checksum is compared against the checksum in the existing
+images. If anything has changed in the file(s), such as the contents and
+metadata, then the cache is invalidated.
+```
+
 ## Copy a file/directory
 
 Trailing slash is considered a directory
@@ -130,6 +143,7 @@ RUN export ADMIN_USER="mark" \
 ```
 
 ## Inspect `.dockerignore` And Build Context
+
 [SO](https://stackoverflow.com/questions/43808558/docker-command-option-to-display-or-list-the-build-context)
 Note: won't show dotfiles
 

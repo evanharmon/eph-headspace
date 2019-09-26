@@ -126,3 +126,17 @@ jq -n --slurpfile f manifest.json '$f[]|.builds | last | .artifact_id | split(":
 ```console
 jq '.arrayOfStuff[] | select(.key2 | contains("dar"))' JSONFile.json
 ```
+
+## Wrap Items In Array And Add Commas
+
+[GH Issue](https://github.com/stedolan/jq/issues/124)
+
+```console
+jq -r '[.Items]' test.json
+```
+
+## Create Valid JSON From Newline-Delimited JSON
+
+```console
+jq -rs '.' my-newline-json.json
+```
