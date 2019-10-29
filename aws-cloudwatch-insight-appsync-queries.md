@@ -7,7 +7,7 @@ Saved queries for reuse on cloudwatch insight
 ## Filter By Function Name And Mapping
 
 ```
-fields @timestamp, functionName, @message
+fields @timestamp, logType, fieldName, functionName, @message
 | filter fieldName like /(?i)(myFunctionName)/
 | filter logType like /(?i)(Mapping)/
 | sort @timestamp desc

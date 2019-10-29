@@ -6,6 +6,7 @@ Notes on using aws amplify sdk's, cli, etc
 
 ## Resources
 
+[AWS Blog Analytics None DataSource Subscriptions](https://aws.amazon.com/blogs/mobile/visualizing-big-data-with-aws-appsync-amazon-athena-and-aws-amplify/)
 [React Router Amplify Auth](https://www.rockyourcode.com/custom-react-hook-use-aws-amplify-auth/)
 
 ## Get Environment After Git Clone
@@ -44,3 +45,9 @@ Amplify.configure({
   }
 });
 ```
+
+## Configuration
+
+Amplify Web Apps exhibit odd behavior around authentication 401's / 400's if
+configuration is changed after loading. For now, tracking `authMode` of AppSync
+in a seperate variable in the app to use after sign in.

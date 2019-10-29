@@ -10,6 +10,22 @@ Notes on working with docker containers
 docker ps -a
 ```
 
+## List PIDs Inside Container
+
+Have to exec in to container
+
+```console
+docker exec nvim ps aux
+```
+
+## List PIDs Inside Container
+
+Have to exec in to container
+
+```console
+docker exec nvim kill 11416
+```
+
 ## Create Docker Container
 
 ```console
@@ -123,6 +139,7 @@ docker run -it --rm --name nvim \
 ```
 
 ## Override Entrypoint
+
 [Docs](https://docs.docker.com/engine/reference/run/#entrypoint-default-command-to-execute-at-runtime)
 
 ```console

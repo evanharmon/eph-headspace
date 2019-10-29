@@ -29,3 +29,15 @@ docker pull image-name
 ```console
 docker rmi <hash>
 ```
+
+## Get Image Info In JSON
+
+```console
+docker images repo1 --format "{{json . }}"
+```
+
+## Export Image Data And Parse With JQ
+
+``console
+docker images --format "{{json . }}" | jq .Repository | grep -v <exclude random stuff here> > images.txt
+```

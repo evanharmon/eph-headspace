@@ -4,6 +4,10 @@
 
 Notes on c++
 
+## Resources
+
+[Lambdas Explained](https://shaharmike.com/cpp/lambdas-and-functions/)
+
 ## Casts
 
 #### Generic Cast Form

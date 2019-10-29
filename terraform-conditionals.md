@@ -7,6 +7,7 @@ Notes on working with Terraform conditionals
 ## Resources
 
 [Docs](https://www.terraform.io/docs/configuration-0-11/interpolation.html#conditionals)
+[Blog on Dynamic Blocks](https://lgallardo.com/2019/06/14/dynamic-blocks-in-terraform-0.12.x/)
 
 ## Example OR
 

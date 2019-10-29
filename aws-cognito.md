@@ -29,7 +29,23 @@ Notes on working with AWS Cognito services
 
 Each unauthenticated user has a unique identity in the identity pool, even though they haven't been individually logged in and authenticated.
 
-## Mobile Setup NOTE!!
+## Server Side Token Check
+
+Cognito Identity Pools DO NOT check against the user pool by default. This
+means a user can be disabled / deleted in the User Pool and their identity pool
+authorization creds will STILL WORK.
+
+#### Turn On Server Side Token Check
+
+```console
+aws cognito-identity update-identity-pool \
+  --identity-pool-id \
+  --identity-pool-name \
+  --allow-unauthenticated-identities \
+  --cognito-identity-providers ProviderName=,ClientId=,ServerSideTokenCheck=<true|false>
+```
+
+#### Mobile Setup NOTE!!
 
 If your app uses Google and will be available on multiple mobile platforms,
 you should configure it as an OpenID Connect Provider, adding all created

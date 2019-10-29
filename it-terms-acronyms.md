@@ -76,3 +76,5 @@ simple X.509 certificates
 ## Resource Public Key Infrastructure (RPKI)
 
 ## Local Internet Registry (LIR)
+
+## First Run Experience (FRE)

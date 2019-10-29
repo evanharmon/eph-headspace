@@ -2,7 +2,11 @@
 
 ## Summary
 
-Notes on using `helm` on kubernetes
+Notes on using `helm` on kubernetes.
+
+## NOTE
+
+Explore k8s operators instead
 
 ## Resources
 

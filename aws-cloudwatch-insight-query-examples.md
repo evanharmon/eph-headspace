@@ -32,3 +32,11 @@ fields @timestamp, @message
 | sort @timestamp desc
 | limit 200
 ```
+
+## Get Distinct List Of Events
+
+```
+stats count(*) by eventSource
+| sort eventSource asc
+| limit 2000
+```

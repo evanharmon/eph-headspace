@@ -6,10 +6,13 @@ Notes on using aws amplify auth sdk's, cli, etc
 
 ## Resources
 
+[AWS Blog Cypress Auth Test](https://aws.amazon.com/blogs/mobile/running-end-to-end-cypress-tests-for-your-fullstack-ci-cd-deployment-with-amplify-console/)
 [React Router Amplify Auth](https://www.rockyourcode.com/custom-react-hook-use-aws-amplify-auth/)
 [Docs for JS](https://aws-amplify.github.io/docs/js/authentication)
+[Android Setup Google OAuth2 AWS](https://www.linkedin.com/learning/building-android-apps-with-aws/set-up-user-sign-in-with-google?u=2240169)
+[iOS Setup Google OAuth2 AWS](https://www.linkedin.com/learning/building-ios-apps-with-aws-mobile/add-google-login?u=2240169)
 
-## Sign In With Google
+## Web App Sign In With Google
 
 ```javascript
 Auth.federatedSignIn({ provider: "Google" });
@@ -45,3 +48,8 @@ const createdTodo = await API.graphql({
 missing redirect_uri
 check for mispellings on AWS console, cognito user pools, `Callback URLs` and
 `Sign out URLs`
+
+## Mobile Oauth2
+
+`federatedSignIn` methods use SDK's from google / facebook that interact internally on the phone.
+They are NOT web views. See linkedin Videos above in Resources

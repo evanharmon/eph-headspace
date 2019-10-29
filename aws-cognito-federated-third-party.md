@@ -45,7 +45,7 @@ facebook, google, and amazon
   Example: `https://my-awesome-app-dev.auth.us-east-1.amazoncognito.com/oauth2/idpresponse`.
   Save Changes.
 
-#### Test Cognito Setup
+#### Test Cognito Oauth2 Setup
 
 In a web browser, visit
 `https://my-awesome-app-dev.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=aaaaaaaa11111111111111111&redirect_uri=http://localhost:3000`
@@ -79,7 +79,7 @@ In form:
 
 #### Cognito Setup
 
-Make sure Cognito setup above in `faceobok` section is complete. Go in to
+Make sure Cognito setup above in `facebook` section is complete. Go in to
 `User Pools, Federation, Attribute mapping`, click `Google` tab and set
 attributes to capture and associated user pool attributes
 
@@ -112,3 +112,11 @@ Benefit is that user pool token is never shared with end user.
 - Does not generate refresh tokens.
 - This is the preferred method for security on
   Single-Page Applications (SPA) which reveal the Client Secret.
+
+## Refresh Tokens
+
+[AWS](https://forums.aws.amazon.com/thread.jspa?threadID=241503)
+
+Refresh tokens DO NOT auto refresh when app gets new limited time credentials.
+Refresh tokens cannot be refreshed manually.
+There is no way to invalidate refresh tokens!

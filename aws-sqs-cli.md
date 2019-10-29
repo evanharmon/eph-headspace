@@ -21,6 +21,9 @@ aws sqs receive-message \
   --max-number-of-messages 10 > receive-messages.json
 ```
 
+## Download Single SQS Message To JSON By Message ID
+not possible
+
 ## Create Template Message File
 
 ```console
@@ -39,4 +42,10 @@ aws sqs receive-message \
 
 ```console
 aws sqs send-message --cli-input-json file://my-test-message.json
+```
+
+## Format Messages For Send Message Batch
+```console
+export Q_URL="https://sqs.us-east-1.amazonaws.com/111111111111/my-queue"
+jq '.Messages | map(. + { Id: .MessageId, MessageBody: .Body } | del(.Body,.MD5OfMessageAttributes,.MD5OfBody,.ReceiptHandle,.Attributes,.MessageId)) | { QueueUrl: env.Q_URL, Entries: . }' messages.json > cli-input.json
 ```

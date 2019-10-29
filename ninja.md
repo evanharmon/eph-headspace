@@ -61,3 +61,9 @@ print list of commands in build
 ```bash
 ninja -t commands
 ```
+
+#### Compilation Database
+
+```console
+ninja -t compdb cxx > compile_commands.json
+```

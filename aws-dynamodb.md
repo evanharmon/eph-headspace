@@ -10,6 +10,9 @@ Notes on using DynamoDB
 [Medium TimeHop Dynamodb Strategies](https://www.timehop.com/news/2018/5/25/one-year-of-dynamodb-at-timehop)
 [NAB Tech Design Patterns](https://medium.com/@nabtechblog/advanced-design-patterns-for-amazon-dynamodb-354f97c96c2)
 [Restore Point In Time From Backup](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/pointintimerecovery_beforeyoubegin.html)
+[AWS Blog Workbench Preview](https://aws.amazon.com/blogs/aws/nosql-workbench-for-amazon-dynamodb-available-in-preview/)
+[Workbench Download](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.settingup.html)
+[AWS Blog Priority Queueing](https://aws.amazon.com/blogs/database/implementing-priority-queueing-with-amazon-dynamodb/)
 
 ## Features
 

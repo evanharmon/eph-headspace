@@ -4,6 +4,10 @@
 
 Notes on working with golang structs
 
+## Resources
+
+[OmitEmpty Tags](https://www.sohamkamani.com/blog/golang/2018-07-19-golang-omitempty/)
+
 ## Inline Define / Anonymous Struct
 
 [Golangbot](https://golangbot.com/structs/)

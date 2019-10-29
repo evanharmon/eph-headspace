@@ -140,3 +140,8 @@ jq -r '[.Items]' test.json
 ```console
 jq -rs '.' my-newline-json.json
 ```
+
+## Use Env Variable
+```console
+jq '.Messages | map(. + { Id: .MessageId, MessageBody: .Body } | del(.Body,.MD5OfMessageAttributes,.MD5OfBody,.ReceiptHandle,.Attributes,.MessageId)) | { QueueUrl: env.Q_URL, Entries: . }' messages.json > cli-input.json
+```
