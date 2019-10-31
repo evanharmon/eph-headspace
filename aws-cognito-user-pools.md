@@ -46,3 +46,20 @@ Benefit is that user pool token is never shared with end user.
 
 [OpenID Configuration](https://cognito-idp.us-east-1.amazonaws.com/us-east-1_aaaaaaaaa/.well-known/openid-configuration)
 [JWKS Configuration](https://cognito-idp.us-east-1.amazonaws.com/us-east-1_aaaaaaaaa/.well-known/jwks.json)
+
+## Triggers
+
+### Lambda Invokation From Cognito Policy
+
+in terraform:
+
+```
+resource "aws_lambda_permission" "allow_invocation_from_cognito" {
+  provider      = aws.cross-account
+  statement_id  = "AllowExecutionFromCognito"
+  action        = "lambda:InvokeFunction"
+  function_name = module.post_confirmation_trigger.lambda_name
+  principal     = "cognito-idp.amazonaws.com"
+  source_arn    = module.cognito_user_pool.user_pool.arn
+}
+```
