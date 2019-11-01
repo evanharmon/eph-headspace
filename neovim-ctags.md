@@ -35,11 +35,18 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 `ctags -R --languages=c --exclude=".git" --exclude=log . $(bundle list --paths)`
 
+## Add Home Library Ctags
+
+vimrc or vim command line
+
+```
+set tags+=~/JUCE/tags
+```
+
 ## Jump to definition
 
 ```
-:tag ClassName
-^]
+<CTRL-]>
 ```
 
 ## Jump back from definition

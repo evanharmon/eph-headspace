@@ -6,10 +6,11 @@ Notes on using react router
 
 ## Resources
 
+[Docs](https://reacttraining.com/react-router/web/guides/quick-start)
 [RWeiruch UnMounted Component Set State Warning](https://www.robinwieruch.de/react-warning-cant-call-setstate-on-an-unmounted-component/)
 [React Hooks And Context Router](https://medium.com/trabe/implementing-private-routes-with-react-router-and-hooks-ed38d0cf93d5)
 [React Router Amplify Auth](https://www.rockyourcode.com/custom-react-hook-use-aws-amplify-auth/)
-[Testing](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/testing.md)
+[GH Testing](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/testing.md)
 
 ## Index Route
 
@@ -77,5 +78,23 @@ const MyRouteComponent = ({ ...options }) => (
   <>
     <MyComponent {...options} />
   </>
+);
+```
+
+## Simple Example
+
+```javascript
+ReactDOM.render(
+  <Router>
+    <div>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/news">
+        <NewsFeed />
+      </Route>
+    </div>
+  </Router>,
+  node
 );
 ```
