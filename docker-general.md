@@ -93,3 +93,9 @@ systemctl status docker
 ## Mac docker.sock
 
 located at `/private/var/run/docker.sock`
+
+## Get Registry Info
+
+```console
+docker login | rg registry
+```
