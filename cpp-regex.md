@@ -26,3 +26,9 @@ std::cout << result;
 std::cout << std::regex_replace (s,e,"$1 and $2",std::regex_constants::format_no_copy);
 std::cout << std::endl;
 ```
+
+## Regex Search
+
+```cpp
+std::cout << std::regex_search("-123", e) << std::endl;
+```

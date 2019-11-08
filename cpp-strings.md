@@ -36,3 +36,11 @@ std::cout << "The size of str is " << str.length() << " bytes.\n";
 ```cpp
 std::reverse(copy.begin(), copy.end());
 ```
+
+## Join Strings
+
+```cpp
+auto sign = "-";
+auto sint = "123";
+auto joinedInt = sign + sint;
+```

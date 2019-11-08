@@ -4,6 +4,10 @@
 
 Notes on building docker images
 
+## Resources
+
+[ARG in Dockerfile FROM](https://www.jeffgeerling.com/blog/2017/use-arg-dockerfile-dynamic-image-specification)
+
 ## Build Image
 
 ```console

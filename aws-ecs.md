@@ -9,6 +9,7 @@ Notes on working with ECS in AWS
 [GH Awesome](https://github.com/nathanpeck/awesome-ecs)
 [AWS Local Dev Blog](https://aws.amazon.com/blogs/compute/a-guide-to-locally-testing-containers-with-amazon-ecs-local-endpoints-and-docker-compose/)
 [GH Local Dev Repo](https://github.com/awslabs/amazon-ecs-local-container-endpoints<Paste>)
+[Private ECS Fargate](https://aws.amazon.com/blogs/compute/access-private-applications-on-aws-fargate-using-amazon-api-gateway-privatelink/)
 
 ## Log File Locations
 

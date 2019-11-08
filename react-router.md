@@ -98,3 +98,34 @@ ReactDOM.render(
   node
 );
 ```
+
+## Hooks
+
+### Test React-Router Hooks With Jest
+
+```javascript
+test("renders without failing", () => {
+  jest.mock("react-router-dom", () => ({
+    ...jest.requireActual("react-router-dom"),
+    useParams: () => ({
+      id: "123"
+    }),
+    useRouteMatch: () => ({ url: "/records/123" })
+  }));
+  const renderer = new ShallowRenderer();
+  renderer.render(
+    <MemoryRouter>
+      <Records />
+    </MemoryRouter>
+  );
+  const result = renderer.getRenderOutput();
+  expect(result).toBeTruthy();
+});
+```
+
+## Common Mistakes
+
+### Redirects Aren't Working Outside Switch
+
+make sure you don't have MULTIPLE <BrowserRouter>'s. Example, one in
+'src/index.js' and yet another in 'src/routes.js'

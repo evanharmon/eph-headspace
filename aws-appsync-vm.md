@@ -128,3 +128,9 @@ $util.toJson($ctx.result)
 $util.qr($context.stash.put("latestVersionNumber", $ctx.result.versionNumber))
 $util.toJson($ctx.result)
 ```
+
+## Check TypeOf
+
+```vtl
+$util.typeOf("$context.identity.groups")
+```

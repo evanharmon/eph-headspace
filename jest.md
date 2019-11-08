@@ -37,3 +37,9 @@ jest --testRegex MyComponent/MyComponent.test.js
 ```console
 node --inspect node_modules/.bin/jest --runInBand
 ```
+
+## Hide Coverage On Jest Run
+
+```console
+jest --testRegex mycomponent.test.js --coverage=false
+```

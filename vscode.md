@@ -29,3 +29,9 @@ Linux $HOME/.config/Code/User/settings.json
     }
 }
 ```
+
+## Open File In VSCode From Terminal
+
+```console
+code README.md
+```

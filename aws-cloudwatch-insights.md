@@ -1,4 +1,4 @@
-# AWS CLOUDWATCH INSIGHTS Query Examples
+# AWS CLOUDWATCH INSIGHTS
 
 ## Summary
 

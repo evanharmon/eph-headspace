@@ -10,6 +10,8 @@ Notes on using OAuth2 in Google Cloud API
 [FAQ](https://support.google.com/cloud/answer/9110914?hl=en&ref_topic=3473162)
 [Google Sign In Scopes](https://developers.google.com/identity/protocols/googlescopes#google_sign-in)
 [Branding Guidelines](https://developers.google.com/identity/branding-guidelines#top_of_page)
+[Blog On App Verificaton](https://www.nylas.com/blog/google-oauth-app-verification/)
+[Medium Blog On The Verification Headache](https://medium.com/@crspybits/the-google-oauth-review-process-9d1b05f53aea)
 
 ## OAuth Token Grants
 

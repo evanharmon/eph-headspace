@@ -80,3 +80,19 @@ cancelBtn.dispatchEvent(
   new MouseEvent("click", { bubbles: true, cancelable: true })
 );
 ```
+
+## Test Hook With Initial Render Changes
+
+```javascript
+const wrapper = ({ children }) => (
+  <AuthProvider>
+    <MainProvider>{children}</MainProvider>
+  </AuthProvider>
+);
+
+const { result, waitForNextUpdate } = renderHook(() => useCustomState(), {
+  wrapper
+});
+await waitForNextUpdate(); // avoids `act`  warnings
+expect(result.current).toHaveProperty("id");
+```
