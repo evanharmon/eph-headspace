@@ -1,17 +1,14 @@
-# JUCE
+# JUCE BUFFERS
 
 ## Summary
 
-Notes on using the juce framework
+Notes on using buffers with the juce framework
 
 ## Resources
 
-[Build with Ninja using Fruit]
+## Initialize Audio Buffer
 
-## Ninja Builds
-
-#### Convert Projucer To Ninja
-
-```console
-./FRUT/prefix/FRUT/bin/Jucer2Reprojucer SimpleConvert.jucer ../FRUT/prefix/FRUT/cmake/Reprojucer.cmake --juce-modules=../../../../JUCE/modules
+```cpp
+AudioBuffer<float> outputBuffer;
+outputBuffer.setSize(2, 44100);
 ```

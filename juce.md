@@ -2,13 +2,9 @@
 
 ## Summary
 
-Notes on using the juce framework with files
+Notes on using the juce framework
 
 ## Resources
-
-## Argument Parsing
-
-arguments MUST have an equal sign `--file=myfile.txt`
 
 ## VST Plug-Ins Not Building
 

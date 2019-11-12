@@ -35,3 +35,7 @@ Linux $HOME/.config/Code/User/settings.json
 ```console
 code README.md
 ```
+
+## View DotFiles
+
+Toggle display of dotfiles (e.g., .env), Command-Shift-.
