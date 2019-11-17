@@ -106,3 +106,10 @@ Sometimes the provider needs to be added explicitly in the CLI call
 ```console
 terraform import -provider=aws.my-custom aws_iam_policy.my_policy arn:aws:iam::aaaaaaaaaaaa:policy/my-policy
 ```
+
+## Force Serial Deployment
+helps avoid lambda permission resource exception issues
+
+```console
+terraform apply --parallelism=1 tfplan
+```

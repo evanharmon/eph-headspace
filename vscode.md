@@ -4,18 +4,41 @@
 
 ## Resources
 
-## Debug With GDB Server
+## Open File In VSCode From Terminal
 
-[SO](https://stackoverflow.com/questions/53519668/how-to-attach-to-remote-gdb-with-vscode)
+```console
+code README.md
+```
 
-install `Native Debug` extension
+## View DotFiles
 
-## Settings File Location
+Toggle display of dotfiles (e.g., .env), Command-Shift-.
 
-macOS $HOME/Library/Application Support/Code/User/settings.json
-Linux $HOME/.config/Code/User/settings.json
+## Setup
 
-## Cmake / Debug Setup
+### Settings.json
+
+#### Settings File Location
+
+- macOS \$HOME/Library/Application Support/Code/User/settings.json
+- Linux \$HOME/.config/Code/User/settings.json
+
+#### MAC OS X
+
+The default `settings.json` and `launch.json` are stored deep inside the $HOME
+directory in the Library folder. Very annoying. Symlink them to $HOME
+
+```console
+ln -sf ~/.config/vscode/launch.json ~/Library/Application\ Support/Code/User/launch.json
+ln -sf ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -sf ~/.config/vscode/extensions.json ~/Library/Application\ Support/Code/User/extensions.json
+```
+
+#### Linux
+
+### Launch.json
+
+### Cmake / Debug Setup
 
 ```json
 "cmake.debugConfig": {
@@ -30,12 +53,13 @@ Linux $HOME/.config/Code/User/settings.json
 }
 ```
 
-## Open File In VSCode From Terminal
+## Debugging
 
-```console
-code README.md
-```
+remember to copy over arguments from `task.json` to launch file if trying to
+debug CLI tools
 
-## View DotFiles
+### Debug With GDB Server
 
-Toggle display of dotfiles (e.g., .env), Command-Shift-.
+[SO](https://stackoverflow.com/questions/53519668/how-to-attach-to-remote-gdb-with-vscode)
+
+install `Native Debug` extension

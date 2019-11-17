@@ -7,6 +7,7 @@ Notes on testing with Jest
 ## Resources
 
 [Github Cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
+[Debug In Chrome](https://jestjs.io/docs/en/troubleshooting)
 
 ## Error watching file for changes: EMFILE
 
@@ -42,4 +43,26 @@ node --inspect node_modules/.bin/jest --runInBand
 
 ```console
 jest --testRegex mycomponent.test.js --coverage=false
+```
+
+## Expect
+
+### Check If Array Contains String
+
+```javascript
+expect(["mic", "synth"]).toContain("synth");
+```
+
+### Check If Array Contains Property
+
+[Medium Match Objet In Array](https://medium.com/@andrei.pfeiffer/jest-matching-objects-in-array-50fe2f4d6b98)
+
+```javascript
+expect(state).toEqual(
+  expect.arrayContaining([
+    expect.objectContaining({
+      type: "END"
+    })
+  ])
+);
 ```

@@ -7,6 +7,7 @@ Notes on using prettier
 ## Resources
 
 [Docs](https://prettier.io/docs/en/ignore.html)
+[RWieruch Using Prettier in Vscode](https://www.robinwieruch.de/how-to-use-prettier-vscode)
 
 ## Ignore Javascript Code
 

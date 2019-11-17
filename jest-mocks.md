@@ -20,3 +20,20 @@ jest.mock("react-router-dom", () => ({
   useRouteMatch: () => ({ url: "/id/1" })
 }));
 ```
+
+## Mock File
+
+```javascript
+import moduleName, { foo } from "../moduleName";
+
+jest.mock("../moduleName", () => {
+  return {
+    __esModule: true,
+    default: jest.fn(() => 42),
+    foo: jest.fn(() => 43)
+  };
+});
+
+moduleName(); // Will return 42
+foo(); // Will return 43
+```

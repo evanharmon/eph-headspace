@@ -33,3 +33,9 @@ EOF
 ```console
 docker build --target builder -t alexellis2/href-counter:latest .
 ```
+
+## Build Docker Image With NO Context
+
+```console
+docker build - < Dockerfile
+```

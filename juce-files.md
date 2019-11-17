@@ -44,3 +44,18 @@ writer.reset (format.createWriterFor (new FileOutputStream (file),
 if (writer != nullptr)
     writer->writeFromAudioSampleBuffer (buffer, 0, buffer.getNumSamples());
 ```
+
+or
+
+```
+void writeToFile(AudioBuffer<float> buffer, File outFile, lengthInSamples) {
+  const String outFileExt = outFile.getFileExtension();
+  AudioFormat *fmtType = manager.findFormatForFileExtension(outFileExt);
+  AudioFormatWriter *writer =
+      fmtType->createWriterFor(new FileOutputStream(outFile), 44100,
+                               buffer.getNumSamples(), 24, {}, 0);
+  writer->writeFromAudioSampleBuffer(buffer, 0, lengthInSamples);
+  writer->flush();
+  delete writer;
+}
+```
