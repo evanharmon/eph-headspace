@@ -129,3 +129,38 @@ test("renders without failing", () => {
 
 make sure you don't have MULTIPLE <BrowserRouter>'s. Example, one in
 'src/index.js' and yet another in 'src/routes.js'
+
+## Debugging
+
+[SO Debug Example](https://stackoverflow.com/questions/34093913/how-to-debug-react-router)
+
+```javascript
+class DebugRouter extends Router {
+  constructor(props) {
+    super(props);
+    console.log("initial history is: ", JSON.stringify(this.history, null, 2));
+    this.history.listen((location, action) => {
+      console.log(
+        `The current URL is ${location.pathname}${location.search}${location.hash}`
+      );
+      console.log(
+        `The last navigation action was ${action}`,
+        JSON.stringify(this.history, null, 2)
+      );
+    });
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+      <DebugRouter>
+        <Switch>
+          <Route exact path="/login" name="Login Page" component={Login} />
+          <Route path="/" name="Home" component={DefaultComponent} />
+        </Switch>
+      </DebugRouter>
+    );
+  }
+}
+```

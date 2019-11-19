@@ -59,3 +59,32 @@ void writeToFile(AudioBuffer<float> buffer, File outFile, lengthInSamples) {
   delete writer;
 }
 ```
+
+### Load Buffer From File
+
+```cpp
+void loadBuffer()
+{
+    AudioFormatManager formatManager;
+    formatManager.registerBasicFormats();
+    std::unique_ptr<AudioFormatReader> reader (formatManager.createReaderFor(File("/Users/nammick/Desktop/Dump/test.wav")));
+    // NB: you really must check for a nullptr here
+    buffer.setSize((int)reader->numChannels, (int)reader->lengthInSamples);
+    reader->read(&buffer, 0,(int)reader->lengthInSamples,0, true,true);
+}
+```
+
+### Save To File From Buffer
+
+```cpp
+void saveOutput()
+{
+    File outputFile("/Users/nammick/Desktop/analysis1.wav");
+    auto outStream = outputFile.createOutputStream();
+    // in real code you must check whether the stream is null before continuing
+    WavAudioFormat format;
+    std::unique_ptr<AudioFormatWriter> writer (format->createWriterFor(outStream, 44100, output.getNumChannels(), 32,nullptr, 0));
+    // again, you need add a check for a nullptr here
+    writer->writeFromAudioSampleBuffer(output, 0, output.getNumSamples());
+}
+```
