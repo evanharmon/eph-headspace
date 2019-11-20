@@ -4,9 +4,13 @@
 
 Notes on working with git log
 
+## Resources
+
 ## Check Log
 
-`$ git log`
+```console
+git log
+```
 
 ## Check Log One Line
 
@@ -28,4 +32,18 @@ Notes on working with git log
 
 ```console
 git log --stat
+```
+
+## Files
+
+### Show Files Changed By Each Commit
+
+```console
+git log --stat
+```
+
+### See Files Changed In Last 10 Commits
+
+```console
+git log -name-status -10 ./
 ```

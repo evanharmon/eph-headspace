@@ -25,3 +25,20 @@ feature branch
 ```console
 git rebase -Xtheirs master
 ```
+
+## Show Git File Changes During Rebase Edit
+
+```console
+git show --name-only
+```
+
+## Reset Single File During Rebase Edit
+
+```console
+git reset HEAD^ -- .gitignore
+```
+## Return ALL Edited Files For More Changes During Rebase
+
+```console
+git reset HEAD^
+```

@@ -4,6 +4,9 @@
 
 ## Resources
 
+[DOCS Integrated Terminals](https://code.visualstudio.com/docs/editor/integrated-terminal)
+[Master The Terminal](https://www.growingwiththeweb.com/2017/03/mastering-vscodes-terminal.html)
+
 ## Open File In VSCode From Terminal
 
 ```console
@@ -63,3 +66,9 @@ debug CLI tools
 [SO](https://stackoverflow.com/questions/53519668/how-to-attach-to-remote-gdb-with-vscode)
 
 install `Native Debug` extension
+
+## TERMINAL
+
+### Rename Terminal Session
+
+run the command `terminal rename`

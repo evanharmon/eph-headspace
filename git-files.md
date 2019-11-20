@@ -1,5 +1,11 @@
 # GIT FILES
 
+## Summary
+
+Notes on working with files with GIT
+
+## Resources
+
 ## Adds All New or Changed (as long as not ignored)
 
 but no rm actions
