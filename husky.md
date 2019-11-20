@@ -47,10 +47,8 @@ in package.json
 ```bash
 #!/bin/bash
 
-[[ ! -z $NO_HUSKY ]] && exit 0
-[[ $HUSKY_GIT_STDIN =~ 'delete' ]] && exit 0
 # Only run husky on src directory
-[[ "$(git diff --stat ./src)" == "" ]] && exit 0
+[[ "$(git diff --staged --stat ./src)" == "" ]] && exit 0
 
 exit 1
 ```
