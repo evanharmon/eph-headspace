@@ -1,6 +1,10 @@
 # AWS S3
 Storage is theoretically unlimited
 
+## Summary
+
+## Resources
+
 ## General Info
 Key / Value Pair
 Object based storage - not an OS or Database

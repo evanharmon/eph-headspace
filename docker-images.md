@@ -40,4 +40,12 @@ docker images repo1 --format "{{json . }}"
 
 ``console
 docker images --format "{{json . }}" | jq .Repository | grep -v <exclude random stuff here> > images.txt
-```
+
+````
+
+## Delete All Images By Name
+
+Pretty Nuclear!
+```console
+docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}' | rg myimage)
+````

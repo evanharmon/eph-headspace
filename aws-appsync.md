@@ -11,6 +11,7 @@ Notes on using aws appsync
 [Resolver VTL Programming](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference-programming-guide.html)
 [VTL Utility Functions](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-util-reference.html)
 [Resource For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
+[Pure WebSocket Support](https://aws.amazon.com/about-aws/whats-new/2019/11/aws-appsync-adds-real-time-enhancements-with-pure-websockets-support-for-graphql-subscriptions/)
 
 ## Subscriptions
 
