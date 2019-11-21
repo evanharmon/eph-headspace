@@ -20,6 +20,12 @@ show line numbers as well
 rg 'convert to string' -C
 ```
 
+## Show File Names Only
+
+```console
+rg --files 'history.replaceState' .
+```
+
 ## Use ripgrep with FZF in zsh
 
 ### .zshrc

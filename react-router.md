@@ -7,6 +7,7 @@ Notes on using react router
 ## Resources
 
 [Docs](https://reacttraining.com/react-router/web/guides/quick-start)
+[History Docs](https://github.com/ReactTraining/history/blob/master/docs/GettingStarted.md)
 [RWeiruch UnMounted Component Set State Warning](https://www.robinwieruch.de/react-warning-cant-call-setstate-on-an-unmounted-component/)
 [React Hooks And Context Router](https://medium.com/trabe/implementing-private-routes-with-react-router-and-hooks-ed38d0cf93d5)
 [React Router Amplify Auth](https://www.rockyourcode.com/custom-react-hook-use-aws-amplify-auth/)
@@ -35,21 +36,21 @@ use `<Redirect />` in combination with `setState()`
 ```javascript
 class Login extends React.Component {
   state = {
-    redirectToReferrer: false
-  };
+    redirectToReferrer: false,
+  }
 
   login = () => {
     fakeAuth.authenticate(() => {
-      this.setState({ redirectToReferrer: true });
-    });
-  };
+      this.setState({ redirectToReferrer: true })
+    })
+  }
 
   render() {
-    const { redirectToReferrer } = this.state;
+    const { redirectToReferrer } = this.state
 
     // here is the important part
     if (redirectToReferrer) {
-      return <Redirect to="/" />;
+      return <Redirect to="/" />
     }
     //
 
@@ -58,7 +59,7 @@ class Login extends React.Component {
         <p>You must log in to view the page at {from.pathname}</p>
         <button onClick={this.login}>Log in</button>
       </div>
-    );
+    )
   }
 }
 ```
@@ -78,7 +79,7 @@ const MyRouteComponent = ({ ...options }) => (
   <>
     <MyComponent {...options} />
   </>
-);
+)
 ```
 
 ## Simple Example
@@ -96,7 +97,7 @@ ReactDOM.render(
     </div>
   </Router>,
   node
-);
+)
 ```
 
 ## Hooks
@@ -104,23 +105,23 @@ ReactDOM.render(
 ### Test React-Router Hooks With Jest
 
 ```javascript
-test("renders without failing", () => {
-  jest.mock("react-router-dom", () => ({
-    ...jest.requireActual("react-router-dom"),
+test('renders without failing', () => {
+  jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
     useParams: () => ({
-      id: "123"
+      id: '123',
     }),
-    useRouteMatch: () => ({ url: "/records/123" })
-  }));
-  const renderer = new ShallowRenderer();
+    useRouteMatch: () => ({ url: '/records/123' }),
+  }))
+  const renderer = new ShallowRenderer()
   renderer.render(
     <MemoryRouter>
       <Records />
     </MemoryRouter>
-  );
-  const result = renderer.getRenderOutput();
-  expect(result).toBeTruthy();
-});
+  )
+  const result = renderer.getRenderOutput()
+  expect(result).toBeTruthy()
+})
 ```
 
 ## Common Mistakes
@@ -137,17 +138,17 @@ make sure you don't have MULTIPLE <BrowserRouter>'s. Example, one in
 ```javascript
 class DebugRouter extends Router {
   constructor(props) {
-    super(props);
-    console.log("initial history is: ", JSON.stringify(this.history, null, 2));
+    super(props)
+    console.log('initial history is: ', JSON.stringify(this.history, null, 2))
     this.history.listen((location, action) => {
       console.log(
         `The current URL is ${location.pathname}${location.search}${location.hash}`
-      );
+      )
       console.log(
         `The last navigation action was ${action}`,
         JSON.stringify(this.history, null, 2)
-      );
-    });
+      )
+    })
   }
 }
 
@@ -160,7 +161,19 @@ class App extends Component {
           <Route path="/" name="Home" component={DefaultComponent} />
         </Switch>
       </DebugRouter>
-    );
+    )
   }
 }
+```
+
+## Listen To History Changes
+
+```javascript
+useEffect(() => {
+  const unlisten = history.listen((location, action) => {
+    // location is an object like window.location
+    console.log(action, location.pathname, location.state)
+  })
+  return () => unlisten()
+})
 ```
