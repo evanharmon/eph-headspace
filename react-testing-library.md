@@ -7,6 +7,7 @@ Overview of using react-testing-library to test react apps
 ## Resources
 
 [Docs](https://testing-library.com/docs/intro)
+[FAQs](https://testing-library.com/docs/react-testing-library/faq)
 [Use With Jest](https://jestjs.io/docs/en/tutorial-react#dom-testing)
 [Dom Testing Example Docs](https://testing-library.com/docs/dom-testing-library/example-intro)
 [React Testing Example Docs](https://testing-library.com/docs/react-testing-library/example-intro)
@@ -17,9 +18,9 @@ Overview of using react-testing-library to test react apps
 [Docs](https://testing-library.com/docs/react-testing-library/api#debug)
 
 ```javascript
-const HelloWorld = () => <h1>Hello World</h1>;
-const { debug } = render(<HelloWorld />);
-debug();
+const HelloWorld = () => <h1>Hello World</h1>
+const { debug } = render(<HelloWorld />)
+debug()
 ```
 
 ## Accessibility / Icon Library Buttons
@@ -44,9 +45,9 @@ debug();
 test:
 
 ```javascript
-const { getByLabelText } = render(<AwesomeForm />);
+const { getByLabelText } = render(<AwesomeForm />)
 
-fireEvent.click(getByLabelText(/create-button/i));
+fireEvent.click(getByLabelText(/create-button/i))
 ```
 
 ## Fire Input Date
@@ -77,8 +78,8 @@ use dispatchEvent instead
 
 ```javascript
 cancelBtn.dispatchEvent(
-  new MouseEvent("click", { bubbles: true, cancelable: true })
-);
+  new MouseEvent('click', { bubbles: true, cancelable: true })
+)
 ```
 
 ## Test Hook With Initial Render Changes
@@ -88,11 +89,20 @@ const wrapper = ({ children }) => (
   <AuthProvider>
     <MainProvider>{children}</MainProvider>
   </AuthProvider>
-);
+)
 
 const { result, waitForNextUpdate } = renderHook(() => useCustomState(), {
-  wrapper
-});
-await waitForNextUpdate(); // avoids `act`  warnings
-expect(result.current).toHaveProperty("id");
+  wrapper,
+})
+await waitForNextUpdate() // avoids `act`  warnings
+expect(result.current).toHaveProperty('id')
+```
+
+## Await Queries
+
+avoids the `an update was not wrapped in act()` warnings. Use `findBy*` instead of `queryBy*`
+
+```javascript
+const myText = await findByText('my custom text')
+expect(myText).toBeTruthy()
 ```
