@@ -6,6 +6,8 @@
 
 [DOCS Integrated Terminals](https://code.visualstudio.com/docs/editor/integrated-terminal)
 [Master The Terminal](https://www.growingwiththeweb.com/2017/03/mastering-vscodes-terminal.html)
+[CPP Settings](https://code.visualstudio.com/docs/cpp/customize-default-settings-cpp)
+[Clang On Mac](https://code.visualstudio.com/docs/cpp/config-clang-mac#_configure-the-compiler-path)
 
 ## Open File In VSCode From Terminal
 

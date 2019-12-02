@@ -10,6 +10,7 @@ Notes on tools, frameworks, etc for React testing
 [Jest Expect](https://jestjs.io/docs/en/expect)
 [Testing React-Router](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/testing.md)
 [Shallow Renderer](https://reactjs.org/docs/shallow-renderer.html)
+[Kent C Dodds Testing Javascript Course](https://testingjavascript.com)
 
 ## Test Initial State
 
@@ -17,6 +18,6 @@ not react specific, simple javascript class property testing and using `expect`
 from jest
 
 ```javascript
-const component = new CollectionForm({ props: {} });
-expect(component.state.redirectTo).toBeNull();
+const component = new CollectionForm({ props: {} })
+expect(component.state.redirectTo).toBeNull()
 ```

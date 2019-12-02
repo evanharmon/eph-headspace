@@ -16,3 +16,16 @@ Notes on using FRUT on projucer fiels in the juce framework
 ```console
 ./FRUT/prefix/FRUT/bin/Jucer2Reprojucer SimpleConvert.jucer ../FRUT/prefix/FRUT/cmake/Reprojucer.cmake --juce-modules=../../../../JUCE/modules
 ```
+
+#### Run CMAKE With Ninja As Generator
+
+```console
+mkdir build && cd build
+cmake .. -GNinja
+```
+
+#### CMAKE Build
+
+```console
+cd build && cmake ..
+```

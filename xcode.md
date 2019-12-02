@@ -13,3 +13,9 @@ Notes on using XCODE IDE on Mac projects
 ### Add Arguments
 
 `Product Menu->Edit Schema`, choose `Arguments` tab and add arguments.
+
+## Build
+
+### Reporter
+
+Show the Report navigator (CMD+8). Can view actual commands used by xcode.
