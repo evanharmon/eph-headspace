@@ -38,3 +38,20 @@ jest.mock('../moduleName', () => {
 moduleName() // Will return 42
 foo() // Will return 43
 ```
+
+## Mock React useState
+
+```javascript
+jest.mock('react', () => ({
+  ...jest.requireActual('react'),
+  useState: jest.fn(),
+}))
+
+describe('<MyComponent />', () => {
+  const setState = jest.fn()
+  beforeEach(() => {
+    useState.mockImplementation(init => [init, setState])
+  })
+  test('my component rendering test', () => {})
+})
+```
