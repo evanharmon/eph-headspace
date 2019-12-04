@@ -24,15 +24,15 @@ use node.js. Much much easier
 
 ```javascript
 function getBinarySize(string) {
-  return Buffer.byteLength(string, "utf8");
+  return Buffer.byteLength(string, 'utf8')
 }
-getBinarySize("ta-daaaaa");
+getBinarySize('ta-daaaaa')
 ```
 
 ## Escape Double Quotations
 
 ```javascript
-`email = \\${JSON.stringify(email)}\\`;
+;`email = \\${JSON.stringify(email)}\\`
 ```
 
 prints `"email = \"eharmon@gmail.com"\"`
@@ -43,5 +43,13 @@ prints `"email = \"eharmon@gmail.com"\"`
 const reverse = str =>
   Array.from(str)
     .reverse()
-    .join("");
+    .join('')
+```
+
+## Check File Extension
+
+returns bool
+
+```javascript
+'myfile.mp3'.endsWith('.mp3')
 ```
