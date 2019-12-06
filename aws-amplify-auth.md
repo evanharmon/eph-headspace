@@ -15,7 +15,7 @@ Notes on using aws amplify auth sdk's, cli, etc
 ## Web App Sign In With Google
 
 ```javascript
-Auth.federatedSignIn({ provider: "Google" });
+Auth.federatedSignIn({ provider: 'Google' })
 ```
 
 ## Authentication Type
@@ -39,8 +39,8 @@ as it only supportes two argument objects representing `query` and `variables`
 const createdTodo = await API.graphql({
   query: queries.createTodo,
   variables: { input: todoDetails },
-  authMode: "AMAZON_COGNITO_USER_POOLS"
-});
+  authMode: 'AMAZON_COGNITO_USER_POOLS',
+})
 ```
 
 ## Sign Out Error
@@ -53,3 +53,28 @@ check for mispellings on AWS console, cognito user pools, `Callback URLs` and
 
 `federatedSignIn` methods use SDK's from google / facebook that interact internally on the phone.
 They are NOT web views. See linkedin Videos above in Resources
+
+## User
+
+### Get Current Authenticated User
+
+```javascript
+const data = await Auth.currentAuthenticatedUser()
+```
+
+### Get Cognito User Groups From Token
+
+returns array of groups
+
+```javascript
+const groups = user.signInUserSession.accessToken.payload['cognito:groups']
+```
+
+### Get Cognito Sub ID From Token
+
+`Auth.currentSession()` works as well
+
+```javascript
+const data = await Auth.currentAuthenticatedUser()
+const sub = data.signInUserSession.accessToken.payload['sub']
+```
