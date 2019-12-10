@@ -6,11 +6,12 @@ Notes on using react hooks
 
 ## Resources
 
-[HOOKS Blog](https://www.robinwieruch.de/react-hooks-fetch-data/)
-[API](https://reactjs.org/docs/hooks-reference.html#usecontext)
-[useContext between files](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react/)
-[Loading Context example](https://medium.com/digio-australia/using-the-react-usecontext-hook-9f55461c4eae)
-[RoadMap](https://reactjs.org/blog/2018/11/27/react-16-roadmap.html)
+- [HOOKS Blog](https://www.robinwieruch.de/react-hooks-fetch-data/)
+- [API](https://reactjs.org/docs/hooks-reference.html#usecontext)
+- [useContext between files](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react/)
+- [Loading Context example](https://medium.com/digio-australia/using-the-react-usecontext-hook-9f55461c4eae)
+- [RoadMap](https://reactjs.org/blog/2018/11/27/react-16-roadmap.html)
+- [Docs UseLayout](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
 
 ## useAnimationFrame Custom Hook
 
@@ -50,3 +51,5 @@ custom hook
 
 only needs to be used AFTER an `await` statement checking `if (isMounted)` or
 in the `catch` block of a try catch like `if (isMounted) console.log(error)`
+
+## UseLayout

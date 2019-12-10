@@ -6,8 +6,8 @@ notes on using CTAGS with neovim
 
 ## Resources
 
-[Blog 09/2018](https://jdhao.github.io/2018/09/28/nvim_tagbar_install_use/)
-[Neovim Ctags overview](https://github.com/neovim/neovim/wiki/Code-overview)
+- [Blog 09/2018](https://jdhao.github.io/2018/09/28/nvim_tagbar_install_use/)
+- [Neovim Ctags overview](https://github.com/neovim/neovim/wiki/Code-overview)
 
 ## Install
 
@@ -45,13 +45,11 @@ set tags+=~/JUCE/tags
 
 ## Jump to definition
 
-```
-<CTRL-]>
-```
+`<CTRL-]>`
 
 ## Jump back from definition
 
-`^t`
+`<CTRL-t>`
 
 ## Preview definition
 
@@ -75,14 +73,14 @@ set tags+=~/JUCE/tags
 
 ## Generate jsctags for Javascript Files
 
-```
-$ find . \
-    -type f \
-    -iregex ".*\.js$" \
-    -not \
-    -path "./node_modules/*" \
-    -exec jsctags {} -f \; |\
-    sed '/^$/d' |\
-    sort >\
-    tags
+```console
+find . \
+  -type f \
+  -iregex ".*\.js$" \
+  -not \
+  -path "./node_modules/*" \
+  -exec jsctags {} -f \; |\
+  sed '/^$/d' |\
+  sort >\
+  tags
 ```

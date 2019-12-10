@@ -76,12 +76,6 @@ git rm --cached file
 git show --pretty="format:" --name-only {git commit hash}
 ```
 
-## Diff of a File Between Branches
-
-```console
-git diff branch1 branch2 -- {file}
-```
-
 ## View a File From Another Branch
 
 ```console
@@ -126,12 +120,6 @@ git log -- /directory/file.js
 
 ```console
 $(git ls-files --directory <directory-name> | sed 's/\(.*\)\/.*/\1/' | uniq)
-```
-
-## Show Filenames Changed Between Branches
-
-```console
-git diff --name-status firstbranch..secondbranch
 ```
 
 ## Correctly Symlink Folders With `bindfs`
