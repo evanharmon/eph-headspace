@@ -12,6 +12,8 @@ Notes on using react hooks
 - [Loading Context example](https://medium.com/digio-australia/using-the-react-usecontext-hook-9f55461c4eae)
 - [RoadMap](https://reactjs.org/blog/2018/11/27/react-16-roadmap.html)
 - [Docs UseLayout](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
+- [useRef Hook Medium Blog](https://medium.com/@rossbulat/react-using-refs-with-the-useref-hook-884ed25b5c29)
+- [useRef Docs](https://reactjs.org/docs/hooks-reference.html#useref)
 
 ## useAnimationFrame Custom Hook
 
@@ -47,9 +49,36 @@ custom hook
 
 [react-hooks-testing-library](https://react-hooks-testing-library.com/usage/advanced-hooks)
 
+### Example
+
+```javascript
+test('should use custom step when incrementing', () => {
+  const wrapper = ({ children }) => (
+    <CounterStepProvider step={2}>{children}</CounterStepProvider>
+  )
+  const { result } = renderHook(() => useCounter(), { wrapper })
+  act(() => {
+    result.current.increment()
+  })
+  expect(result.current.count).toBe(2)
+})
+```
+
 ## isMounted Technique
 
 only needs to be used AFTER an `await` statement checking `if (isMounted)` or
 in the `catch` block of a try catch like `if (isMounted) console.log(error)`
 
 ## UseLayout
+
+## useRef
+
+```javascript
+const inputEl = useRef(null)
+
+return (
+  <>
+    <input ref={inputEl} type="text" />
+  </>
+)
+```

@@ -1,3 +1,11 @@
+# JQ RECIPES
+
+## Summary
+
+Recipes for common tasks using the JQ cli tool
+
+## Resources
+
 ## Query Example
 
 `{ "results": [{ "doc": {} }] }`
@@ -142,6 +150,13 @@ jq -rs '.' my-newline-json.json
 ```
 
 ## Use Env Variable
+
 ```console
 jq '.Messages | map(. + { Id: .MessageId, MessageBody: .Body } | del(.Body,.MD5OfMessageAttributes,.MD5OfBody,.ReceiptHandle,.Attributes,.MessageId)) | { QueueUrl: env.Q_URL, Entries: . }' messages.json > cli-input.json
+```
+
+## Convert Newline Delimited Text To Array
+
+```console
+jq -rs '.' myfile.txt
 ```

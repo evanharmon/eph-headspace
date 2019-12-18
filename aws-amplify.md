@@ -39,12 +39,12 @@ Amplify.configure({
     region: config.region,
     userPoolId: config.userPoolId,
     userPoolWebClientId: config.userPoolWebClientId,
-    authenticationFlowType: "USER_PASSWORD_AUTH"
+    authenticationFlowType: 'USER_PASSWORD_AUTH',
   },
   Analytics: {
-    disabled: true
-  }
-});
+    disabled: true,
+  },
+})
 ```
 
 ## Configuration
@@ -62,5 +62,22 @@ npm install @aws-amplify/auth --save
 ## Import Specific Package
 
 ```javascript
-import { graphql } from "@aws-amplify/Api";
+import { graphql } from '@aws-amplify/Api'
+```
+
+## Jest Mock Example
+
+```javascript
+jest.mock('aws-amplify', () => {
+  return {
+    _esModule: true,
+    Storage: {
+      get: jest.fn(() => {}),
+    },
+    Hub: {
+      listen: jest.fn(() => {}),
+      remove: jest.fn(() => {}),
+    },
+  }
+})
 ```

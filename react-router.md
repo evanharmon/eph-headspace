@@ -124,6 +124,10 @@ test('renders without failing', () => {
 })
 ```
 
+### Testing Redirect
+
+- [Medium Blog](https://medium.com/@the_teacher/how-to-test-redirect-from-react-router-with-rtl-react-test-library-and-jest-242eced1c6b8)
+
 ## Common Mistakes
 
 ### Redirects Aren't Working Outside Switch
