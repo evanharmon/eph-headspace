@@ -82,3 +82,16 @@ return (
   </>
 )
 ```
+
+## useState
+
+`setState` does not auto merge update objects
+
+to merge updates:
+
+```javascript
+setState(prevState => {
+  // Object.assign would also work
+  return { ...prevState, ...updatedValues }
+})
+```
