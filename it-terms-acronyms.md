@@ -78,3 +78,13 @@ simple X.509 certificates
 ## Local Internet Registry (LIR)
 
 ## First Run Experience (FRE)
+
+## Personal Area Network (PAN)
+
+shares data between devices that are close to one another
+
+## FOG Computing / FOG Networking
+
+Architecture that uses edge devices to carry out a substantial amount of
+computation, storage, communication locally and routed over the internet
+backbone
