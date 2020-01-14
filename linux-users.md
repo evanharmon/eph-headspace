@@ -1,11 +1,39 @@
-# Check user
-`$ whoami`
+## LINUX USERS
 
-# Change Password
-`$ passwd`
+## Summary
 
-# create user
-`$ usermod -aG nvm root`
+Notes on managing users in linux
 
-# List users
-`$ cat /etc/passwd`
+## Resources
+
+## Check user
+
+```console
+whoami
+```
+
+## Change Password
+
+```console
+passwd
+```
+
+## create user
+
+```console
+usermod -aG nvm root
+```
+
+## List users
+
+```console
+cat /etc/passwd
+```
+
+## Add User
+
+creates home directory as well
+
+```console
+sudo adduser evanharmon
+```

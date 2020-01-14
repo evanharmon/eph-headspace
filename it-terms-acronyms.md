@@ -88,3 +88,9 @@ shares data between devices that are close to one another
 Architecture that uses edge devices to carry out a substantial amount of
 computation, storage, communication locally and routed over the internet
 backbone
+
+## Advanced Encryption System (AES)
+
+## Secure Hash Algorithm (SHA)
+
+## Software Defined Network (SDN)

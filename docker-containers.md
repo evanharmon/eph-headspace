@@ -145,3 +145,9 @@ docker run -it --rm --name nvim \
 ```console
 docker run -it --entrypoint="" mysql bash
 ```
+
+## Docker Run Using Env File
+
+```console
+docker run -it --env-file .env myimage
+```

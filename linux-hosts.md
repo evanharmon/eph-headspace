@@ -1,12 +1,17 @@
-# Computer Hostname
-`$ cat /etc/hostname`
+# LINUX HOSTS
+
+## Summary
+
+Notes on hostnames and hosts in Linux
+
+## Resources
+
+## Set Hostname
+
+Requires a reboot. Example is for raspberry pi
+
+edit /etc/hostname
 
 ```
-127.0.0.1 localhost
-127.0.1.1 ubuntu
-192.168.0.1 nas.domain.com nas
-192.168.0.254 router.domain.com router
+raspberrypi1
 ```
-
-# Give hostnames to ip addresses on local computers
-`$ vi /etc/hosts`
