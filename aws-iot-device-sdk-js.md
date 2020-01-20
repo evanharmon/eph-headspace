@@ -14,6 +14,13 @@ Notes on using the AWS IoT device sdk for javascript
 Do not install nodejs via `apt-get` until downloading the latest deb
 package node version via `curl`
 
+## Install Dependencies
+
+```console
+sudo apt-get update -y
+sudo apt-get install -y git
+```
+
 ## Install AWS CLI
 
 ```console
@@ -33,9 +40,7 @@ aws iot describe-endpoint --endpoint-type iot:Data-ATS
 ## Install NodeJS
 
 ```console
-sudo apt-get update -y
-sudo apt-get install -y git curl
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 

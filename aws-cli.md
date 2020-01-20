@@ -1,12 +1,18 @@
 # AWS CLI
 
-# Install AWS CLI
+## Summary
+
+Notes on working with the AWS cli
+
+## Resources
+
+# Install
 
 ```console
 brew install awscli
 ```
 
-# Update AWS CLI
+# Update
 
 ```console
 pip install --upgrade --user awscli

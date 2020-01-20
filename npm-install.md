@@ -4,6 +4,10 @@
 
 Notes on installing npm modules / packages via the CLI
 
+## Resources
+
+- [NPM Docs](https://docs.npmjs.com/)
+
 ## Install Specific Version
 
 ```console
@@ -61,4 +65,16 @@ some npm packages need xcode tools, to install them run:
 
 ```console
 xcode-select --install
+```
+
+## Check For Missing Peer Dependencies
+
+```console
+npm ls --depth=0
+```
+
+## Upgrade Npm Module
+
+```console
+npm install -D graphql@latest
 ```

@@ -8,6 +8,7 @@ General notes on javascript
 
 - [Eloquent Javascript](https://eloquentjavascript.net/)
 - [You Don't Know Javascript](https://github.com/getify/You-Dont-Know-JS)
+- [Javascript Snippets 30 Seconds of code](https://github.com/30-seconds/30-seconds-of-code)
 
 ## Check for non-empty Strings
 

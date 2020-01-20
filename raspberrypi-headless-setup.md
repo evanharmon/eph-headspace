@@ -54,4 +54,4 @@ ssh-keygen -R raspberrypi.local
 ssh pi@raspberrypi.local
 ```
 
-password should be `raspberry`
+default password should be `raspberry`

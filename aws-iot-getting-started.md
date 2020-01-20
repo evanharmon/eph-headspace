@@ -6,7 +6,7 @@ Notes on getting started with AWS IoT
 
 ## Resources
 
-- [Getting Started Tutorial - RaspberryPi](https://docs.aws.amazon.com/greengrass/latest/developerguide/setup-filter.rpi.html)
+- [Getting Started Tutorial - RaspberryPi](https://docs.aws.amazon.com/iot/latest/developerguide/sdk-tutorials.html)
 
 ## OS Setup
 
@@ -59,4 +59,10 @@ cgroup_enable=memory cgroup_memory=1
 
 ```console
 sudo reboot
+```
+
+## Install Java 8
+
+```console
+sudo apt-get install -y openjdk-8-jdk
 ```

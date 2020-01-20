@@ -151,3 +151,11 @@ docker run -it --entrypoint="" mysql bash
 ```console
 docker run -it --env-file .env myimage
 ```
+
+## Export Container To Tar
+
+helpful when no shell is installed
+
+```console
+docker export f05eb31111 > contents.tar
+```

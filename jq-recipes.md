@@ -6,6 +6,8 @@ Recipes for common tasks using the JQ cli tool
 
 ## Resources
 
+- [JSON / JQ / CSV tutorial](https://programminghistorian.org/en/lessons/json-and-jq)
+
 ## Query Example
 
 `{ "results": [{ "doc": {} }] }`
@@ -97,6 +99,12 @@ cat myfile.json |\
      jq 'map(select(.doc != null) | .doc.payload | { field1: .field1, field2: .field2 })' |\
      jq -r '(map(keys) | add | unique) as $cols | map(. as $row | $cols | map($row[.])) as $rows | $cols, $rows[]' |\
      jq -r @csv > myfile.csv
+```
+
+## JSON Newline to CSV
+
+```console
+jq -rs '.[]|[.User, .CreateTimeStamp]|@csv'
 ```
 
 ## Parse and Get Length Of Key
