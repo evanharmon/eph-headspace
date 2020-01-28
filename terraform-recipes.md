@@ -34,3 +34,9 @@ locals {
   timestamp = "${replace(timestamp(), "/[-:TZ]/", "")}000000000000000000"
 }
 ```
+
+## Join Single Item With List
+
+```
+speciallist = concat([aws_cloudfront_origin_access_identity.main.iam_arn], var.my_arn_list)
+```

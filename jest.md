@@ -11,7 +11,9 @@ Notes on testing with Jest
 
 ## Error watching file for changes: EMFILE
 
-`brew install watchman`
+```console
+brew install watchman
+```
 
 ## Run Single Test File
 
@@ -50,7 +52,7 @@ jest --testRegex mycomponent.test.js --coverage=false
 ### Check If Array Contains String
 
 ```javascript
-expect(["mic", "synth"]).toContain("synth");
+expect(['mic', 'synth']).toContain('synth')
 ```
 
 ### Check If Array Contains Property
@@ -61,8 +63,8 @@ expect(["mic", "synth"]).toContain("synth");
 expect(state).toEqual(
   expect.arrayContaining([
     expect.objectContaining({
-      type: "END"
-    })
+      type: 'END',
+    }),
   ])
-);
+)
 ```

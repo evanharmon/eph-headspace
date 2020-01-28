@@ -24,3 +24,17 @@ Notes on using prettier
 ## Ignore Sections Of Code
 
 use a `.prettierignore` file instead with globs
+
+## Format Markdown To 80 Char Max
+
+```
+prettier --prose-wrap="always" README.md
+```
+
+## Write Prettier Changes To File
+
+This command is destructive!
+
+```
+prettier --prose-wrap="always" --write README.md
+```

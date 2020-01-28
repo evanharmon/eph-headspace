@@ -30,3 +30,9 @@ do
         printf 'Username: %s, Shell: %s, Home Dir: %s\n' "$f1" "$f7" "$f6"
 done < "$file"
 ```
+
+## Use Read To Get Home Directory
+
+```bash
+IFS=: read -r _ _ _ _ _ homedir _ < <(getent passwd "$username")
+```

@@ -14,6 +14,7 @@ Notes on using react hooks
 - [Docs UseLayout](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
 - [useRef Hook Medium Blog](https://medium.com/@rossbulat/react-using-refs-with-the-useref-hook-884ed25b5c29)
 - [useRef Docs](https://reactjs.org/docs/hooks-reference.html#useref)
+- [Hooks Cheat Sheet](https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70/)
 
 ## useAnimationFrame Custom Hook
 
