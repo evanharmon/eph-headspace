@@ -4,6 +4,11 @@
 
 Notes on working with JSON in golang
 
+## Resources
+
+- [Online JSON to Go Generator](https://mholt.github.io/json-to-go/)
+- [JSON Code Generator Online Tool](https://app.quicktype.io/)
+
 ## Convert JSON to GO Struct
 
 [JSON-to-Go](https://mholt.github.io/json-to-go/)

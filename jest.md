@@ -57,7 +57,7 @@ expect(['mic', 'synth']).toContain('synth')
 
 ### Check If Array Contains Property
 
-[Medium Match Objet In Array](https://medium.com/@andrei.pfeiffer/jest-matching-objects-in-array-50fe2f4d6b98)
+[Medium Match Object In Array](https://medium.com/@andrei.pfeiffer/jest-matching-objects-in-array-50fe2f4d6b98)
 
 ```javascript
 expect(state).toEqual(
