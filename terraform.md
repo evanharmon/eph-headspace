@@ -6,11 +6,11 @@ General notes on terraform
 
 ## Resources
 
-[Automation](https://learn.hashicorp.com/terraform/development/running-terraform-in-automation)
+- [Automation](https://learn.hashicorp.com/terraform/development/running-terraform-in-automation)
 
 ## Installation
 
-[Getting Started](https://www.terraform.io/intro/getting-started/install.html)
+- [Getting Started](https://www.terraform.io/intro/getting-started/install.html)
 
 Steps:
 
@@ -40,22 +40,22 @@ export PATH=$HOME/bin:$PATH
 
 ## Examples
 
-[Gruntwork Introduction to Terraform](https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180)
-[Terraform AWS Modules](https://github.com/terraform-aws-modules)
+- [Gruntwork Introduction to Terraform](https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180)
+- [Terraform AWS Modules](https://github.com/terraform-aws-modules)
 
 ## Functions
 
 ### cidrsubnet
 
-[Article](http://blog.itsjustcode.net/blog/2017/11/18/terraform-cidrsubnet-deconstructed/)
+- [Article](http://blog.itsjustcode.net/blog/2017/11/18/terraform-cidrsubnet-deconstructed/)
 
 ### Route Table Associations
 
-[Count](https://stackoverflow.com/questions/51739482/terraform-how-to-associate-multiple-subnet-to-route-table)
+- [Count](https://stackoverflow.com/questions/51739482/terraform-how-to-associate-multiple-subnet-to-route-table)
 
 ### Tags For Autoscaling Groups
 
-[Github Issue Solution](https://github.com/hashicorp/terraform/issues/15226)
+- [Github Issue Solution](https://github.com/hashicorp/terraform/issues/15226)
 
 ```
 data "null_data_source" "asg-tags" {

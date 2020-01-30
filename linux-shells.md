@@ -1,9 +1,31 @@
 # UNIX LINUX SHELLS
 
-## Check What Shell is Being Used
+## Summary
+
+Notes on working with unix / linux shells and associated variables
+
+## Resources
+
+## Built In Shell Variables
+
+### Check What Shell is Being Used
 
 ```console
 echo $0
+```
+
+### Reference Current Working Directory
+
+Current working directory is an OS level concept
+
+```console
+${CWD}
+```
+
+### Reference Present Working Directory
+
+```console
+${PWD}
 ```
 
 ## Change Shell Preference
@@ -35,12 +57,6 @@ shell variables not inherited
 
 ```console
 a=879
-```
-
-## Reference Current Directory
-
-```console
-${PWD}
 ```
 
 ## Assign Path To Variable

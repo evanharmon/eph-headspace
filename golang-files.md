@@ -4,6 +4,10 @@
 
 Notes on reading and writing files with golang
 
+## Resources
+
+- [Linux Process and Threads Don't Mix](https://news.ycombinator.com/item?id=14470231)
+
 ## Write Fprintf Output To File
 
 ```golang
