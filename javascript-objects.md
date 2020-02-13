@@ -1,6 +1,7 @@
 # JAVASCRIPT OBJECTS
 
 ## Dynamically Add properties to an object
+
 ```
 const v = {}
 v.sortByHeaderProp = prop => {
@@ -13,16 +14,20 @@ acc[OrderNo] = '13455';
 ```
 
 ## Check if an object has any properties
+
 `Object.keys(obj).length === 0`
 
 ## Check if an Object Has a Specific Property
+
 does not traverse prototype chain
+
 ```
 let o = {};
 o.hasOwnProperty()
 ```
 
 ## Build Nested Object
+
 ```
 const nest = (obj, keys, v) => {
     if (keys.length === 1) {
@@ -37,6 +42,7 @@ const nest = (obj, keys, v) => {
 ```
 
 ## Example
+
 ```
 const dog = {bark: {sound: 'bark!'}};
 nest(dog, ['bark', 'loudness'], 66);
@@ -45,7 +51,9 @@ console.log(dog); // {bark: {loudness: 66, sound: "bark!"}, woff: {sound: "woff!
 ```
 
 ## Short-hand Object Properties
+
 Object Property Values in a shorthand way
+
 ```
 let firstName = "john";
 let lastName = "smith";
@@ -53,7 +61,9 @@ let person = {firstName, lastName};
 ```
 
 ## Computed Property
+
 will evaluate, do string concatenation, etc
+
 ```
 let color = "red";
 let speed = 10;
@@ -64,4 +74,13 @@ const car = {
      speed,
      [drive]: function() { console.log("vroom"); }
 };
+```
+
+## Transform Key Values
+
+```javascript
+const data = Object.entries({ mykey: myvalue, mykey2: myvalue2 }).map(i => ({
+  name: i[0],
+  value: i[1],
+}))
 ```

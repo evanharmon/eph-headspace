@@ -4,21 +4,32 @@
 
 Notes on using the terraform CLI
 
+## Resources
+
+- [Blog](https://ryaneschinger.com/blog/terraform-state-move/)
+- [TF Plan](https://www.terraform.io/docs/commands/plan.html)
+
 ## State
 
-#### Remove a root level resource
+#### Remove Root Level Resource
 
 ```console
 terraform state rm aws_iam_service_linked_role.autoscaling
 ```
 
-#### Remove entire module
+#### Remove Entire Module
 
 ```console
 terraform state rm module.mymod
 ```
 
-#### Taint module
+#### Remove Module Resource
+
+```console
+tf state rm "module.mymodule.aws_cloudfront_distribution.mycdn[0]"
+```
+
+#### Taint Module
 
 ```console
 terraform taint --module=my-module aws_iam_role.my_role
@@ -33,17 +44,13 @@ or resources not in use.
 
 ## Resources
 
-[TF Plan](https://www.terraform.io/docs/commands/plan.html)
-
-#### Destroy entire module
+#### Destroy Entire Module
 
 ```console
 terraform destroy --target=module.mymod
 ```
 
-#### Move `main.tf` resources in to modules
-
-[Blog](https://ryaneschinger.com/blog/terraform-state-move/)
+#### Move `main.tf` Resources To Modules
 
 Remove resource from main.tf file, add to `modules/mymodule/main.tf` file, then:
 
@@ -51,7 +58,7 @@ Remove resource from main.tf file, add to `modules/mymodule/main.tf` file, then:
 terraform state mv aws_elb.weblb module.web.aws_elb.weblb
 ```
 
-## Show Details Of A Resource
+## Show Details Of Resource
 
 ```console
 terraform state show module.storage.aws_iam_role_policy.auth
@@ -75,31 +82,31 @@ terraform plan -out=tfplan --target=module.appsync
 
 ## Import
 
-## Import User Pool
+#### Import User Pool
 
 ```console
 terraform import aws_cognito_user_group.my_group us-east-1_vG78M4goG/user-group
 ```
 
-## Import IAM Policy
+#### Import IAM Policy
 
 ```console
 terraform import aws_iam_policy.my_policy arn:aws:iam::123456789012:policy/UsersManageOwnCredentials
 ```
 
-## Import IAM Role
+#### Import IAM Role
 
 ```console
 terraform import aws_iam_role.my_role role_name
 ```
 
-## Import Attached Role Policy
+#### Import Attached Role Policy
 
 ```console
 terraform import aws_iam_role_policy_attachment.my_role role_name
 ```
 
-### Cannot Import Non-Existent Remote Object
+#### Cannot Import Non-Existent Remote Object
 
 Sometimes the provider needs to be added explicitly in the CLI call
 
@@ -108,6 +115,7 @@ terraform import -provider=aws.my-custom aws_iam_policy.my_policy arn:aws:iam::a
 ```
 
 ## Force Serial Deployment
+
 helps avoid lambda permission resource exception issues
 
 ```console

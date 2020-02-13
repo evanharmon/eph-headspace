@@ -71,3 +71,9 @@ resource "aws_autoscaling_group" "my-group" {
   ....
   tags = ["${data.null_data_source.asg-tags.*.outputs}"]
 ```
+
+## Review Stale Plan
+
+```console
+terraform show tfplan
+```

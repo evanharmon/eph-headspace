@@ -78,3 +78,9 @@ npm ls --depth=0
 ```console
 npm install -D graphql@latest
 ```
+
+## Install Packages Without Package.json
+
+```console
+cd src && npm init --yes && npm install redis && rm package.json package-lock.json && cd ..
+```

@@ -1,10 +1,13 @@
 # GOLANG TESTS
 
-All golang variables are initialized to their respective zero values
+## Summary
+
+Notes on writing tests in golang
 
 ## Resources
 
-[Table Driven Tests](https://dave.cheney.net/2019/05/07/prefer-table-driven-tests)
+- [Table Driven Tests](https://dave.cheney.net/2019/05/07/prefer-table-driven-tests)
+- [Go Test Tips From Splice](https://splice.com/blog/lesser-known-features-go-test/)
 
 ## Run A Single Test Function
 
@@ -32,6 +35,12 @@ go test `go list ./... | grep -v 'testhelper'`
 
 ```console
 go test --cover
+```
+
+## Fail Fast
+
+```console
+go test -v -timeout 20m -failfast
 ```
 
 ## Run Tests As Package User

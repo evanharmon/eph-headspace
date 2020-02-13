@@ -14,3 +14,16 @@ Notes on working with Terraform conditionals
 ```hcl
 name = "${local.env == "sandbox" ? "main-sandbox" : "main"}"
 ```
+
+## Conditional Dynamic Block
+
+```hcl
+dynamic "storage_data_disk" {
+  for_each = var.create_metric_and_logging_data_disks ? [local.metric_and_logging_data_disk] : []
+  content {
+    name = storage_data_disk.value.name
+    lun  = storage_data_disk.value.lun
+    size = storage_data_disk.value.size
+  }
+}
+```
