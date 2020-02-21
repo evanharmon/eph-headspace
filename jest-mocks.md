@@ -6,9 +6,10 @@ Notes on writing mocks with jest
 
 ## Resources
 
-[Docs](https://jestjs.io/docs/en/mock-functions)
-[Mock AWS SQS](https://itnext.io/mock-promisified-aws-service-operation-calls-with-jest-6f11a22a371)
-[Multiple Different Mocks Per Module](https://medium.com/trabe/mocking-different-values-for-the-same-module-using-jest-a7b8d358d78b)
+- [Docs](https://jestjs.io/docs/en/mock-functions)
+- [Mock AWS SQS](https://itnext.io/mock-promisified-aws-service-operation-calls-with-jest-6f11a22a371)
+- [Multiple Different Mocks Per Module](https://medium.com/trabe/mocking-different-values-for-the-same-module-using-jest-a7b8d358d78b)
+- [Mock AudioContext / Web Audio](https://stackoverflow.com/questions/51829319/how-to-mock-video-pause-function-using-jest)
 
 ## Mock NPM Package
 
@@ -54,4 +55,13 @@ describe('<MyComponent />', () => {
   })
   test('my component rendering test', () => {})
 })
+```
+
+## Mock HTML Audio
+
+```
+window.AudioContext = jest.fn().mockImplementation(() => {})
+jest
+  .spyOn(window.HTMLMediaElement.prototype, 'load')
+  .mockImplementation(() => {})
 ```

@@ -6,8 +6,8 @@ Notes on testing with Jest
 
 ## Resources
 
-[Github Cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
-[Debug In Chrome](https://jestjs.io/docs/en/troubleshooting)
+- [Github Cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
+- [Debug In Chrome](https://jestjs.io/docs/en/troubleshooting)
 
 ## Error watching file for changes: EMFILE
 
@@ -68,3 +68,7 @@ expect(state).toEqual(
   ])
 )
 ```
+
+### DeepEqual Equivalent
+
+[.toMatchObject()](https://jestjs.io/docs/en/expect#tomatchobjectobject)

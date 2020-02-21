@@ -7,6 +7,7 @@ Notes on setting up and using VPC Endpoints
 ## Resources
 
 - [Setting Up ECS / ECR / S3 VPC Endpoints](https://aws.amazon.com/blogs/compute/setting-up-aws-privatelink-for-amazon-ecs-and-amazon-ecr/)
+- [AWS Blog VPC Endpoint Policies](https://aws.amazon.com/blogs/containers/using-vpc-endpoint-policies-to-control-amazon-ecr-access/)
 
 ## Creation With Restricted Policy
 
@@ -33,3 +34,19 @@ create a policy limiting it to just your AWS account
 Doesn't look like VPC endpoints can be used to provide VPN access to services like S3
 [Reddit](https://www.reddit.com/r/aws/comments/4fzrts/route_s3_traffic_through_vpn/_)
 [SO](https://stackoverflow.com/questions/1764988/amazon-s3-over-vpn#46740474)
+
+## Restrict ECR Access By Account
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "ecr:*",
+      "Effect": "Allow",
+      "Resource": "arn:aws:ecr:us-east-1:123456789123:repository/*"
+      "Principal": "*"
+    }
+  ]
+}
+```

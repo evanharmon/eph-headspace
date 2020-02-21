@@ -28,25 +28,6 @@ echo "$(aws ecr get-authorization-token | \
     --password-stdin
 ```
 
-ON EC2
-
-```console
-export AWS_ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text)"
-export AWS_DEFAULT_REGION='us-east-1'
-sudo echo "$(aws ecr get-authorization-token | \
-  sudo jq -r '.authorizationData[].authorizationToken' | \
-  sudo base64 -d | sudo cut -d: -f2)" | \
-  sudo docker login -u AWS \
-    "https://$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_REPO" \
-    --password-stdin
-```
-
-afterwards delete creds
-
-```console
-rm -rf /root/.docker/config.json
-```
-
 ## Copy Localhost File to Docker Container
 
 Does not work for images - only running containers. Run the container first,

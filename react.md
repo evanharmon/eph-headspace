@@ -7,6 +7,7 @@ General notes on using reactjs
 ## Resources
 
 - [React Snippets 30 seconds of code](https://www.30secondsofcode.org/react/p/1/)
+- [Synthetic Events](https://reactjs.org/docs/events.html)
 
 ## use font-awesome
 
@@ -58,7 +59,7 @@ React DOM is for including React in the page before React DOM
 ## Styling with object
 
 ```
-var divStyle = { color: 'white', textAlign: 'center' };
+const divStyle = { color: 'white', textAlign: 'center' };
 <div style={divStyle}></div>
 ```
 
