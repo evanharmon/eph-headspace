@@ -5,6 +5,8 @@
 [Aliases](https://medium.com/atheros/graphql-quick-tip-aliases-567303a9ddc5)
 [Fragments](https://graphqlmastery.com/blog/how-to-query-your-schema-with-graphql-fragments)
 
+## HTTP Response Shape
+
 ## JOINS
 
 (https://apihandyman.io/and-graphql-for-all-a-few-things-to-think-about-before-blindly-dumping-rest-for-graphql/)

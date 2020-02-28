@@ -13,7 +13,7 @@ Notes on common errors in React
 make sure your import is capital R
 
 ```javascript
-import React from "react";
+import React from 'react'
 ```
 
 ## Invariant
@@ -21,14 +21,14 @@ import React from "react";
 Bad
 
 ```javascript
-export default React.createClass({});
+export default React.createClass({})
 ```
 
 Good
 
 ```javascript
-const App = React.createClass({});
-export default App;
+const App = React.createClass({})
+export default App
 ```
 
 ## Commenting in JSX
@@ -43,3 +43,20 @@ export default App;
 
 Returning an object where React is expecting a string. Look for an empty object
 inside a jsx comment, or a return statement mismatch between () and {}
+
+## \_this is undefined
+
+if using vanilla (non hooks) React, make sure the class has `super(props)`
+
+example:
+
+```jsx
+class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (</>)
+  }
+}
+```

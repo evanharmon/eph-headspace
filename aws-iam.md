@@ -1,10 +1,14 @@
 # AWS IAM
 
+## Summary
+
+Notes on AWS Identity And Access Management
+
 ## Policies
 
-[Action Lists per Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actionsconditions.html)
-[Full List](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html)
-[Policy Evaluation Logic](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html#policies_evaluation_example)
+- [Action Lists per Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actionsconditions.html)
+- [Full List](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html)
+- [Policy Evaluation Logic](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html#policies_evaluation_example)
 
 ## Best Practices
 
@@ -32,9 +36,9 @@ MFA can be added to specific roles
 
 ### Trust Policy
 
-who is allowed to assume role
+Assume a role as an IAM user
 
-example trust relationship
+example trust relationship policy
 
 ```json
 {

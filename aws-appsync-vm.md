@@ -134,3 +134,35 @@ $util.toJson($ctx.result)
 ```vtl
 $util.typeOf("$context.identity.groups")
 ```
+
+## Cognito Identity Shape
+
+- [Identity Shapes](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-context-reference.html#aws-appsync-resolver-context-reference-identity)
+
+AWS_IAM
+
+```
+{
+    "accountId" : "string",
+    "cognitoIdentityPoolId" : "string",
+    "cognitoIdentityId" : "string",
+    "sourceIp" : ["string"],
+    "username" : "string", // IAM user principal
+    "userArn" : "string",
+    "cognitoIdentityAuthType" : "string", // authenticated/unauthenticated based on the identity type
+    "cognitoIdentityAuthProvider" : "string" // the auth provider that was used to obtain the credentials
+}
+```
+
+AMAZON_COGNITO_USER_POOLS
+
+```
+{
+    "sub" : "uuid",
+    "issuer" : "string",
+    "username" : "string"
+    "claims" : { ... },
+    "sourceIp" : ["x.x.x.x"],
+    "defaultAuthStrategy" : "string"
+}
+```

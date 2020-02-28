@@ -59,3 +59,14 @@ fmt.Println(string(body))
 ```golang
 b, err := io.Copy(ioutil.Discard, req.Body)
 ```
+
+## Print Request Body For Debugging
+
+```golang
+// Save a copy of this request for debugging.
+requestDump, err := httputil.DumpRequest(req, true)
+if err != nil {
+  fmt.Println(err)
+}
+fmt.Println(string(requestDump))
+```

@@ -39,3 +39,18 @@ docker build --target builder -t alexellis2/href-counter:latest .
 ```console
 docker build - < Dockerfile
 ```
+
+## AWS SDK Troubleshooting
+
+If the docker build is complaining about aws env variables for the SDKs, use
+the following flags to make sure a stale layer isn't in place
+
+```console
+docker build -t myimage \
+  --no-cache \
+  --force-rm \
+  --build-arg AWS_ACCESS_KEY_ID \
+  --build-arg AWS_SECRET_ACCESS_KEY \
+  --build-arg AWS_SESSION_TOKEN \
+  -f Dockerfile .
+```
