@@ -6,7 +6,8 @@ Notes on working with golang's type system
 
 ## Resources
 
-[Conversions](https://yourbasic.org/golang/convert-int-to-string/#string-to-int64)
+- [Conversions](https://yourbasic.org/golang/convert-int-to-string/#string-to-int64)
+- [Composite Types](https://medium.com/golangspec/composite-literals-in-go-10dc62eec06a)
 
 ## PRIMITIVES
 

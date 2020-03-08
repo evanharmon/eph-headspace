@@ -6,13 +6,14 @@ Notes on using DynamoDB
 
 ## Resources
 
-[Hash / Range Keys](https://stackoverflow.com/questions/29178855/what-is-the-use-of-a-hash-range-in-a-dynamodb-table)
-[Medium TimeHop Dynamodb Strategies](https://www.timehop.com/news/2018/5/25/one-year-of-dynamodb-at-timehop)
-[NAB Tech Design Patterns](https://medium.com/@nabtechblog/advanced-design-patterns-for-amazon-dynamodb-354f97c96c2)
-[Restore Point In Time From Backup](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/pointintimerecovery_beforeyoubegin.html)
-[AWS Blog Workbench Preview](https://aws.amazon.com/blogs/aws/nosql-workbench-for-amazon-dynamodb-available-in-preview/)
-[Workbench Download](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.settingup.html)
-[AWS Blog Priority Queueing](https://aws.amazon.com/blogs/database/implementing-priority-queueing-with-amazon-dynamodb/)
+- [Hash / Range Keys](https://stackoverflow.com/questions/29178855/what-is-the-use-of-a-hash-range-in-a-dynamodb-table)
+- [Medium TimeHop Dynamodb Strategies](https://www.timehop.com/news/2018/5/25/one-year-of-dynamodb-at-timehop)
+- [NAB Tech Design Patterns](https://medium.com/@nabtechblog/advanced-design-patterns-for-amazon-dynamodb-354f97c96c2)
+- [Restore Point In Time From Backup](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/pointintimerecovery_beforeyoubegin.html)
+- [AWS Blog Workbench Preview](https://aws.amazon.com/blogs/aws/nosql-workbench-for-amazon-dynamodb-available-in-preview/)
+- [Workbench Download](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.settingup.html)
+- [AWS Blog Priority Queueing](https://aws.amazon.com/blogs/database/implementing-priority-queueing-with-amazon-dynamodb/)
+- [Row Level Access Via Cognito Sub ID](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_dynamodb_rows.html)
 
 ## Features
 
@@ -84,3 +85,31 @@ think triggers for lambda
 used to capture modifications to tables
 
 - stores for max 24 hours
+
+## IAM
+
+### Limit Action Based On Cognito ID
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:DeleteItem",
+        "dynamodb:GetItem",
+        "dynamodb:PutItem",
+        "dynamodb:Query",
+        "dynamodb:UpdateItem"
+      ],
+      "Resource": ["arn:aws:dynamodb:*:*:table/MyTable"],
+      "Condition": {
+        "ForAllValues:StringEquals": {
+          "dynamodb:LeadingKeys": ["${cognito-identity.amazonaws.com:sub}"]
+        }
+      }
+    }
+  ]
+}
+```

@@ -72,3 +72,30 @@ expect(state).toEqual(
 ### DeepEqual Equivalent
 
 [.toMatchObject()](https://jestjs.io/docs/en/expect#tomatchobjectobject)
+
+### Test That Function Throws Error
+
+function must be wrapped in an anonymous function
+
+```javascript
+it('fails early when AWS credential properties are missing', () => {
+  expect(() => signRequest({})).toThrow()
+})
+```
+
+## CSS / SASS
+
+Enable importing scss / sass files
+
+inside package.json
+
+```json
+{
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  }
+}
+```

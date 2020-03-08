@@ -6,10 +6,17 @@ Notes on working with the `create-react-app` npm package
 
 ## Resources
 
-[Github](https://github.com/facebook/create-react-app)
-[Docs](https://facebook.github.io/create-react-app/)
+- [Github](https://github.com/facebook/create-react-app)
+- [Docs](https://facebook.github.io/create-react-app/)
 
-## Implement Create React App On Existing Repo
+### Impelement Create React App New Repo
+
+```javascript
+npx create-react-app my-app-folder-name
+cd my-app-folder-name
+```
+
+### Implement Create React App On Existing Repo
 
 Major Pain In The Ass (PITA)
 

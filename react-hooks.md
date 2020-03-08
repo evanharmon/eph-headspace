@@ -96,3 +96,8 @@ setState(prevState => {
   return { ...prevState, ...updatedValues }
 })
 ```
+
+## useRef Lottie Example For Animation
+
+- [Medium Article](https://medium.com/@noamgjacobsonknzi/lottie-with-react-hooks-f52de4b6a2c4)
+- [CodeSandbox](https://codesandbox.io/s/lottie-demo-react-hooks-b7pg4?from-embed)

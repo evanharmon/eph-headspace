@@ -23,3 +23,18 @@ emp3 := struct {
     salary:    5000,
 }
 ```
+
+## Initialize Struct
+
+initializing a custom type
+
+```golang
+type employee struct {
+  FirstName string
+  LastName string
+}
+
+function myFunc(first, last string) {
+  emp := employee{FirstName: first, LastName: last}
+}
+```

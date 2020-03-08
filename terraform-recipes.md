@@ -135,3 +135,16 @@ cidr_blocks = [for subnet in aws_subnet.mysubnet : tostring(subnet.cidr_block)]
 ```hcl
 list = concat(split(",", join(",", [for param in data.aws_ssm_parameter.list : param.value])), local.other_list)
 ```
+
+## Depends On For Modules
+
+```terraform
+variable depends_on {
+  default = []
+  type = "list"
+}
+module "app" {
+    source  = "../../modules/mymodule"
+    depends_on = ["${null_resource.mynull}"]
+}
+```

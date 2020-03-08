@@ -26,6 +26,8 @@ err := json.Unmarshal([]byte("mybites"), &res)
 spec, err := json.Marshal(chain)
 ```
 
+## Parse Struct / Interface To Escaped Stringified JSON
+
 ## Omit Field If Empty
 
 ```golang
@@ -41,6 +43,21 @@ type Response2 struct {
 [Go Playground](http://play.golang.org/p/id4f4r9tEr)
 
 use `strconv.Unquote()` first
+
+## Use GJSON Package
+
+```golang
+package main
+
+import "github.com/tidwall/gjson"
+
+const json = `{"name":{"first":"Janet","last":"Prichard"},"age":47}`
+
+func main() {
+	value := gjson.Get(json, "name.last")
+	println(value.String())
+}
+```
 
 ## Example Interfaces And JSON
 

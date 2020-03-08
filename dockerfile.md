@@ -152,3 +152,12 @@ install `ncdu`. `brew install ncdu` or `yum install -y ncdu`
 ```console
 ncdu -X .dockerignore
 ```
+
+## Add vs Copy
+
+- [Add Docs](https://docs.docker.com/engine/reference/builder/#add)
+- [Copy Docs](https://docs.docker.com/engine/reference/builder/#copy)
+
+```
+Note: If you build using STDIN (docker build - < somefile), there is no build context, so COPY can’t be used
+```
