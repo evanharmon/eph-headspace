@@ -10,6 +10,7 @@ Notes on working with elasticache
 - [Redis Cluster Mode Explained](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.NodeGroups.html)
 - [High Availability With Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Replication.html)
 - [Backups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups.html)
+- [Pricing](https://aws.amazon.com/elasticache/pricing/)
 
 ### Concurrent Connections
 

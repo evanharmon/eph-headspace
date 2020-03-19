@@ -6,7 +6,12 @@ All golang variables are initialized to their respective zero values
 
 Notes on variables and syntax in Golang
 
-## Declare A Package Wide Variable
+## Resources
+
+- [Avoid Using Suffixes In Variable Naming](https://dave.cheney.net/2019/01/29/you-shouldnt-name-your-variables-after-their-types-for-the-same-reason-you-wouldnt-name-your-pets-dog-or-cat)
+- [Constants - GoByExample](https://gobyexample.com/constants)
+
+### Declare A Package Wide Variable
 
 unnested, then available to entire package
 
@@ -14,7 +19,7 @@ unnested, then available to entire package
 var port = ":1234"
 ```
 
-## Declare Multiple Variables
+### Declare Multiple Variables
 
 ```golang
 var (
@@ -23,7 +28,7 @@ var (
 )
 ```
 
-## Unexported Variables
+### Unexported Variables
 
 lowercase letter variables cannot be directly accessed outside package
 
@@ -31,7 +36,7 @@ lowercase letter variables cannot be directly accessed outside package
 var port = ":1234"
 ```
 
-## Best Practice Variable Declaration
+### Best Practice Variable Declaration
 
 use `var` when not setting an initial value
 
@@ -40,7 +45,7 @@ var mystr string
 mystr = ":1234"
 ```
 
-## Unexported Identifiers Access
+### Unexported Identifiers Access
 
 Can still be available outside the package to a calling function via closures / scope
 Example (untested)
@@ -53,7 +58,7 @@ func myFunc(newPort string) {
 }
 ```
 
-## Pass Scoped Variables As Values To Goroutine
+### Pass Scoped Variables As Values To Goroutine
 
 ```golang
 go func(mytype MyType, feed *Feed) {
@@ -61,7 +66,7 @@ go func(mytype MyType, feed *Feed) {
 }(mytype, feed)
 ```
 
-## Shorthand Declare Return Variables
+### Shorthand Declare Return Variables
 
 ```golang
 func NewClientGRPC() (c ClientGRPC, err error) {
@@ -69,15 +74,13 @@ func NewClientGRPC() (c ClientGRPC, err error) {
 }
 ```
 
-## Template String Style Port
+### Template String Style Port
 
 ```golang
 ":"+strconv.Itoa(s.port)
 ```
 
-## Constants
-
-[GoByExample](https://gobyexample.com/constants)
+### Constants
 
 ```golang
 package main

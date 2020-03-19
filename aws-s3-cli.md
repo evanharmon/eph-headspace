@@ -2,7 +2,7 @@
 
 ## Resources
 
-[Canned ACLS](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl)
+- [Canned ACLS](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl)
 
 ## Create Bucket
 
@@ -20,14 +20,6 @@
 
 `aws s3 ls s3://mybucket --recursive --human-readable --summarize`
 
-## Delete Objects In A Bucket
-
-```
-$ aws s3api delete-objects \
-    --bucket serverless-chatbot-dev-uploads-hss \
-    --delete Objects=[{Key=277ebc9.jpg}],Quiet=false
-```
-
 ## Move Bucket With Files
 
 ```
@@ -40,16 +32,6 @@ $ aws s3 mv \
 ## Tagging
 
 S3 Object must be uploaded first, then tagged
-
-## Get Version Of Objects
-
-use --prefix to search nested folders
-
-```
-$ aws s3api list-object-versions \
-    --bucket "cf-templates-us-west-2" \
-    --prefix "hss"
-```
 
 ## Cross Account Sync Support
 

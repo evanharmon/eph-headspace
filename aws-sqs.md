@@ -6,14 +6,11 @@ Notes on using the aws SQS service
 
 ## Resources
 
-[IAM Policy Lambda -> SNS](https://stackoverflow.com/questions/32211246/aws-sqs-permissions-for-aws-lambda)
-[Monitoring](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-monitoring-using-cloudwatch.html)
-[Cloudwatch Alarm Suggestions](https://www.bluematador.com/blog/how-to-monitor-amazon-sqs-with-cloudwatch)
-[SQS FIFO -> LAMBDA](https://aws.amazon.com/blogs/compute/new-for-aws-lambda-sqs-fifo-as-an-event-source/)
-
-## Tools
-
-[Copy Messages Between Queues](https://github.com/scottjbarr/sqsmv)
+- [IAM Policy Lambda -> SNS](https://stackoverflow.com/questions/32211246/aws-sqs-permissions-for-aws-lambda)
+- [Monitoring](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-monitoring-using-cloudwatch.html)
+- [Cloudwatch Alarm Suggestions](https://www.bluematador.com/blog/how-to-monitor-amazon-sqs-with-cloudwatch)
+- [SQS FIFO -> LAMBDA](https://aws.amazon.com/blogs/compute/new-for-aws-lambda-sqs-fifo-as-an-event-source/)
+- [CLI TOOL Copy Messages Between Queues](https://github.com/scottjbarr/sqsmv)
 
 ## Use
 

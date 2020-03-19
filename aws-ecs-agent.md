@@ -6,7 +6,9 @@ Notes on using the ecs agent on ec2
 
 ## Resources
 
-## Updating ECS Agent On ECS AMI
+- [Using Cloudwatch Logs On ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_cloudwatch_logs.html)
+
+### Updating ECS Agent On ECS AMI
 
 amazon linux 1
 
@@ -24,15 +26,13 @@ sudo systemctl restart docker
 sudo systemctl restart ecs
 ```
 
-## Use Cloudwatch AWS Logs
-
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_cloudwatch_logs.html)
+### Use Cloudwatch AWS Logs
 
 1. Create `ECS-CloudWatchLogs` policy
 2. Attach the `ECS-CloudWatchLogs` policy to your `ecsInstanceRole`
 3. Install awslogs `$ sudo yum install -y awslogs`
 
-## Verbose Agent logging
+### Verbose Agent logging
 
 amazon linux 1
 
@@ -50,15 +50,15 @@ sudo systemctl restart docker
 sudo -E systemctl restart ecs
 ```
 
-## Get ECS Agent Config
+### Get ECS Agent Config
 
 ```console
 curl -s http://localhost:51678/v1/metadata | python -mjson.tool
 ```
 
-## Debugging
+### Debugging
 
-#### Manually Pull Image On EC2 Instance
+##### Manually Pull Image On EC2 Instance
 
 ```console
 sudo docker pull 111111111111.dkr.ecr.us-east-1.amazonaws.com/my-repo-name/app/base

@@ -6,7 +6,8 @@ Compute service
 
 ## Resources
 
-- [Unzip Large Files In Lambda With Streaing](https://medium.com/@johnpaulhayes/how-extract-a-huge-zip-file-in-an-amazon-s3-bucket-by-using-aws-lambda-and-python-e32c6cf58f06)
+- [AWS Sample Events Published](https://docs.aws.amazon.com/lambda/latest/dg/eventsources.html#eventsources-api-gateway-request)
+- [Unzip Large Files In Lambda With Streaming](https://medium.com/@johnpaulhayes/how-extract-a-huge-zip-file-in-an-amazon-s3-bucket-by-using-aws-lambda-and-python-e32c6cf58f06)
 - [AWS Blog Improved VPC Networking](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/)
 
 ## Use Cases
@@ -45,10 +46,6 @@ Kinesis streams
 SNS topics
 API Gateway
 SDK invocation
-
-## Sample Events
-
-[AWS Sample Events Published](https://docs.aws.amazon.com/lambda/latest/dg/eventsources.html#eventsources-api-gateway-request)
 
 ## Limitations
 

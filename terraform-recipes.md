@@ -148,3 +148,13 @@ module "app" {
     depends_on = ["${null_resource.mynull}"]
 }
 ```
+
+## Unescape Backslashes
+
+helpful with parameter store if you make the mistake of entering quotes
+
+example: convert parameter store escaped string list
+
+```hcl
+value = split(",", replace(data.aws_ssm_parameter.mylist.value, "/[\"]/", ""))
+```
