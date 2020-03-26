@@ -67,6 +67,8 @@ test('should use custom step when incrementing', () => {
 
 ## isMounted Technique
 
+- [GH Utility Module For this](https://github.com/jmlweb/isMounted)
+
 only needs to be used AFTER an `await` statement checking `if (isMounted)` or
 in the `catch` block of a try catch like `if (isMounted) console.log(error)`
 

@@ -11,7 +11,7 @@ Notes on writing mocks with jest
 - [Multiple Different Mocks Per Module](https://medium.com/trabe/mocking-different-values-for-the-same-module-using-jest-a7b8d358d78b)
 - [Mock AudioContext / Web Audio](https://stackoverflow.com/questions/51829319/how-to-mock-video-pause-function-using-jest)
 
-## Mock NPM Package
+### Mock NPM Package
 
 ```javascript
 jest.mock('react-router-dom', () => ({
@@ -23,7 +23,7 @@ jest.mock('react-router-dom', () => ({
 }))
 ```
 
-## Mock File
+### Mock File
 
 ```javascript
 import moduleName, { foo } from '../moduleName'
@@ -40,7 +40,7 @@ moduleName() // Will return 42
 foo() // Will return 43
 ```
 
-## Mock React useState
+### Mock React useState
 
 ```javascript
 jest.mock('react', () => ({
@@ -57,11 +57,21 @@ describe('<MyComponent />', () => {
 })
 ```
 
-## Mock HTML Audio
+### Mock HTML Audio
 
-```
+```javascript
 window.AudioContext = jest.fn().mockImplementation(() => {})
 jest
   .spyOn(window.HTMLMediaElement.prototype, 'load')
   .mockImplementation(() => {})
+```
+
+### Ensure Function Called
+
+```javascript
+const mockCallback = jest.fn(x => 42 + x)
+forEach([0, 1], mockCallback)
+
+// The mock function is called twice
+expect(mockCallback.mock.calls.length).toBe(2)
 ```

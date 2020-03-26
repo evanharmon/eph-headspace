@@ -9,19 +9,21 @@ Notes on testing with Jest
 - [Github Cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
 - [Debug In Chrome](https://jestjs.io/docs/en/troubleshooting)
 
-## Error watching file for changes: EMFILE
+### CLI
+
+#### Error watching file for changes: EMFILE
 
 ```console
 brew install watchman
 ```
 
-## Run Single Test File
+#### Run Single Test File
 
 ```console
 jest --testRegex MyComponent.test.js
 ```
 
-## Error: Your Test Suite Must Contain At Least One Test
+#### Error: Your Test Suite Must Contain At Least One Test
 
 jest cli testRegex is probably including snapshots
 
@@ -35,27 +37,27 @@ should be
 jest --testRegex MyComponent/MyComponent.test.js
 ```
 
-## Debug Jest Test With Inspector
+#### Debug Jest Test With Inspector
 
 ```console
 node --inspect node_modules/.bin/jest --runInBand
 ```
 
-## Hide Coverage On Jest Run
+#### Hide Coverage On Jest Run
 
 ```console
 jest --testRegex mycomponent.test.js --coverage=false
 ```
 
-## Expect
+### Expect
 
-### Check If Array Contains String
+#### Check If Array Contains String
 
 ```javascript
 expect(['mic', 'synth']).toContain('synth')
 ```
 
-### Check If Array Contains Property
+#### Check If Array Contains Property
 
 [Medium Match Object In Array](https://medium.com/@andrei.pfeiffer/jest-matching-objects-in-array-50fe2f4d6b98)
 
@@ -69,11 +71,11 @@ expect(state).toEqual(
 )
 ```
 
-### DeepEqual Equivalent
+#### DeepEqual Equivalent
 
 [.toMatchObject()](https://jestjs.io/docs/en/expect#tomatchobjectobject)
 
-### Test That Function Throws Error
+#### Test That Function Throws Error
 
 function must be wrapped in an anonymous function
 
@@ -83,7 +85,7 @@ it('fails early when AWS credential properties are missing', () => {
 })
 ```
 
-## CSS / SASS
+### CSS / SASS
 
 Enable importing scss / sass files
 

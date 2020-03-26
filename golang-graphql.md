@@ -6,12 +6,12 @@ Notes on working with graphql in Golang
 
 ## Resources
 
-[Example Custom Client](https://gist.github.com/lox/d97691970dbcc666b07b3d858a6fbb95)
-[Custom Unmarshalling](https://blog.gopheracademy.com/advent-2017/custom-json-unmarshaler-for-graphql-client/)
+- [Example Custom Client](https://gist.github.com/lox/d97691970dbcc666b07b3d858a6fbb95)
+- [Custom Unmarshalling](https://blog.gopheracademy.com/advent-2017/custom-json-unmarshaler-for-graphql-client/)
 
 ## Parse GraphQL Response JSON
 
-[Playground](https://goplay.space/#9fH_1_VTN9r)
+- [Playground](https://goplay.space/#9fH_1_VTN9r)
 
 ```golang
 package main

@@ -6,19 +6,19 @@ Notes on using aws appsync
 
 ## Resources
 
-[Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html)
-[Authorization Use Cases](https://docs.aws.amazon.com/appsync/latest/devguide/security-authorization-use-cases.html)
-[Resoure For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
-[Multi Auth Examples Medium](https://medium.com/@ednergizer/multiple-authorization-methods-in-a-single-graphql-api-with-aws-appsync-security-at-the-data-7feeaa968486)
-[UserId Conditional Update](https://forums.aws.amazon.com/thread.jspa?threadID=239939)
-[GH Example Conditional Update](https://github.com/aws-samples/aws-appsync-chat/blob/master/amplify/backend/api/allamplifychatt/build/resolvers/Mutation.updateMessage.request)
+- [Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html)
+- [Authorization Use Cases](https://docs.aws.amazon.com/appsync/latest/devguide/security-authorization-use-cases.html)
+- [Resoure For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
+- [Multi Auth Examples Medium](https://medium.com/@ednergizer/multiple-authorization-methods-in-a-single-graphql-api-with-aws-appsync-security-at-the-data-7feeaa968486)
+- [UserId Conditional Update](https://forums.aws.amazon.com/thread.jspa?threadID=239939)
+- [GH Example Conditional Update](https://github.com/aws-samples/aws-appsync-chat/blob/master/amplify/backend/api/allamplifychatt/build/resolvers/Mutation.updateMessage.request)
 
 ## Auth
 
-[Cognito Scenarios](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-scenarios.html#scenario-appsync)
-Can be Cognito User Pool or Identity Pool
+- [Cognito Scenarios](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-scenarios.html#scenario-appsync)
+  Can be Cognito User Pool or Identity Pool
 
-[Resource For Mobile Auth]([Resoure For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
+- [Resource For Mobile Auth]([Resoure For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
 
 ## Schema Directives
 

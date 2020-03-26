@@ -1,18 +1,20 @@
 # JAVASCRIPT ARRAYS
 
-## Filter Nested Array of Objects
+## Resources
+
+### Filter Nested Array of Objects
 
 ```javascript
 arr.reduce((a, b) => a.concat(b)).filter(obj => obj.id == ID)
 ```
 
-## Ensure a reduce returns an array
+### Ensure a reduce returns an array
 
 ```javascript
 return [myarray].reduce((acc, curr) => {})
 ```
 
-## Concat Array
+### Concat Array
 
 `[].concat([1,2,3]);` WONT WORK
 
@@ -22,19 +24,19 @@ let arr2 = [1, 2, 3]
 arr2.concat(arr1)
 ```
 
-## Flatten nested array
+### Flatten nested array
 
 `const orderList = orders.reduce((a, b) => a.concat(b.location));`
 
-## Reduce and avoid mutations
+### Reduce and avoid mutations
 
 `const orderList = orders.reduce((a,b) => [...results, acc]);`
 
-## Flatten nested array to new array
+### Flatten nested array to new array
 
 `const orderList = orders.reduce((a, b) => a.concat(b.location), []);`
 
-## Array indexOf on Objects
+### Array indexOf on Objects
 
 have to use findIndex instead
 
@@ -50,11 +52,11 @@ const index = test.findIndex(entry => {
 })
 ```
 
-## Create Array of values from Array of Objects
+### Create Array of values from Array of Objects
 
 `items.map(i => i.OrderNo);`
 
-## Return a new array from a reduce
+### Return a new array from a reduce
 
 Have to return array item every iteration!!
 
@@ -67,7 +69,7 @@ const orderIds = wcRes.body.results.reduce((arr, doc) => {
 }, [])
 ```
 
-## Extra ways
+### Extra ways
 
 ```javascript
 ;[...set]
@@ -78,7 +80,7 @@ Array.from(set.keys())
 Array.from(set.values())
 ```
 
-## Easier to read indexOf check
+### Easier to read indexOf check
 
 instead of OrderNo.indexOf(i.doc.OrderID) !== -1
 
@@ -86,7 +88,7 @@ instead of OrderNo.indexOf(i.doc.OrderID) !== -1
 OrderNo.includes(i.doc.OrderID)
 ```
 
-## Stringify Array of Strings
+### Stringify Array of Strings
 
 yes it is this simple
 
