@@ -1,14 +1,15 @@
 # AWS LAMBDA
 
-Compute service
-
 ## Summary
+
+Compute service
 
 ## Resources
 
 - [AWS Sample Events Published](https://docs.aws.amazon.com/lambda/latest/dg/eventsources.html#eventsources-api-gateway-request)
 - [Unzip Large Files In Lambda With Streaming](https://medium.com/@johnpaulhayes/how-extract-a-huge-zip-file-in-an-amazon-s3-bucket-by-using-aws-lambda-and-python-e32c6cf58f06)
 - [AWS Blog Improved VPC Networking](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/)
+- [Configuration Docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-console.html)
 
 ## Use Cases
 
@@ -52,6 +53,10 @@ SDK invocation
 lowest RAM setting is 128MB
 up to 3008MB RAM
 CPU scales with RAM increase
+
+```
+Lambda allocates CPU power linearly in proportion to the amount of memory configured. At 1,792 MB, a function has the equivalent of one full vCPU (one vCPU-second of credits per second).
+```
 
 ## Logs
 

@@ -7,7 +7,7 @@ with wav files
 
 ## Resources
 
-[GH](https://github.com/mackron/dr_libs/blob/master/dr_wav.h)
+- [GH](https://github.com/mackron/dr_libs/blob/master/dr_wav.h)
 
 ## My Examples
 
@@ -52,12 +52,6 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-```
-
-## Read All Frames In To Memory
-
-```c
-
 ```
 
 ## Doc Examples
