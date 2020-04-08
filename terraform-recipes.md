@@ -8,7 +8,7 @@ Delicious
 
 - [v12 Changes](https://www.hashicorp.com/blog/hashicorp-terraform-0-12-preview-for-and-for-each/)
 
-## Get AWS Account ID
+### Get AWS Account ID
 
 [Doc](https://www.terraform.io/docs/providers/aws/d/caller_identity.html)
 
@@ -19,7 +19,7 @@ module "example" {
 }
 ```
 
-## Append Timestamp To Resource Name
+### Append Timestamp To Resource Name
 
 ```
 resource "some_resource" "foo" {
@@ -39,13 +39,13 @@ locals {
 }
 ```
 
-## Join Single Item With List
+### Join Single Item With List
 
 ```
 speciallist = concat([aws_cloudfront_origin_access_identity.main.iam_arn], var.my_arn_list)
 ```
 
-## Output Multiple Objects
+### Output Multiple Objects
 
 in TF v0.12, now entire objects can be outputed in multiples, allowing
 the consumer drill down for the id, name, etc
@@ -57,7 +57,7 @@ output "public_subnets" {
 }
 ```
 
-## Output Multiple Resource IDs As Map For Loop
+### Output Multiple Resource IDs As Map For Loop
 
 ```
 output "private_subnets" {
@@ -69,7 +69,7 @@ output "private_subnets" {
 }
 ```
 
-## Ouput Multiple Resources As Map In For Loop
+### Ouput Multiple Resources As Map In For Loop
 
 ```
 output "instance_private_ip_addresses" {
@@ -82,13 +82,13 @@ output "instance_private_ip_addresses" {
 }
 ```
 
-## Pass Multiple Data Object Values As List
+### Pass Multiple Data Object Values As List
 
 ```
 private_subnet_ids = [for subnet in data.terraform_remote_state.networking.outputs.private_subnets : tostring(subnet.id)]
 ```
 
-## Use data.terraform_remote_state
+### Use data.terraform_remote_state
 
 ```
 data "terraform_remote_state" "store" {
@@ -106,7 +106,7 @@ data "terraform_remote_state" "store" {
 }
 ```
 
-## For Loop
+### For Loop
 
 ```hcl
 cidr_blocks = [
@@ -115,7 +115,7 @@ cidr_blocks = [
 ]
 ```
 
-## Multiple Data Parameter Store Objects
+### Multiple Data Parameter Store Objects
 
 ```hcl
 data "aws_ssm_parameter" "list" {
@@ -124,21 +124,21 @@ data "aws_ssm_parameter" "list" {
 }
 ```
 
-## Stringify List Of Number Values
+### Stringify List Of Number Values
 
 ```hcl
 cidr_blocks = [for subnet in aws_subnet.mysubnet : tostring(subnet.cidr_block)]
 ```
 
-## Join StringList From Parameter Store With Another List
+### Join StringList From Parameter Store With Another List
 
 ```hcl
 list = concat(split(",", join(",", [for param in data.aws_ssm_parameter.list : param.value])), local.other_list)
 ```
 
-## Depends On For Modules
+### Depends On For Modules
 
-```terraform
+```hcl
 variable depends_on {
   default = []
   type = "list"
@@ -149,7 +149,7 @@ module "app" {
 }
 ```
 
-## Unescape Backslashes
+### Unescape Backslashes
 
 helpful with parameter store if you make the mistake of entering quotes
 

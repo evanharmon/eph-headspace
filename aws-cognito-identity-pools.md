@@ -7,9 +7,9 @@ facebook, google, and amazon
 
 ## Resources
 
-## Refresh Tokens
+### Refresh Tokens
 
-[AWS](https://forums.aws.amazon.com/thread.jspa?threadID=241503)
+- [AWS](https://forums.aws.amazon.com/thread.jspa?threadID=241503)
 
 Refresh tokens DO NOT auto refresh when app gets new limited time credentials.
 Refresh tokens cannot be refreshed manually.

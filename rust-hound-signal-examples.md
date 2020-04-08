@@ -1,9 +1,11 @@
 # RUST HOUND SIGNAL EXAMPLES
 
 ## Summary
+
 Notes on reading and writing WAV files in Rust with hound and signal libraries
 
-## Read 16bit Mono Samples And Convert To Float 32
+### Read 16bit Mono Samples And Convert To Float 32
+
 ```rust
 extern crate hound;
 extern crate sample;
@@ -32,6 +34,7 @@ fn main() {
 ```
 
 ## Read 24bit Mono Samples And Convert To Float 32
+
 ```rust
 extern crate hound;
 extern crate sample;
@@ -71,7 +74,9 @@ fn convert_wav_pcm_24bit_to_f32() {
 ```
 
 ## Example Test read 24bit WAV
+
 [Rust](https://github.com/ruuda/hound/blob/master/src/read.rs#L1150)
+
 ```rust
 extern crate hound;
 extern crate sample;
@@ -98,6 +103,7 @@ fn read_wav_wave_format_extensible_pcm_24bit() {
 ```
 
 ## Create Stereo Signal From Mono WAV
+
 ```rust
     let filename = "assets/user_single_clap.wav";
     let reader = WavReader::open(filename).unwrap();
@@ -112,7 +118,9 @@ fn read_wav_wave_format_extensible_pcm_24bit() {
 ```
 
 ## Convert 24bit Stereo WAV To Signal
+
 Allows access to interleaved sample amplitudes as a frame
+
 ```rust
 fn main() {
     let filename = "assets/user_single_clap.wav";

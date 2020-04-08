@@ -6,7 +6,7 @@ Notes on using the `aws cognito-idp` cli for AWS Cognito User Pools Identity Pro
 
 ## Resources
 
-## Create Unauthorized Role
+### Create Unauthorized Role
 
 ```console
 aws iam create-role \
@@ -14,7 +14,7 @@ aws iam create-role \
   --assume-role-policy-document file://policies/cognito-unauthorized-trust.json
 ```
 
-## Create Authorized Role
+### Create Authorized Role
 
 ```console
 aws iam create-role \
@@ -22,7 +22,7 @@ aws iam create-role \
   --assume-role-policy-document file://policies/cognito-authorized-trust.json
 ```
 
-## Admin Create User Shortcut
+### Admin Create User Shortcut
 
 ```console
 aws cognito-idp sign-up \
@@ -41,7 +41,7 @@ aws cognito-idp admin-update-user-attributes \
   --user-attributes Name=email_verified,Value=true
 ```
 
-## Admin User Global Sign Out
+### Admin User Global Sign Out
 
 Sign out user from ALL devices. Invalidates all refresh tokens.
 
@@ -51,7 +51,15 @@ aws cognito-idp admin-user-global-sign-out \
   --username myusername
 ```
 
-## List Users In Group
+### List Users With Filter
+
+```console
+aws cognito-idp list-users \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --filter 'email = "evan@email.com"'
+```
+
+### List Users In Group
 
 ```console
 aws cognito-idp list-users-in-group \

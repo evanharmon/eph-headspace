@@ -30,7 +30,7 @@ The valid configuration values for `aws_appsync_authenticationType` are:
 
 ## GraphQL
 
-[Multi-Auth Setup](https://aws-amplify.github.io/docs/js/api#multi-auth)
+- [Multi-Auth Setup](https://aws-amplify.github.io/docs/js/api#multi-auth)
 
 have to customize graphQL API Call. `graphqlOperation` can no longer be used
 as it only supportes two argument objects representing `query` and `variables`

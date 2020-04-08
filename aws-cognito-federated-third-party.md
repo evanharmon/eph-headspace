@@ -42,7 +42,7 @@ facebook, google, and amazon
 - `Settings, Basic`, at top, add cognito domain to `App Domains` without `oauth2`
   part. Example: `https://my-awesome-app-dev.auth.us-east-1.amazoncognito.com`
 
-- `Products, Settings` add your cognito domain to `Valid Oauth Redirects URIs`.
+- `Products, Facebook Login, Settings` add your cognito domain to `Valid Oauth Redirects URIs`.
   Example: `https://my-awesome-app-dev.auth.us-east-1.amazoncognito.com/oauth2/idpresponse`.
   Save Changes.
 
