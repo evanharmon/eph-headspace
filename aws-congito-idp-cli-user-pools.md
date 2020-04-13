@@ -66,3 +66,13 @@ aws cognito-idp list-users-in-group \
   --user-pool-id us-east-1_aaaaaaaaa \
   --group-name mygroup
 ```
+
+### Describe Identity Provider
+
+Provider name for apple is [SignInWithApple](https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/describe-identity-provider.html)
+
+```console
+aws cognito-idp describe-identity-provider \
+  --user-pool-id=us-east-1_AAAAAAAAA \
+  --provider-name=SignInWithApple
+```

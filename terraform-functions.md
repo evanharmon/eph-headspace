@@ -42,3 +42,9 @@ tostring()
 
 if trying to stringify a list and getting the error 'is tuple with X elements'
 try flattening
+
+## Lookup Value And Set Default
+
+```console
+lookup({a="ay", b="bee"}, "a", "what?")
+```

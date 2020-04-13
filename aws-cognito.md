@@ -6,19 +6,19 @@ Notes on working with AWS Cognito services
 
 ## Resources
 
-[Passwordless Email Authentication](https://aws.amazon.com/blogs/mobile/implementing-passwordless-email-authentication-with-amazon-cognito/)
-[OAuth 2.0 Grants](https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/)
-[Role-Based Access Control](https://docs.aws.amazon.com/cognito/latest/developerguide/role-based-access-control.html)
-[Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/google.html)
-[Auth Flow](https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html)
-[Multiple Accounts Same Email](https://forums.aws.amazon.com/thread.jspa?threadID=261470)
-[Own Domain For Hosted UI](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-add-custom-domain.html)
+- [Passwordless Email Authentication](https://aws.amazon.com/blogs/mobile/implementing-passwordless-email-authentication-with-amazon-cognito/)
+- [OAuth 2.0 Grants](https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/)
+- [Role-Based Access Control](https://docs.aws.amazon.com/cognito/latest/developerguide/role-based-access-control.html)
+- [Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/google.html)
+- [Auth Flow](https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html)
+- [Multiple Accounts Same Email](https://forums.aws.amazon.com/thread.jspa?threadID=261470)
+- [Own Domain For Hosted UI](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-add-custom-domain.html)
 
 ## User Pools
 
 #### Multiple Account / Identities
 
-[Link Existing User Account With Identity From External Provider](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminLinkProviderForUser.html)
+- [Link Existing User Account With Identity From External Provider](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminLinkProviderForUser.html)
 
 #### User Pool Setup
 
@@ -58,77 +58,86 @@ Identity.
 - create identity pool
 - create authorized and unauthorized roles, with policies and trusts
 
-## Policy Examples
+## Policies
+
+### Policy Conditions
+
+`cognito-identity.amazonaws.com:amr` contains more text than authentication
+status. Use `ForAnyValue:StringLike` to match only the
+authentication status
+
+```json
+{
+  "ForAnyValue:StringLike": {
+    "cognito-identity.amazonaws.com:amr": "unauthenticated"
+  }
+}
+```
+
+### Policy Examples
 
 #### Basic Unauthorized Role Policy
 
-```
+```json
 {
-	"Version": "2012-10-17",
-		"Statement": [
-			{
-				"Effect": "Allow",
-				"Action": [
-					"mobileanalytics:PutEvents",
-				"cognito-sync:*"
-				],
-				"Resource": [
-					"*"
-				]
-			}
-		]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["mobileanalytics:PutEvents", "cognito-sync:*"],
+      "Resource": ["*"]
+    }
+  ]
 }
 ```
 
 #### Basic Unauthorized Role Trust Relationship
 
-```
+```json
 {
-	"Version": "2012-10-17",
-		"Statement": [
-		{
-			"Effect": "Allow",
-			"Principal": {
-				"Federated": "cognito-identity.amazonaws.com"
-			},
-			"Action": "sts:AssumeRoleWithWebIdentity",
-			"Condition": {
-				"StringEquals": {
-					"cognito-identity.amazonaws.com:aud": "us-west-2:eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee"
-				},
-				"ForAnyValue:StringLike": {
-					"cognito-identity.amazonaws.com:amr": "unauthenticated"
-				}
-			}
-		}
-		]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "cognito-identity.amazonaws.com"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "cognito-identity.amazonaws.com:aud": "us-west-2:eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee"
+        },
+        "ForAnyValue:StringLike": {
+          "cognito-identity.amazonaws.com:amr": "unauthenticated"
+        }
+      }
+    }
+  ]
 }
 ```
 
 #### Basic Authorized Role Policy
 
-```
+```json
 {
-	"Version": "2012-10-17",
-		"Statement": [
-		{
-			"Effect": "Allow",
-			"Action": [
-				"mobileanalytics:PutEvents",
-			"cognito-sync:*",
-			"cognito-identity:*"
-			],
-			"Resource": [
-				"*"
-			]
-		}
-		]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "mobileanalytics:PutEvents",
+        "cognito-sync:*",
+        "cognito-identity:*"
+      ],
+      "Resource": ["*"]
+    }
+  ]
 }
 ```
 
 #### Basic Unauthorized Role Trust Relationship
 
-```
+```json
 {
   "Version": "2012-10-17",
   "Statement": [

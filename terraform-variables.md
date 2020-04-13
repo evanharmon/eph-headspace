@@ -42,3 +42,7 @@ Access Variable Object Properties
 ```hcl
 setting = var.feature_flags.flag1
 ```
+
+## Sensitive Values
+No way to avoid printing sensitive outputs in logs. Make sure to encrypt the
+s3 backend

@@ -7,4 +7,4 @@ facebook, google, and amazon
 
 ## Resources
 
-[RCBJ Oauth2 OIDC Debugger](https://github.com/rcbj/oauth2-oidc-debugger)
+- [RCBJ Oauth2 OIDC Debugger](https://github.com/rcbj/oauth2-oidc-debugger)

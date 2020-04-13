@@ -10,6 +10,8 @@ Cognito. Example being a user / password account and a google identity
 - [admin-link-provider-for-user CLI](https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/admin-link-provider-for-user.html)
 - [AWS FORUMS](https://forums.aws.amazon.com/thread.jspa?threadID=261470)
 
+## Link Identities
+
 ### Example CLI Call To Link Identity
 
 Link a Cognito User / Password account with a Google identity. Must be done
@@ -38,13 +40,17 @@ Use the cli to delete identities in the `identities []` array in the aws
 console. User / Password account will still be able to log in and perform a new
 third party auth association again.
 
-Google:
+Facebook:
 
 ```console
+IDENTITIES_USER_ID="111111111111111" \
 aws cognito-idp admin-disable-provider-for-user \
   --user-pool-id us-east-1_aaaaaaaaa \
-  --user "ProviderName=Google,ProviderAttributeName=Cognito_Subject,ProviderAttributeValue=Google_111111111111111111111"
+  --user "ProviderName=Facebook,ProviderAttributeName=Cognito_Subject,ProviderAttributeValue=${IDENTITIES_USER_ID}"
 ```
+
+After unlinking, cognito user `Facebook_111111111111111` will now be it's own
+record and not an alias for the other record
 
 ### Example Code Google Linking
 

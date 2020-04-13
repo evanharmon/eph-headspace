@@ -115,19 +115,20 @@ terraform property example
 
 ```hcl
 provider_details = {
-  attributes_url                = "https://graph.facebook.com/me?fields="
-  attributes_url_add_attributes = "true"
-  authorize_url                 = "https://www.facebook.com/v2.12/dialog/oauth"
-  authorize_scopes              = "public_profile,email"
-  client_id                     = "myid"
-  client_secret                 = "mysecret"
-  oidc_issuer                   = "https://accounts.google.com"
-  token_request_method          = "GET"
-  token_url                     = "https://graph.facebook.com/v2.12/oauth/access_token"
+  attributes_url_add_attributes = "false"
+  authorize_scopes              = "email, name"
+  authorize_url                 = "https://appleid.apple.com/auth/authorize"
+  client_id                     = "com.mycompany.myapp"
+  key_id                        = "mysecret"
+  oidc_issuer                   = "https://appleid.apple.com"
+  private_key                    = "-----BEGIN PRIVATE KEY----- XXXX -----END PRIVATE KEY-----"
+  team_id                       = "AAAAAAAAAA"
+  token_request_method          = "POST"
+  token_url                     = "https://appleid.apple.com/auth/token"
 }
 
 attribute_mapping = {
   email    = "email"
-  username = "id"
+  username = "sub"
 }
 ```
