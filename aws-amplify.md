@@ -6,9 +6,9 @@ Notes on using aws amplify sdk's, cli, etc
 
 ## Resources
 
-[AWS Blog Analytics None DataSource Subscriptions](https://aws.amazon.com/blogs/mobile/visualizing-big-data-with-aws-appsync-amazon-athena-and-aws-amplify/)
-[React Router Amplify Auth](https://www.rockyourcode.com/custom-react-hook-use-aws-amplify-auth/)
-[API Call Jest Mock Example](https://github.com/aws-amplify/amplify-js/blob/master/packages/api/__tests__/API-test.ts)
+- [AWS Blog Analytics None DataSource Subscriptions](https://aws.amazon.com/blogs/mobile/visualizing-big-data-with-aws-appsync-amazon-athena-and-aws-amplify/)
+- [React Router Amplify Auth](https://www.rockyourcode.com/custom-react-hook-use-aws-amplify-auth/)
+- [API Call Jest Mock Example](https://github.com/aws-amplify/amplify-js/blob/master/packages/api/__tests__/API-test.ts)
 
 ## Get Environment After Git Clone
 

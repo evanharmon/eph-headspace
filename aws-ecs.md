@@ -12,6 +12,7 @@ Notes on working with ECS in AWS
 - [Private ECS Fargate](https://aws.amazon.com/blogs/compute/access-private-applications-on-aws-fargate-using-amazon-api-gateway-privatelink/)
 - [AWS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html)
 - [ECS AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/agent-update-ecs-ami.html)
+- [Cloudwatch Container Insights](https://aws.amazon.com/blogs/mt/introducing-container-insights-for-amazon-ecs/)
 
 ## Steps To Create ECS cluster
 

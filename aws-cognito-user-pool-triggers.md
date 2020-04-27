@@ -13,3 +13,9 @@ Notes on working with triggers on cognito user pools
 - all triggered lambdas must return within 5 seconds
 - all error messages from Lambdas are visible on AWS Cognito Hosted UI as query
   params
+
+### Event Request User Attributes
+
+```javascript
+const { email } = event.request.userAttributes
+```

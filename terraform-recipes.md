@@ -10,9 +10,9 @@ Delicious
 
 ### Get AWS Account ID
 
-[Doc](https://www.terraform.io/docs/providers/aws/d/caller_identity.html)
+- [Doc](https://www.terraform.io/docs/providers/aws/d/caller_identity.html)
 
-```
+```hcl
 data "aws_caller_identity" {}
 module "example" {
   account_id = "${data.aws_caller_identity.account_id}"
@@ -21,7 +21,7 @@ module "example" {
 
 ### Append Timestamp To Resource Name
 
-```
+```hcl
 resource "some_resource" "foo" {
     # Change 8 for your desired substring length of timestamp
     name = "my-thing-${substr(replace(timestamp(), "/[-:]/", ""), 0, 8)}"
@@ -33,7 +33,7 @@ resource "some_resource" "foo" {
 
 or
 
-```
+```hcl
 locals {
   timestamp = "${replace(timestamp(), "/[-:TZ]/", "")}000000000000000000"
 }
@@ -41,7 +41,7 @@ locals {
 
 ### Join Single Item With List
 
-```
+```hcl
 speciallist = concat([aws_cloudfront_origin_access_identity.main.iam_arn], var.my_arn_list)
 ```
 
@@ -50,7 +50,7 @@ speciallist = concat([aws_cloudfront_origin_access_identity.main.iam_arn], var.m
 in TF v0.12, now entire objects can be outputed in multiples, allowing
 the consumer drill down for the id, name, etc
 
-```
+```hcl
 output "public_subnets" {
   description = "List of IDs of public subnets"
   value       = aws_subnet.public
@@ -59,7 +59,7 @@ output "public_subnets" {
 
 ### Output Multiple Resource IDs As Map For Loop
 
-```
+```hcl
 output "private_subnets" {
   description = "List of IDs of private subnets"
   value = {
@@ -71,7 +71,7 @@ output "private_subnets" {
 
 ### Ouput Multiple Resources As Map In For Loop
 
-```
+```hcl
 output "instance_private_ip_addresses" {
   # Result is a map from instance id to private IP address, such as:
   #  {"i-1234" = "192.168.1.2", "i-5678" = "192.168.1.5"}
@@ -84,13 +84,13 @@ output "instance_private_ip_addresses" {
 
 ### Pass Multiple Data Object Values As List
 
-```
+```hcl
 private_subnet_ids = [for subnet in data.terraform_remote_state.networking.outputs.private_subnets : tostring(subnet.id)]
 ```
 
 ### Use data.terraform_remote_state
 
-```
+```hcl
 data "terraform_remote_state" "store" {
   backend = "s3"
 

@@ -63,6 +63,12 @@ They are NOT web views. See linkedin Videos above in Resources
 const data = await Auth.currentAuthenticatedUser()
 ```
 
+### GEt Credentials
+
+```javascript
+const data = await Auth.currentCredentials()
+```
+
 ### Get Cognito User Groups From Token
 
 returns array of groups

@@ -10,81 +10,191 @@ Notes on working with Redis
 
 - [Command List](https://redis.io/commands)
 
-## Values
+### Default Port
+
+6379
+
+## Types
 
 Values can be an int, a string, or a JSON object. So more than a single value
 can be stored in a single key
 
-## Start
+### Less Recently Used (LRU) eviction
+
+handle clearing keys to make room for new keys to stay with in maxMemory setting
+
+## CLI
+
+### Start
 
 `redis-server`
 
-## Shutdown
+### Check Redis
+
+`redis-cli ping`
+
+### Log In
+
+`redis-cli`
+
+## Shell
+
+### General Commands
+
+#### Shutdown
 
 ```console
 shutdown save
 shutdown nosave
 ```
 
-## Default Port
-
-6379
-
-## Check Redis
-
-`redis-cli ping`
-
-## Log In
-
-`redis-cli`
-
-## Kill Connection
+#### Kill Connection
 
 `CLIENT KILL addr:port`
 
-## Kill All Connections
+#### Kill All Connections
 
 `CLIENT KILL TYPE type normal`
 
-## Less Recently Used (LRU) eviction
+### Key Commands
 
-handle clearing keys to make room for new keys to stay with in maxMemory setting
+#### Check If Key Exists
 
-http://redis.io/commands
+```console
+EXISTS city
+```
 
-### Terms <key> and <myhash> seem to be interchangeable
+#### Get All Keys
 
-## Get All Keys
+```console
+KEYS *
+```
 
-`KEYS *`
+#### Get Specific Prefix'd Keys
 
-## Get Specific Prefix'd Keys
+```console
+KEYS koa:sess:*
+```
 
-`KEYS koa:sess:*`
+#### Get Key
 
-## Get Key's value
+```console
+GET koa:sess:<id>
+```
 
-`GET koa:sess:<id>`
+#### Get Multiple Keys
 
-## Create New Key - Does Not Overwrite Key
+```console
+MGET street city
+```
 
-`HMSET myhash field1 "Hello" field2 "World"`
+#### Get And Set
 
-## Edit Key - Overwrites Key
+Returns previous value
 
-`HSET myhash field1 "Hello"`
+```console
+GETSET mykey myval
+```
 
-## Set TTL TimeOut
+#### Set Key
 
-### Redis will delete after it expires
+```console
+SET city dallas
+```
 
-`TTL <key> 60 ## Seconds`
+#### Set Key And Expiration
 
-## Delete a Key
+```console
+SET mykey EX 60
+```
 
-`DEL <key>`
+#### Set Multiple Values
 
-## Increment a Key
+```console
+MSET street main city dallas
+```
 
-good for things like login attempts
-`INCR <key>`
+#### Delete
+
+```console
+DEL mykey
+```
+
+#### Increment
+
+```console
+INCR mycounter
+```
+
+#### Increment By
+
+```console
+INCRBY mycounter 100
+```
+
+#### Decrement
+
+```console
+DECR <key>
+```
+
+### TTL Commands
+
+#### Set TTL Time Out
+
+In seconds
+
+```console
+TTL mykey 60
+EXPIRE mykey 5
+```
+
+### Hash Commands
+
+similar to objects in javascript
+
+### Get All Fields From Hash
+
+```console
+HGETALL myhash
+```
+
+#### Get Field From Hash
+
+```console
+HGET myhash myfield
+```
+
+#### Get Multiple Fields From Hash
+
+```console
+HGET myhash myfield1 myfield2 myfield3
+```
+
+#### Check If Field Exists In Hash
+
+```console
+HEXISTS myhash myfield1
+```
+
+#### Set Multiple Fields In Hash
+
+Does Not Overwrite
+
+```console
+HMSET myhash field1 "Hello" field2 "World"
+```
+
+#### Edit Hash
+
+Overwrites
+
+```console
+HSET myhash field1 "Hello"
+```
+
+#### Increment Field In Hash
+
+```console
+HINCRBY myhash myfield1 5
+```

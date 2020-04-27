@@ -1,4 +1,10 @@
-# NEOVIM VISUAL MODE
+# VIM VISUAL MODE
+
+## Summary
+Notes on using visual mode in vim
+
+## Resources
+
 
 ## Virtual Replace
 gR

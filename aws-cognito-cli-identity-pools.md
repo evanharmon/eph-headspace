@@ -1,4 +1,4 @@
-# AWS COGNITO IDP CLI
+# AWS COGNITO CLI
 
 ## Summary
 

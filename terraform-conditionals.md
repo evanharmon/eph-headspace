@@ -17,6 +17,9 @@ name = "${local.env == "sandbox" ? "main-sandbox" : "main"}"
 
 ## Conditional Dynamic Block
 
+Can be used inside a resource, and inside a nested property object of a
+resource
+
 ```hcl
 dynamic "storage_data_disk" {
   for_each = var.create_metric_and_logging_data_disks ? [local.metric_and_logging_data_disk] : []

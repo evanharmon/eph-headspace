@@ -59,6 +59,14 @@ aws cognito-idp list-users \
   --filter 'email = "evan@email.com"'
 ```
 
+### List Users And Filter By Domain Name
+
+```console
+aws cognito-idp list-users \
+  --user-pool-id us-east-1_aaaaaaaaa |\
+  jq '.Users[]|select(.Attributes[]|.Value | endswith("@google.com"))'
+```
+
 ### List Users In Group
 
 ```console

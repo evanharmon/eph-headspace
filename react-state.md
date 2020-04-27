@@ -23,3 +23,7 @@ export default (props) => {
 ```
 
 ## Error Synthetic event reuse
+
+## Nulls
+
+Use nulls with arrays. null means api call hasn't returned yet

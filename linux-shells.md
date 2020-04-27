@@ -198,3 +198,9 @@ helpful to check for /bin/dash on debian, etc
 ```console
 readlink -f $(which sh)
 ```
+
+## See All Environment Variables
+
+```console
+declare -p
+```
