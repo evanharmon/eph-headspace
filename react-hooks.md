@@ -16,14 +16,15 @@ Notes on using react hooks
 - [useRef Docs](https://reactjs.org/docs/hooks-reference.html#useref)
 - [Hooks Cheat Sheet](https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70/)
 - [useState or useReducer](https://kentcdodds.com/blog/should-i-usestate-or-usereducer)
+- [KDodds Testing](https://kentcdodds.com/blog/how-to-test-custom-react-hooks?ck_subscriber_id=479255035)
 
 ## useAnimationFrame Custom Hook
 
-[Sandbox](https://codesandbox.io/s/ojxl32jm4z)
+- [Sandbox](https://codesandbox.io/s/ojxl32jm4z)
 
 ## Context
 
-[Avoid Passing Callbacks Down](https://reactjs.org/docs/hooks-faq.html#how-to-avoid-passing-callbacks-down)
+- [Avoid Passing Callbacks Down](https://reactjs.org/docs/hooks-faq.html#how-to-avoid-passing-callbacks-down)
 
 From the React Team:
 
@@ -35,8 +36,8 @@ rerender unless they also need the application state.
 
 ## Fetch Data With React Hooks
 
-[Robin Weiruch Blog](https://www.robinwieruch.de/react-hooks-fetch-data/)
-[Audisho.Sada Medium Example](https://medium.com/@audisho.sada/using-react-hooks-to-asynchronously-make-api-requests-1fdf52f797ce)
+- [Robin Weiruch Blog](https://www.robinwieruch.de/react-hooks-fetch-data/)
+- [Audisho.Sada Medium Example](https://medium.com/@audisho.sada/using-react-hooks-to-asynchronously-make-api-requests-1fdf52f797ce)
 
 In the future, `react-cache` and `suspense` will be used for data fetching
 
@@ -49,7 +50,7 @@ custom hook
 
 ## Testing Hooks
 
-[react-hooks-testing-library](https://react-hooks-testing-library.com/usage/advanced-hooks)
+- [react-hooks-testing-library](https://react-hooks-testing-library.com/usage/advanced-hooks)
 
 ### Example
 

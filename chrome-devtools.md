@@ -22,4 +22,14 @@ In search bar of Network
 
 ## Launch Debugger And Pause On Redirects
 
-`window.addEventListener("beforeunload", function() { debugger; }, false)`
+```javscript
+window.addEventListener("beforeunload", function() { debugger; }, false)
+```
+
+or
+
+```javascript
+window.beforeunload = () => {
+  debugger
+}
+```
