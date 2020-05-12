@@ -7,6 +7,7 @@ Recipes for common tasks using the JQ cli tool
 ## Resources
 
 - [JSON / JQ / CSV tutorial](https://programminghistorian.org/en/lessons/json-and-jq)
+- [Cheat Sheet](https://gist.github.com/olih/f7437fb6962fb3ee9fe95bda8d2c8fa4)
 
 ## Query Example
 
@@ -23,15 +24,19 @@ cat ~/Downloads/myfile.json |\
   more
 ```
 
-`jq 'del(._id, ._rev)'`
+```console
+jq 'del(._id, ._rev)'
+```
 
 ## Map And Filter Array Of JSON To Inner Object
 
-`cat file.json | jq '.docs' | jq 'map(.payload)' | more`
+```console
+cat file.json | jq '.docs' | jq 'map(.payload)' | more
+```
 
 ## Exclude Keys But Keep Commas For Array Of Objects
 
-```
+```console
 cat new.json |\
   jq '.results' |\
   jq 'map(select(.doc != null) | .doc | del(._rev))' >\
@@ -40,9 +45,11 @@ cat new.json |\
 
 ## Exclude Nulls So You Can Map
 
-`cat file.json | jq '.results' | jq 'map(select(.doc != null) | .doc)' | more`
-
+```console
+cat file.json | jq '.results' | jq 'map(select(.doc != null) | .doc)' | more
 ```
+
+```console
 cat file.json |\
   jq '.results' |\
   jq 'map(select(.doc != null) | .doc | del(._id,._rev))' >\
@@ -53,7 +60,7 @@ cat file.json |\
 
 `{ "docs": [{ "payload": { "d": { "Field": "XYZ" } } }] }`
 
-```
+```console
 cat file.json |\
   jq '.docs' |\
   jq 'map(. + { id: .payload.d.FUNCTION_LOCATION })' |\
@@ -62,11 +69,13 @@ cat file.json |\
 
 ## Convert Number To String
 
-`jq '{ docs: map(. + { _id: ((.payload.OBJECTID|tostring) + "-" + .payload.LOCATION) }) }'`
+```console
+jq '{ docs: map(. + { _id: ((.payload.OBJECTID|tostring) + "-" + .payload.LOCATION) }) }'
+```
 
 ## To Lowercase
 
-```
+```console
 cat myfile.json |\
      jq '.docs' |\
      jq 'map(. + { id: ("city-" + (.payload.WorkCity|ascii_downcase)) })' |\
@@ -75,7 +84,7 @@ cat myfile.json |\
 
 ## Move Property Out Of A Nesting Level And Delete Parent Property
 
-```
+```console
 cat myfile.json |\
   jq 'map(. + { payload: .results[0] } | del(.d))' |\
   less
@@ -83,7 +92,7 @@ cat myfile.json |\
 
 ## Add New Object With Array Of Objects
 
-```
+```console
 cat myfile.json |\
     jq '.results' |\
     jq 'map(select(.doc != null)|.doc)' |\
@@ -93,7 +102,7 @@ cat myfile.json |\
 
 ## Map object and extra two properties to CSV
 
-```
+```console
 cat myfile.json |\
      jq '.results' |\
      jq 'map(select(.doc != null) | .doc.payload | { field1: .field1, field2: .field2 })' |\
@@ -109,19 +118,27 @@ jq -rs '.[]|[.User, .CreateTimeStamp]|@csv'
 
 ## Parse and Get Length Of Key
 
-`cat file.json | jq '.results' | jq 'map(select(.id != null)| .) | length'`
+```console
+cat file.json | jq '.results' | jq 'map(select(.id != null)| .) | length'
+```
 
 ## Assign JQ Result To A Bash Variable
 
-`FILE_SYSTEM_ID=$(aws efs describe-file-systems|jq '.FileSystems[0].FileSystemId)`
+```console
+FILE_SYSTEM_ID=$(aws efs describe-file-systems|jq '.FileSystems[0].FileSystemId)
+```
 
 ## Get List Of Properties
 
-`cat myfile.json | jq 'map(keys) | add | unique'`
+```console
+cat myfile.json | jq 'map(keys) | add | unique'
+```
 
 ## Get Max Of A Key Value In Array
 
-`cat myfile.json | jq 'map(.OrderNo) | max'`
+```console
+cat myfile.json | jq 'map(.OrderNo) | max'
+```
 
 ## Get AMI ID From Packer Manifest.json
 
@@ -167,4 +184,12 @@ jq '.Messages | map(. + { Id: .MessageId, MessageBody: .Body } | del(.Body,.MD5O
 
 ```console
 jq -rs '.' myfile.txt
+```
+
+## Newline JSON
+
+### Get Length Of Newline JSON
+
+```console
+jq -rs '.|flatten' myfile.json
 ```

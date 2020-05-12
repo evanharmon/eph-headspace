@@ -1,4 +1,4 @@
-# NODE FILE
+# NODE FILES
 
 ## Summary
 
@@ -40,11 +40,11 @@ createDocs(1);
 Remember to `JSON.parse()` and then `JSON.stringify()`
 
 ```javascript
-const fs = require("fs");
-const file = fs.readFileSync("./my-file.json", "utf-8"); // without utf-8 you get a buffer
-const records = JSON.parse(file);
-const docs = records.docs.map(i => ({ ...i, myNewProperty: "test" }));
-fs.writeFileSync("my-updated-file.json", JSON.stringify(docs));
+const fs = require('fs')
+const file = fs.readFileSync('./my-file.json', 'utf-8') // without utf-8 you get a buffer
+const records = JSON.parse(file)
+const docs = records.docs.map(i => ({ ...i, myNewProperty: 'test' }))
+fs.writeFileSync('my-updated-file.json', JSON.stringify(docs))
 ```
 
 ## Append And Read Flags

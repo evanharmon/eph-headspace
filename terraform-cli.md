@@ -26,7 +26,7 @@ terraform state rm module.mymod
 #### Remove Module Resource
 
 ```console
-tf state rm "module.mymodule.aws_cloudfront_distribution.mycdn[0]"
+terraform state rm "module.mymodule.aws_cloudfront_distribution.mycdn[0]"
 ```
 
 #### Taint Module

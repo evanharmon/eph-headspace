@@ -68,7 +68,7 @@ debug CLI tools
 
 ### Debug With GDB Server
 
-[SO](https://stackoverflow.com/questions/53519668/how-to-attach-to-remote-gdb-with-vscode)
+- [SO](https://stackoverflow.com/questions/53519668/how-to-attach-to-remote-gdb-with-vscode)
 
 install `Native Debug` extension
 

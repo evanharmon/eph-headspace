@@ -158,3 +158,17 @@ example: convert parameter store escaped string list
 ```hcl
 value = split(",", replace(data.aws_ssm_parameter.mylist.value, "/[\"]/", ""))
 ```
+
+## Check If Data Resource Empty
+
+```hcl
+data "aws_lambda_function" "myfunc" {
+  count = var.env === "dev" ? 1 : 0
+  function_name = "myfuncname"
+}
+
+module "mymodule" {
+  ...
+  myvar = length(data.aws_lambda_function.myfunc) > 0 ? data.aws_lambda_function.myfunc[0].function_name : ""
+}
+```

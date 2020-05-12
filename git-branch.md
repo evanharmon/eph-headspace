@@ -1,45 +1,94 @@
 # GIT BRANCHES
 
 ## Set Upstream
-`$ git branch -u`
+
+```console
+git branch -u
+```
 
 ## Show Upstreams
-`git branch -vv`
+
+```console
+git branch -vv
+```
 
 ## Checkout Previous Branch
-`$ git checkout -`
+
+```console
+git checkout -
+```
 
 ## Update branch information from origin and clean out stales
-`$ git fetch -p`
+
+```console
+git fetch -p
+```
 
 ## Update different branch while on another branch
-`$ git fetch origin dev:dev`
+
+```console
+git fetch origin dev:dev
+```
 
 ## Create local branch
-`$ git checkout -b new_feature_name`
+
+```console
+git checkout -b new_feature_name
+```
 
 ## Create local branch from remote branch
-`$ git checkout --track origin/lh-shopping-cart`
+
+```console
+git checkout --track origin/lh-shopping-cart
+```
 
 ## Push New Local Branch to Remote
-`$ git push -u origin <branchName>`
+
+```console
+git push -u origin <branchName>
+```
+
+## Push And Set Upstream
+
+```console
+git branch --set-upstream-to origin feature-branch
+```
 
 ## Delete Local Branch
-`$ git branch -d branch_name`
+
+```console
+git branch -d branch_name
+```
 
 ## List Branches
+
 -a for local and remote branches
 -r for only remote branches
-`$ git branch --list`
+
+```console
+git branch --list
+```
 
 ## Delete a Remote Branch
-`$ git push origin --delete <branchName>`
+
+```console
+git push origin --delete <branchName>
+```
 
 ## Resetting Branch, if no unsaved/unpushed commits exist
-`$ git reset --hard origin/dev`
+
+```console
+git reset --hard origin/dev
+```
 
 ## Rename Current Branch
-`$ git branch -m <newname>`
+
+```console
+git branch -m <newname>
+```
 
 ## DANGER DANGER Force Push a Branch To Remote
-`$ git push --force-with-lease origin <branchname>`
+
+```console
+git push --force-with-lease origin <branchname>
+```

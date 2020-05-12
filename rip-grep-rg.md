@@ -6,8 +6,14 @@ Notes on using the rip grep cli tool
 
 ## Resources
 
-[GH Repo](https://github.com/BurntSushi/ripgrep)
-[User Guide](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md)
+- [GH Repo](https://github.com/BurntSushi/ripgrep)
+- [User Guide](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md)
+
+## Install
+
+```console
+brew install ripgrep
+```
 
 ## Common Options
 
