@@ -92,6 +92,10 @@ ex: v.search.results.test = res.data;
 
 ### Replace space indents with tabs
 
+`:retab`
+
+### Replace tabs indents with spaces
+
 if no tabstop set or its set to expandtab then replace tabs with spaces
 
 `:retab`

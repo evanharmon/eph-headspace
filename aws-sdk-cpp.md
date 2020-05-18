@@ -6,7 +6,8 @@ Notes on working with the aws c++ sdk
 
 ## Resources
 
-[AWS Build CMAKE](https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/build-cmake.html)
+- [SDK Docs](https://sdk.amazonaws.com/cpp/api/LATEST/class_aws_1_1_transfer_1_1_transfer_manager.html)
+- [AWS Build CMAKE](https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/build-cmake.html)
 
 ## Getting Started
 

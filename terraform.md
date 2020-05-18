@@ -7,6 +7,7 @@ General notes on terraform
 ## Resources
 
 - [Automation](https://learn.hashicorp.com/terraform/development/running-terraform-in-automation)
+- [Terraform Version Manager](https://warrensbox.github.io/terraform-switcher/)
 
 ## Installation
 
@@ -28,6 +29,12 @@ unzip $HOME/Downloads/terraform_0.11.8_darwin_amd64.zip -d $HOME/bin
 
 ```shell
 export PATH=$HOME/bin:$PATH
+```
+
+## Install Terraform Version Manager
+
+```
+brew install warrensbox/tap/tfswitch
 ```
 
 ## Documentation

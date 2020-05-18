@@ -6,7 +6,9 @@ Notes on using the `aws cognito-idp` cli for AWS Cognito User Pools Identity Pro
 
 ## Resources
 
-### Create Unauthorized Role
+### Roles
+
+#### Create Unauthorized Role
 
 ```console
 aws iam create-role \
@@ -14,7 +16,7 @@ aws iam create-role \
   --assume-role-policy-document file://policies/cognito-unauthorized-trust.json
 ```
 
-### Create Authorized Role
+#### Create Authorized Role
 
 ```console
 aws iam create-role \
@@ -22,7 +24,9 @@ aws iam create-role \
   --assume-role-policy-document file://policies/cognito-authorized-trust.json
 ```
 
-### Admin Create User Shortcut
+### Users
+
+#### Admin Create User Shortcut
 
 ```console
 aws cognito-idp sign-up \
@@ -41,7 +45,7 @@ aws cognito-idp admin-update-user-attributes \
   --user-attributes Name=email_verified,Value=true
 ```
 
-### Admin User Global Sign Out
+#### Admin User Global Sign Out
 
 Sign out user from ALL devices. Invalidates all refresh tokens.
 
@@ -51,7 +55,7 @@ aws cognito-idp admin-user-global-sign-out \
   --username myusername
 ```
 
-### List Users With Filter
+#### List Users With Filter
 
 ```console
 aws cognito-idp list-users \
@@ -59,7 +63,7 @@ aws cognito-idp list-users \
   --filter 'email = "evan@email.com"'
 ```
 
-### List Users And Filter By Domain Name
+#### List Users And Filter By Domain Name
 
 ```console
 aws cognito-idp list-users \
@@ -67,7 +71,7 @@ aws cognito-idp list-users \
   jq '.Users[]|select(.Attributes[]|.Value | endswith("@google.com"))'
 ```
 
-### List Users In Group
+#### List Users In Group
 
 ```console
 aws cognito-idp list-users-in-group \
@@ -75,7 +79,29 @@ aws cognito-idp list-users-in-group \
   --group-name mygroup
 ```
 
-### Describe Identity Provider
+### Disable User
+
+// TODO double check
+
+```console
+aws cognito-idp admin-disable-user \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --user "111111111111111"
+```
+
+### Identities
+
+#### Remove Linked Identity
+
+```console
+aws cognito-idp admin-disable-provider-for-user \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --user "ProviderName=Facebook,ProviderAttributeName=Cognito_Subject,ProviderAttributeValue=111111111111111"
+```
+
+### Identity Providers
+
+#### Describe Identity Provider
 
 Provider name for apple is [SignInWithApple](https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/describe-identity-provider.html)
 
