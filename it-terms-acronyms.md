@@ -94,3 +94,5 @@ backbone
 ## Secure Hash Algorithm (SHA)
 
 ## Software Defined Network (SDN)
+
+## Consistency Availability Partition Tolerance (CAP)

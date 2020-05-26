@@ -79,14 +79,22 @@ aws cognito-idp list-users-in-group \
   --group-name mygroup
 ```
 
-### Disable User
-
-// TODO double check
+#### Disable User
 
 ```console
 aws cognito-idp admin-disable-user \
   --user-pool-id us-east-1_aaaaaaaaa \
-  --user "111111111111111"
+  --username "Facebook_111111111111111"
+```
+
+#### Delete User
+
+user must be disabled
+
+```console
+aws cognito-idp admin-delete-user \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --username "Facebook_111111111111111"
 ```
 
 ### Identities
