@@ -6,6 +6,9 @@ Notes on working with files with GIT
 
 ## Resources
 
+- [git add docs](https://git-scm.com/docs/git-add)
+- [git rm docs](https://git-scm.com/docs/git-rm)
+
 ## Adds All New or Changed (as long as not ignored)
 
 but no rm actions

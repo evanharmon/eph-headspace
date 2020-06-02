@@ -60,3 +60,9 @@ print wav.sampleRate
 ```console
 memory read -s1 -fu -c10000 0xb0987654 --force
 ```
+
+## Print Object
+
+```console
+po blabhlah
+```

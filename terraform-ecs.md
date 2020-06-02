@@ -25,6 +25,6 @@ Error message: Unable to assume role and validate the specified targetGroupArn
 
 reference the targetgroup in the loadbalancer, NOT the load balancer arn
 
-```
+```hcl
 loadbalancer { targetGroupArn: "${aws_lb_target_group.mygroup.arn}" }
 ```

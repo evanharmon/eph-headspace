@@ -6,12 +6,12 @@ Notes on working with terraform workspaces
 
 ## Resources
 
-[Docs](https://www.terraform.io/docs/state/workspaces.html)
+- [Docs](https://www.terraform.io/docs/state/workspaces.html)
 
 ## Workspace Commands
 
-List workspaces: `terraform workspace list`
+- List workspaces: `terraform workspace list`
 
-Select workspace: `terraform workspace select default`
+- Select workspace: `terraform workspace select default`
 
-Create workspace: `terraform workspace new sandbox`
+- Create workspace: `terraform workspace new sandbox`

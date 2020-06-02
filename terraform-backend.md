@@ -1,11 +1,14 @@
 # TERRAFORM BACKEND
 
 ## Summary
+
 Notes on backend configuration and use in Terraform
 
 ## Assume Role With S3 Remote Backend
-[Github Issue](https://github.com/hashicorp/terraform/issues/13690)
-```
+
+- [Github Issue](https://github.com/hashicorp/terraform/issues/13690)
+
+```hcl
 terraform {
   backend "s3" {
     encrypt      = "true"

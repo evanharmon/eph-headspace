@@ -14,7 +14,7 @@ Galaxy. Or using Hashicorp's Terraform for Infrastructure as Code.
 It is tempting to rigidly sort terraform object properties alphabetically like
 below.
 
-```
+```hcl
 resource "aws_autoscaling_notification" "autoscaling_group" {
   group_names = ["${aws_autoscaling_group.autoscaling_group.name}"]
 
@@ -36,7 +36,7 @@ formatter on the extra lines for readability.
 Group single line properties together, and multi-line objects below the
 single-line properties.
 
-```
+```hcl
 resource "aws_autoscaling_notification" "autoscaling_group" {
   group_names = ["${aws_autoscaling_group.autoscaling_group.name}"]
   topic_arn   = "${aws_sns_topic.autoscaling_group.arn}"

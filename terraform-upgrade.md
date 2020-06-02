@@ -25,7 +25,7 @@ a `terraform.tf` terraform backend resource has a `providers` object. The
 providers portion should be removed so the `terraform` resource only has the
 `backend` resource
 
-```
+```hcl
 terraform {
   backend "s3" {
     encrypt = true
@@ -41,7 +41,7 @@ terraform {
 
 Be sure the provider is updated to a reason version such as 2.46.0
 
-```
+```hcl
 provider "aws" {
     region  = "us-east-1"
     profile = "terraform"

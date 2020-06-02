@@ -172,3 +172,20 @@ module "mymodule" {
   myvar = length(data.aws_lambda_function.myfunc) > 0 ? data.aws_lambda_function.myfunc[0].function_name : ""
 }
 ```
+
+## Graphql Schema Template File
+
+### Render Array Of Strings
+
+GQL file isn't JSON so can't enclose entire template file in jsonencode
+
+```hcl
+schema = templatefile("${path.module}/schema.graphql", {
+  MY_GROUPS = jsonencode([aws_cognito_user_group.users.name])
+})
+```
+
+```gql
+enhanceFileVersion(input: CreateFileInput!): Collection
+  @aws_cognito_user_pools(cognito_groups: ${MY_GROUPS})
+```
