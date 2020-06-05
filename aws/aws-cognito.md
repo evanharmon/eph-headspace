@@ -11,8 +11,7 @@ Notes on working with AWS Cognito services
 - [Role-Based Access Control](https://docs.aws.amazon.com/cognito/latest/developerguide/role-based-access-control.html)
 - [Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/google.html)
 - [Auth Flow](https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html)
-- [Multiple Accounts Same Email](https://forums.aws.amazon.com/thread.jspa?threadID=261470)
-- [Own Domain For Hosted UI](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-add-custom-domain.html)
+- [Link Multiple Accounts Same Email](https://forums.aws.amazon.com/thread.jspa?threadID=261470)
 
 ## User Pools
 

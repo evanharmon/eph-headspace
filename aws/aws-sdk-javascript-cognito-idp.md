@@ -8,6 +8,7 @@ Notes on working with the javascript aws sdk and cognito user pools
 
 - [Docs](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityServiceProvider.html)
 - [Lambda Trigger Event Shape](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html#cognito-user-pools-lambda-trigger-event-parameter-shared)
+- [Username Already Exists](https://stackoverflow.com/questions/47815161/cognito-auth-flow-fails-with-already-found-an-entry-for-username-facebook-10155)
 
 ## Instanciate Client
 
@@ -36,7 +37,7 @@ async function getAllUsernames({ UserPoolId, Limit }) {
   try {
     while (true) {
       const res = await cognitoIdp.listUsers(params).promise()
-      const usernames = res.Users.map(i => i.Username)
+      const usernames = res.Users.map((i) => i.Username)
       wstream.write(`${JSON.stringify(usernames)}\n`) // Newline JSON
       if (undefined === res.PaginationToken) {
         break
@@ -74,7 +75,7 @@ async function getAllUserIdsInGroup({
   try {
     while (true) {
       const res = await cognitoIdp.listUsersInGroup(params).promise()
-      const usernames = res.Users.map(i => i.Username)
+      const usernames = res.Users.map((i) => i.Username)
       console.log(usernames)
       wstream.write(`${JSON.stringify(usernames)}\n`) // Newline JSON
       if (undefined === res.NextToken) {
@@ -109,4 +110,10 @@ async function addUserIdsToGroup({ UserPoolId, GroupName, UserIdArray }) {
     console.error(e)
   }
 }
+```
+
+### Handle Additional Provider Sign Up Error
+
+```
+error_description: Already found an entry for username Facebook_10155611263152353
 ```
