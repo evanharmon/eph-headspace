@@ -7,8 +7,9 @@ Notes on working with S3 bucket policies
 ## List Of Actions
 
 differs from IAM!
-[S3 Bucket Policy Actions](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html)
-[S3 Bucket Policy Concditions](https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html)
+
+- [S3 Bucket Policy Actions](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html)
+- [S3 Bucket Policy Conditions](https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html)
 
 ## Invalid Action Errors
 

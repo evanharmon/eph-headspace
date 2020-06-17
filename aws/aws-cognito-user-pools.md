@@ -16,6 +16,7 @@ facebook, google, and amazon
 - [Chris Concannon Three Legged OAuth Blog](https://blogby.cc/tech-talk/oauth2-lambda/)
 - [List Of Cognito Trigger Sources For Lambda](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html#cognito-user-identity-pools-working-with-aws-lambda-trigger-sources)
 - [Facebook Example](https://www.integralist.co.uk/posts/cognito/)
+- [User Pool Auth Flow](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html)
 
 ### Scopes
 

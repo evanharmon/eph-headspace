@@ -115,5 +115,5 @@ async function addUserIdsToGroup({ UserPoolId, GroupName, UserIdArray }) {
 ### Handle Additional Provider Sign Up Error
 
 ```
-error_description: Already found an entry for username Facebook_10155611263152353
+http://localhost:3000/mypath?error_description=Already+found+an+entry+for+username+Facebook_11111111111111111
 ```

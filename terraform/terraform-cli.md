@@ -121,3 +121,13 @@ helps avoid lambda permission resource exception issues
 ```console
 terraform apply --parallelism=1 tfplan
 ```
+
+## Init
+
+### Reconfigure State File
+
+disregards any existing configuration of state
+
+```console
+terraform init -reconfigure
+```

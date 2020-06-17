@@ -4,6 +4,10 @@
 
 Notes on using aws amplify graphql services sdk's, cli, etc
 
+## Resources
+
+- [Add Graphql Request Headers](https://github.com/awslabs/aws-mobile-appsync-sdk-js/issues/144)
+
 ## Project Structure
 
 Do not edit anything in the build folder

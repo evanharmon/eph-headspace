@@ -7,6 +7,8 @@ facebook, google, and amazon
 
 ## Resources
 
+- [Identity Pool Auth Flow](https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html)
+
 ### Refresh Tokens
 
 - [AWS](https://forums.aws.amazon.com/thread.jspa?threadID=241503)

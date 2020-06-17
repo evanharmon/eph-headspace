@@ -29,7 +29,7 @@ This step adds the necessary amplify files that are in the gitgnore and not stor
 
 ## Pinpoint Errors
 
-[GH Issue](https://github.com/aws-amplify/amplify-js/issues/3489)
+- [GH Issue](https://github.com/aws-amplify/amplify-js/issues/3489)
 
 disable Analytics in Amplify configure:
 
@@ -81,3 +81,7 @@ jest.mock('aws-amplify', () => {
   }
 })
 ```
+
+## Debug In Browser
+
+in dev tools set `window.LOG_LEVEL='DEBUG'`

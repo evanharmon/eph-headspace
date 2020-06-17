@@ -13,48 +13,20 @@ Notes on using aws appsync
 - [Resource For Gotchas](https://www.integralist.co.uk/posts/cognito/#example-google-app-configuration)
 - [Pure WebSocket Support](https://aws.amazon.com/about-aws/whats-new/2019/11/aws-appsync-adds-real-time-enhancements-with-pure-websockets-support-for-graphql-subscriptions/)
 
-## Subscriptions
+### CORS
 
-## Subscription Spam
-
-Remember to filter subscription event responses. Subscription events are likely
-global. Situation could occur where a page constantly refreshes when EVERY user
-makes a call to that specific graphql mutation!!
-
-#### Subscription Event Response Shape
+common CORS headers needed for api calls
 
 ```json
 {
-  "provider": {
-    "_config": { "clientId": "11111111-1111-1111-1111-111111111111" },
-    "_clientsQueue": { "promises": {} },
-    "_topicObservers": {},
-    "_topicClient": {},
-    "_topicAlias": {}
-  },
-  "value": {
-    "data": {
-      "onCreateFile": {
-        "id": "22222222-2222-2222-2222-222222222222",
-        "name": "name123"
-      }
-    }
-  }
+  "Content-Type": "application/json; charset=UTF-8",
+  "Accept": "application/json, text/plain/ */*",
+  "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Amz-Security-Token",
+  "Access-Control-Allow-Credentials": "true",
+  "Access-Control-Allow-Methods": "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT"
 }
 ```
 
-#### Fields Received In Subscription
+### Custom Headers
 
-A subscription event on a mutation / query, only returns the fields requested by
-the original consumer of that appsync call.
-
-Example consumer mutation:
-
-```gql
-createFile() {
-  id
-  name
-}
-```
-
-Event subscriber will receive the fields `id` and `name`
+- [Rest Api Calls](https://docs.amplify.aws/lib/restapi/authz/q/platform/js#cognito-user-pools-authorization)
