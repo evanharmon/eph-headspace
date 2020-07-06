@@ -14,7 +14,7 @@ Notes on using the git diff tool
 git diff branch1 branch2 -- {file}
 ```
 
-## Show Files Changed Between Branches
+## Show Files Changed Between Branches / Commits
 
 ```console
 git diff firstbranch..secondbranch

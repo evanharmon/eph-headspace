@@ -43,3 +43,9 @@ The linter will complain but you can't use the surrounding quotes
 ```hcl
 "memoryReservation": ${memory_reservation},
 ```
+
+## Escape \$ Characters
+
+```hcl
+$${cognito-identity.amazonaws.com:sub}/*
+```

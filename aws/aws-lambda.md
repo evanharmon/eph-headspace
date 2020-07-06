@@ -10,6 +10,7 @@ Compute service
 - [Unzip Large Files In Lambda With Streaming](https://medium.com/@johnpaulhayes/how-extract-a-huge-zip-file-in-an-amazon-s3-bucket-by-using-aws-lambda-and-python-e32c6cf58f06)
 - [AWS Blog Improved VPC Networking](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/)
 - [Configuration Docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-console.html)
+- [Investigating Spikes](https://aws.amazon.com/blogs/compute/investigating-spikes-in-aws-lambda-function-concurrency/)
 
 ## Use Cases
 

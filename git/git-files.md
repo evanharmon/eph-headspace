@@ -137,3 +137,11 @@ cd /path/to/git_controlled_dir
 mkdir local_copy_dir
 bindfs <source_dir> local_copy_dir
 ```
+
+## List Last Modification of Files In Folder
+
+```console
+git ls-tree -r --name-only HEAD ./appsync | while read filename; do
+  echo "$(git log -1 --format="%ad" -- $filename) $filename"
+done
+```

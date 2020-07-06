@@ -4,6 +4,10 @@
 
 Notes on using the javascript sdk with dynamodb
 
+## Resources
+
+- [CSV Import Tool](https://github.com/GorillaStack/dynamodb-csv-export-import)
+
 ## ValidExpection Error On Schema
 
 `ValidationException: The provided key element does not match the schema`
@@ -14,7 +18,7 @@ below
 ```javascript
 const params = {
   Key: {
-    id: "1234"
-  }
-};
+    id: '1234',
+  },
+}
 ```

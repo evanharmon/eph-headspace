@@ -85,3 +85,9 @@ const groups = user.signInUserSession.accessToken.payload['cognito:groups']
 const data = await Auth.currentAuthenticatedUser()
 const sub = data.signInUserSession.accessToken.payload['sub']
 ```
+
+## Get Cognito Identity Pool Identity Id
+
+```javascript
+const { identityId } = Auth.currentCredentials()
+```

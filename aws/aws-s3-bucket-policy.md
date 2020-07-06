@@ -10,6 +10,7 @@ differs from IAM!
 
 - [S3 Bucket Policy Actions](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html)
 - [S3 Bucket Policy Conditions](https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html)
+- [S3 Policy Role Conditions](https://docs.aws.amazon.com/cognito/latest/developerguide/iam-roles.html)
 
 ## Invalid Action Errors
 
@@ -111,6 +112,33 @@ S3 Buckets can be locked out by incorrect / inadvertent changes to the bucket po
       },
       "Action": "s3:GetObject",
       "Resource": "arn:aws:s3:::examplebucket/*"
+    }
+  ]
+}
+```
+
+## Limit Object Access To Cognito Identity Pool Id
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": ["s3:ListBucket"],
+      "Effect": "Allow",
+      "Resource": ["arn:aws:s3:::mybucket"],
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": ["${cognito-identity.amazonaws.com:sub}/*"]
+        }
+      }
+    },
+    {
+      "Action": ["s3:GetObject", "s3:PutObject"],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::mybucket/${cognito-identity.amazonaws.com:sub}/*"
+      ]
     }
   ]
 }

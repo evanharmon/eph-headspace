@@ -68,7 +68,7 @@ go test --tags=integration
 
 ## Test Helper
 
-[Golang.org](https://blog.golang.org/go1.9)
+- [Golang.org](https://blog.golang.org/go1.9)
 
 ```golang
 package p

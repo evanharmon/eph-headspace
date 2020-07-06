@@ -6,7 +6,8 @@ Delete markers are replicated
 
 ## Resources
 
-[Same Region Replication](https://aws.amazon.com/about-aws/whats-new/2019/09/amazon-s3-introduces-same-region-replication/)
+- [Same Region Replication](https://aws.amazon.com/about-aws/whats-new/2019/09/amazon-s3-introduces-same-region-replication/)
+- [V1 vs V2 Replication with Delete Markers](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations)
 
 ## Same Region Replication
 
@@ -36,3 +37,10 @@ replication to the destination bucket
       "s3:ObjectOwnerOverrideToBucketOwner"
   ],
 ```
+
+## Replication Configuration Schema Upgrade
+
+To use priorities, XML V2 Replication is required. A `schema upgrade` must be
+completed and has an effect on how
+[delete markers](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations)
+are handled.

@@ -78,5 +78,14 @@ ECR permissions policy
 ## Pull By Untagged Digest
 
 ```console
-docker pull aws_account_id.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:@sha256:1234
+docker pull aws_account_id.dkr.ecr.us-east-1.amazonaws.com/amazonlinux:@sha256:1234
 ````
+
+## Push To ECR
+
+first re-tag to ECR namespace if necessary, then push
+
+```console
+docker tag namespace/myapp aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:latest
+docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:latest
+```
