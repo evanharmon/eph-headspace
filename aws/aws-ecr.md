@@ -81,11 +81,25 @@ ECR permissions policy
 docker pull aws_account_id.dkr.ecr.us-east-1.amazonaws.com/amazonlinux:@sha256:1234
 ````
 
-## Push To ECR
+### Push To ECR
 
 first re-tag to ECR namespace if necessary, then push
 
 ```console
 docker tag namespace/myapp aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:latest
 docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:latest
+```
+
+### Re-tag ECR
+
+download old sha then re-tag via docker commands
+
+```console
+docker pull \
+  aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp@sha256:11111
+docker tag \
+  aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp@sha256:11111 \
+  aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:dev
+docker push \
+  aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:dev
 ```

@@ -27,6 +27,6 @@ common CORS headers needed for api calls
 }
 ```
 
-### Custom Headers
+### Custom API Headers
 
 - [Rest Api Calls](https://docs.amplify.aws/lib/restapi/authz/q/platform/js#cognito-user-pools-authorization)

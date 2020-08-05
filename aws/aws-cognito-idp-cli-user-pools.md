@@ -97,6 +97,24 @@ aws cognito-idp admin-delete-user \
   --username "Facebook_111111111111111"
 ```
 
+#### Update User Attributes
+
+```console
+aws cognito-idp admin-update-user-attributes \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --username "Facebook_111111111111111" \
+  --user-attributes Name="custom:CustomAttr1",Value="Purple"
+```
+
+#### Delete User Attributes
+
+```console
+aws cognito-idp admin-delete-user-attributes \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --username "Facebook_111111111111111" \
+  --user-attribute-names "custom:CustomAttr1"
+```
+
 ### Identities
 
 #### Remove Linked Identity

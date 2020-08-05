@@ -12,4 +12,18 @@ notes on managing conflicts in data on applications
 
 ### CRDT
 
-- mult-user from the ground up
+- multi-user from the ground up
+
+### Problems Solved by CRDT
+
+#### Last Write Wins
+
+Stale updates may win!
+
+- unstable connection
+- network latency
+- unreliable clocks
+
+### Merge Function
+
+Use the same merge function / code across client, server, and data store!

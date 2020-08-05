@@ -6,6 +6,8 @@ Notes on doing web identity federation with AWS and the `sts` service
 
 ## Resources
 
+- [Inline Session Policies](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html)
+
 ## Flow
 
 - User Authenticates with Identity Provider

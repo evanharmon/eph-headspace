@@ -12,6 +12,7 @@ Notes on using aws amplify auth sdk's, cli, etc
 - [Android Setup Google OAuth2 AWS](https://www.linkedin.com/learning/building-android-apps-with-aws/set-up-user-sign-in-with-google?u=2240169)
 - [iOS Setup Google OAuth2 AWS](https://www.linkedin.com/learning/building-ios-apps-with-aws-mobile/add-google-login?u=2240169)
 - [Auth On Subscriptions](https://aws-amplify.github.io/docs/cli-toolchain/graphql#authorizing-subscriptions)
+- [Multi Tenant Virtual Cognito Groups](https://medium.com/@dantasfiles/creating-a-simple-multi-tenant-aws-amplify-mobile-app-e26119ab8246)
 
 ## Web App Sign In With Google
 
@@ -63,7 +64,7 @@ They are NOT web views. See linkedin Videos above in Resources
 const data = await Auth.currentAuthenticatedUser()
 ```
 
-### GEt Credentials
+### Get Credentials
 
 ```javascript
 const data = await Auth.currentCredentials()
@@ -86,8 +87,34 @@ const data = await Auth.currentAuthenticatedUser()
 const sub = data.signInUserSession.accessToken.payload['sub']
 ```
 
-## Get Cognito Identity Pool Identity Id
+### Update User Attributes
+
+make sure `aws.cognito.signin.user.admin` is checked under
+`Allowed OAuth Scopes`.
+
+```javascript
+const user = await Auth.currentAuthenticatedUser()
+await Auth.upateUserAttributes(user, { name: 'My name' })
+```
+
+### Get Cognito Identity Pool Identity Id
 
 ```javascript
 const { identityId } = Auth.currentCredentials()
+```
+
+### Authorization Tokens
+
+Request header is `Authorization`
+
+#### Get Access JWT Token
+
+```javascript
+const token = (await Auth.currentSession()).getAccessToken().getJwtToken()
+```
+
+#### Get Identity JWT Token
+
+```javascript
+const token = (await Auth.currentSession()).getIdToken().getJwtToken()
 ```

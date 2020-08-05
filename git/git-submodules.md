@@ -38,11 +38,17 @@ cat .git/modules/mysubmodule/HEAD
 
 ## Move / Rename Submodule Folder on Mac
 
-[SO](https://stackoverflow.com/questions/4526910/rename-a-git-submodule)
+- [SO](https://stackoverflow.com/questions/4526910/rename-a-git-submodule)
 
 do a temporary move
 
 ```console
 git mv Common commontemp
 git mv commontemp common
+```
+
+## Update Submodules
+
+```console
+git submodule update --init --recursive
 ```

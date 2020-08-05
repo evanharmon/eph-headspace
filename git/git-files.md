@@ -9,7 +9,7 @@ Notes on working with files with GIT
 - [git add docs](https://git-scm.com/docs/git-add)
 - [git rm docs](https://git-scm.com/docs/git-rm)
 
-## Adds All New or Changed (as long as not ignored)
+### Adds All New or Changed (as long as not ignored)
 
 but no rm actions
 
@@ -17,13 +17,13 @@ but no rm actions
 git add .
 ```
 
-## Remove Files By Glob Pattern
+### Remove Files By Glob Pattern
 
 ```console
 git rm unix-linux\*.md
 ```
 
-## Look at already Tracked Files and Stage Changes
+### Look at already Tracked Files and Stage Changes
 
 Including rm Actions
 
@@ -31,73 +31,73 @@ Including rm Actions
 git add -u
 ```
 
-## shortcut for: git add .;git add -u
+### shortcut for: git add .;git add -u
 
 ```console
 git add -A
 ```
 
-## List Files Being Tracked
+### List Files Being Tracked
 
 ```console
 git ls-tree -r master --name-only
 ```
 
-## List Git-ignored Files
+### List Git-ignored Files
 
 ```console
 git ls-files . --ignored --exclude-standard --others
 ```
 
-## List Files in Another Branch
+### List Files in Another Branch
 
 ```console
 git ls-tree -r --name-only develop helpers/
 ```
 
-## List Untracked Files
+### List Untracked Files
 
 ```console
 git ls-files . --exclude-standard --others
 ```
 
-## Remove Folder From Being Tracked by Git
+### Remove Folder From Being Tracked by Git
 
 ```console
 git rm --cached -r .config/nvim/plugged/
 ```
 
-## Remove File Without Deleting
+### Remove File Without Deleting
 
 ```console
 git rm --cached file
 ```
 
-## List Files Changed in Commit
+### List Files Changed in Commit
 
 ```console
 git show --pretty="format:" --name-only {git commit hash}
 ```
 
-## View a File From Another Branch
+### View a File From Another Branch
 
 ```console
 git show branch:filename
 ```
 
-## Checkout File from Another Branch
+### Checkout File from Another Branch
 
 ```console
 git checkout {branch} -- {filepath}
 ```
 
-## Checkout File From Another Commit
+### Checkout File From Another Commit
 
 ```console
 git checkout {commit-hash} file/to/restore
 ```
 
-## Checkout Entire Folder From Another Branch
+### Checkout Entire Folder From Another Branch
 
 \*\*Note: You can't checkout a folder to a new folder path. Has to be done in
 separate steps
@@ -107,27 +107,27 @@ git checkout backup/non-cra-master -- public/
 git mv public/ src/
 ```
 
-## Remove All Un-tracked Files
+### Remove All Un-tracked Files
 
 ```console
 git clean -i
 ```
 
-## View Commit History by Specific File
+### View Commit History by Specific File
 
 ```console
 git log -- /directory/file.js
 ```
 
-## List unique current directory commit changes
+### List unique current directory commit changes
 
 ```console
 $(git ls-files --directory <directory-name> | sed 's/\(.*\)\/.*/\1/' | uniq)
 ```
 
-## Correctly Symlink Folders With `bindfs`
+### Correctly Symlink Folders With `bindfs`
 
-[SO at the bottom](https://stackoverflow.com/questions/86402/how-can-i-get-git-to-follow-symlinks)
+- [SO at the bottom](https://stackoverflow.com/questions/86402/how-can-i-get-git-to-follow-symlinks)
 
 On Mac:
 
@@ -138,10 +138,10 @@ mkdir local_copy_dir
 bindfs <source_dir> local_copy_dir
 ```
 
-## List Last Modification of Files In Folder
+### List Last Modification of Files In Folder
 
 ```console
-git ls-tree -r --name-only HEAD ./appsync | while read filename; do
+git ls-tree -r --name-only HEAD ./| while read filename; do
   echo "$(git log -1 --format="%ad" -- $filename) $filename"
 done
 ```

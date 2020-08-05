@@ -12,8 +12,8 @@ fmt.Sprintf("%s.wav", fname)
 
 ## Convert []string To String
 
-[Docs](https://golang.org/pkg/strings/#Join)
-[SO](https://stackoverflow.com/questions/41756412/golang-convert-type-string-to-string)
+- [Docs](https://golang.org/pkg/strings/#Join)
+- [SO](https://stackoverflow.com/questions/41756412/golang-convert-type-string-to-string)
 
 ```golang
 stringArray := []string {"Hello","world","!"}

@@ -33,3 +33,8 @@ no uninstall command exists
 ```console
 rm -rf ~/.fnm/node-versions/<VERSION>
 ```
+
+## Install Node
+```console
+fnm install v13
+```

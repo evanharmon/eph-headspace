@@ -6,7 +6,7 @@ Notes on using XCODE IDE on Mac projects
 
 ## Resources
 
-[GH .gitignore](https://github.com/github/gitignore/blob/master/Global/Xcode.gitignore)
+- [GH .gitignore](https://github.com/github/gitignore/blob/master/Global/Xcode.gitignore)
 
 ## Console Application
 
