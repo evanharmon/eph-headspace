@@ -1,7 +1,8 @@
 # AWS LAMBDA CLI
 
 ## Test Lambda Function Manually
-```
+
+```console
 $ aws lambda invoke \
     --invocation-type RequestResponse \
     --function-name myLambdaTestEndpoint \
@@ -11,13 +12,15 @@ $ aws lambda invoke \
 ```
 
 ## Update Lambda Function
-```
+
+```console
 $ aws lambda update-function-code \
     --zip-file=fileb://file_name.zip \
     --function-name cloudguru-lab-1
 ```
 
 ## Publish Lambda Function
+
 ```
 $ aws lambda update-function-code \
     --zip-file=fileb://file_name.zip \
@@ -26,8 +29,16 @@ $ aws lambda update-function-code \
 ```
 
 ## Update Lambda Function Config
-```
+
+```console
 $ aws lambda update-function-configuration \
     --function-name cloudguru-lab-1
     --handler csv_read.handler
+```
+
+### Find Lambdas Using Layer
+
+```console
+aws lambda list-functions \|
+  jq -r '.Functions[] | {name: .FunctionName, layerArns: .Layers[]? | select(.Arn | contains("mypkg"))}’
 ```

@@ -12,3 +12,6 @@ Notes on using XCODE shortcuts
 
 Open quickly
 CMD + SHIFT + O
+
+### Go To Line Number
+CMD + L

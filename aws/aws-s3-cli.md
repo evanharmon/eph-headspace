@@ -3,6 +3,7 @@
 ## Resources
 
 - [Canned ACLS](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl)
+- [Multi Part Upload](https://aws.amazon.com/premiumsupport/knowledge-center/s3-multipart-upload-cli/)
 
 ## Create Bucket
 
