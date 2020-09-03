@@ -40,7 +40,7 @@ jest --testRegex MyComponent/MyComponent.test.js
 #### Debug Jest Test With Inspector
 
 ```console
-node --inspect node_modules/.bin/jest --runInBand
+node --inspect-brk node_modules/.bin/jest --runInBand
 ```
 
 #### Hide Coverage On Jest Run

@@ -154,7 +154,7 @@ jq -n --slurpfile f manifest.json '$f[]|.builds | last | .artifact_id | split(":
 
 ## Search For Word In Array
 
-[GH Issue](https://github.com/stedolan/jq/issues/861)
+- [GH Issue](https://github.com/stedolan/jq/issues/861)
 
 ```console
 jq '.arrayOfStuff[] | select(.key2 | contains("dar"))' JSONFile.json
@@ -162,7 +162,7 @@ jq '.arrayOfStuff[] | select(.key2 | contains("dar"))' JSONFile.json
 
 ## Wrap Items In Array And Add Commas
 
-[GH Issue](https://github.com/stedolan/jq/issues/124)
+- [GH Issue](https://github.com/stedolan/jq/issues/124)
 
 ```console
 jq -r '[.Items]' test.json
@@ -192,4 +192,14 @@ jq -rs '.' myfile.txt
 
 ```console
 jq -rs '.|flatten' myfile.json
+```
+
+### Flatten NewLine Array JSON
+
+```json
+["one", "two", "three"][("four", "five", "six")]
+```
+
+```console
+jq -rs '.|flatten' myfile.json > flattened-myfile.json
 ```

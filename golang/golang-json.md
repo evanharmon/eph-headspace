@@ -8,6 +8,7 @@ Notes on working with JSON in golang
 
 - [Online JSON to Go Generator](https://mholt.github.io/json-to-go/)
 - [JSON Code Generator Online Tool](https://app.quicktype.io/)
+- [Dyamic JSON in Go](https://eagain.net/articles/go-dynamic-json/)
 
 ## Convert JSON to GO Struct
 

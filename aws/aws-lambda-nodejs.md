@@ -31,3 +31,17 @@ exports.handler = async function(event, context) {
   return context.logStreamName
 }
 ```
+
+### AWS SDK
+
+- [SDK Version By Node Version](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)
+
+Lambda's include the AWS SDK by default
+
+### Tests
+
+Inline test in `index.js` that only runs when invoked from CLI
+
+```javascript
+if (!module.parent) { console.log(do test lines here) }
+```

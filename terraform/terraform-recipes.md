@@ -186,6 +186,6 @@ schema = templatefile("${path.module}/schema.graphql", {
 ```
 
 ```gql
-enhanceFileVersion(input: CreateFileInput!): Collection
+updateDoc(input: myInput!): Collection
   @aws_cognito_user_pools(cognito_groups: ${MY_GROUPS})
 ```

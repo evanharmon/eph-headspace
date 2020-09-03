@@ -5,7 +5,7 @@
 ### Filter Nested Array of Objects
 
 ```javascript
-arr.reduce((a, b) => a.concat(b)).filter(obj => obj.id == ID)
+arr.reduce((a, b) => a.concat(b)).filter((obj) => obj.id == ID)
 ```
 
 ### Ensure a reduce returns an array
@@ -16,7 +16,8 @@ return [myarray].reduce((acc, curr) => {})
 
 ### Concat Array
 
-`[].concat([1,2,3]);` WONT WORK
+WONT WORK
+`[].concat([1,2,3])`
 
 ```javascript
 let arr1 = []
@@ -26,15 +27,21 @@ arr2.concat(arr1)
 
 ### Flatten nested array
 
-`const orderList = orders.reduce((a, b) => a.concat(b.location));`
+```javascript
+const orderList = orders.reduce((a, b) => a.concat(b.location))
+```
 
 ### Reduce and avoid mutations
 
-`const orderList = orders.reduce((a,b) => [...results, acc]);`
+```javascript
+const orderList = orders.reduce((a, b) => [...results, acc])
+```
 
 ### Flatten nested array to new array
 
-`const orderList = orders.reduce((a, b) => a.concat(b.location), []);`
+```javascript
+const orderList = orders.reduce((a, b) => a.concat(b.location), [])
+```
 
 ### Array indexOf on Objects
 
@@ -43,18 +50,22 @@ have to use findIndex instead
 ```javascript
 const target = { name: 'Josh' }
 const targetKeys = Object.keys(target)
-const index = test.findIndex(entry => {
+const index = test.findIndex((entry) => {
   const keys = Object.keys(entry)
   return (
     keys.length == targetKeys.length &&
-    keys.every(key => target.hasOwnProperty(key) && entry[key] === target[key])
+    keys.every(
+      (key) => target.hasOwnProperty(key) && entry[key] === target[key]
+    )
   )
 })
 ```
 
 ### Create Array of values from Array of Objects
 
-`items.map(i => i.OrderNo);`
+```javascript
+items.map((i) => i.OrderNo)
+```
 
 ### Return a new array from a reduce
 

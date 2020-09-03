@@ -7,3 +7,6 @@ Notes on using the s3 transfer utility sdk on iOS
 ## Resources
 
 - [AWSS3TransferUtilityTransferStatusType](https://aws-amplify.github.io/aws-sdk-ios/docs/reference/AWSS3/Enums/AWSS3TransferUtilityTransferStatusType.html)
+
+### Multi-Part Uploads
+Transfer Utility automatically uses multi-part uploads on files over 5MB
