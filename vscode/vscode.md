@@ -12,12 +12,6 @@
 - [Developing Inside A Container](https://code.visualstudio.com/docs/remote/containers-advanced)
 - [Docker Tasks](https://code.visualstudio.com/docs/containers/reference)
 
-## Open File In VSCode From Terminal
-
-```console
-code README.md
-```
-
 ## View DotFiles
 
 Toggle display of dotfiles (e.g., .env), Command-Shift-.

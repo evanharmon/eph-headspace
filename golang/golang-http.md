@@ -4,6 +4,10 @@
 
 Notes on working with HTTP in golang
 
+## Resources
+
+- [Multiple HTTP Servers](https://medium.com/rungo/running-multiple-http-servers-in-go-d15300f4e59f)
+
 ## Mock HTTP Request
 
 package is `net/http/httptest`

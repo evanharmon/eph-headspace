@@ -6,8 +6,8 @@ Notes on memory management in c++
 
 ## Resources
 
-[Dynamic Memory Management](https://www.learncpp.com/cpp-tutorial/69-dynamic-memory-allocation-with-new-and-delete/)
-[Dynamically Allocated Arrays](https://www.learncpp.com/cpp-tutorial/6-9a-dynamically-allocating-arrays/)
+- [Dynamic Memory Management](https://www.learncpp.com/cpp-tutorial/69-dynamic-memory-allocation-with-new-and-delete/)
+- [Dynamically Allocated Arrays](https://www.learncpp.com/cpp-tutorial/6-9a-dynamically-allocating-arrays/)
 
 ## Types Of Memory Management
 

@@ -7,27 +7,48 @@
 
 ## Create Bucket
 
-`aws s3 mb s3://mybucket`
+```console
+aws s3 mb s3://mybucket
+```
 
 ## Copy File Locally From S3
 
-`aws s3 cp s3://mybucket/test.txt test2.txt`
+```console
+aws s3 cp s3://mybucket/test.txt test2.txt
+```
 
 ## Copy File Local To S3
 
-`aws s3 cp test.txt s3://mybucket/test2.txt`
+```console
+aws s3 cp test.txt s3://mybucket/test2.txt
+```
 
 ## Check How Much Is In An S3 bucket
 
-`aws s3 ls s3://mybucket --recursive --human-readable --summarize`
+```console
+aws s3 ls s3://mybucket --recursive --human-readable --summarize
+```
+
+## Copy Bucket With Files
+
+```console
+aws s3 cp --recursive s3://old-bucket s3://new-bucket
+```
+
+## Copy Bucket To Another Account
+
+This is best done by adding policy statements on the original bucket allowing
+access from an assumed role. Do the copy below, then remove the temporary s3
+bucket policy statements
+
+```console
+aws s3 cp --recursive --acl bucket-owner-full-control s3://old-bucket s3://new-bucket
+```
 
 ## Move Bucket With Files
 
-```
-$ aws s3 mv \
-    --recursive \
-    s3://hss-old-cf-templates-us-west-2 \
-    s3://hss-new-cf-templates-us-west-2
+```console
+aws s3 mv --recursive s3://old-bucket s3://new-bucket
 ```
 
 ## Tagging
@@ -42,7 +63,7 @@ account bucket.
 
 source account s3 bucket policy
 
-```
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -66,7 +87,7 @@ source account s3 bucket policy
 put objects granting owner of bucket full control, and giving read access to
 consumer account. Uses canonical ids of each account as ids
 
-```
+```console
 aws s3 sync test-dir s3://mybucket \
   --grants read=id=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc \
            readacl=id=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc \

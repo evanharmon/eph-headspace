@@ -65,3 +65,9 @@ exports.handler = async (event, context) => {
   }
 }
 ```
+
+### Information About Request
+
+potentially write single VTL resolver code that can handle create / update / delete
+
+- [Info](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-context-reference.html#aws-appsync-resolver-context-reference-info)

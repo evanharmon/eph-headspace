@@ -27,3 +27,9 @@ aws s3api list-multipart-uploads \
   --bucket "my-bucket-name" \
   --prefix "hss"
 ```
+
+## Change Object Ownership
+
+```console
+aws s3api put-object-acl --bucket destination_awsexamplebucket --key keyname --acl bucket-owner-full-control
+```

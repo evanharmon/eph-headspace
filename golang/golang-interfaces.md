@@ -4,6 +4,10 @@
 
 Used to declare behavior. Never includes actual implementation for the type
 
+## Resources
+
+- [Convert Types To Interface Via Copy](https://golang.org/doc/faq#convert_slice_of_interface)
+
 ## Interface Values
 
 two-word data structures

@@ -6,6 +6,23 @@ Notes on working with unix / linux shells and associated variables
 
 ## Resources
 
+## Interpreters
+
+Always declare an interpeter at top of shell scripts!
+
+```sh
+#!/usr/bin/env bash
+```
+
+### `sh` Command
+
+`sh` command overrides script interpreter set in a file!
+call the script directly to use the declared interpreter
+
+```sh
+./my-script.sh
+```
+
 ## Built In Shell Variables
 
 ### Check What Shell is Being Used

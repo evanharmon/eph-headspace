@@ -50,3 +50,17 @@ async function run(arr) {
 }
 run(times);
 ```
+
+## Await .map
+
+- [article](https://flaviocopes.com/javascript-async-await-array-map/)
+
+```javascript
+const getData = async (list = []) => {
+  return new Promise.all(
+    list.map(async (i) => {
+      await someAsyncCall()
+    })
+  )
+}
+```

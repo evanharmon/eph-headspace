@@ -4,6 +4,12 @@
 
 Using the vscode `code` cli
 
+## Open File In VSCode From Terminal
+
+```console
+code README.md
+```
+
 ## Install Code CLI Tool
 
 CMD + SHIFT + P

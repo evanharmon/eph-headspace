@@ -6,7 +6,11 @@ Notes on working with the AWS cli
 
 ## Resources
 
-### Install
+- [Install V2 CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
+
+## V1 CLI INSTALL
+
+### Install macOS
 
 ```console
 brew install awscli
@@ -43,4 +47,10 @@ aws configure list
 
 ```console
 aws sts get-caller-identity --query Account --output text
+```
+
+## Clear CLI Cache
+
+```console
+rm -rf ~/.aws/cli/cache/*
 ```

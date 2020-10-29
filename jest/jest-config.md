@@ -6,6 +6,8 @@ Notes on configuring Jest
 
 ## Resources
 
+- [Jest SetupTestsAfterEnv](https://jestjs.io/docs/en/configuration#setupfilesafterenv-array)
+
 ## Configuration
 
 ### Ignore Specific Folders

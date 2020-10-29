@@ -7,6 +7,7 @@ Notes on using aws codebuild
 ## Resources
 
 - [Env Variables Available](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-env-vars.html)
+- [Docker Cache Re-Use Improve Build Times](https://aws.amazon.com/blogs/devops/reducing-docker-image-build-time-on-aws-codebuild-using-an-external-cache/)
 
 ## Errors
 

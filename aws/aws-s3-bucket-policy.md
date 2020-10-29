@@ -11,6 +11,8 @@ differs from IAM!
 - [S3 Bucket Policy Actions](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html)
 - [S3 Bucket Policy Conditions](https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html)
 - [S3 Policy Role Conditions](https://docs.aws.amazon.com/cognito/latest/developerguide/iam-roles.html)
+- [Allow Cross-Account Bucket Access](https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/)
+- [Enforce Object Ownership To Bucket Owner](https://aws.amazon.com/blogs/aws/amazon-s3-update-three-new-security-access-control-features/)
 
 ## Invalid Action Errors
 
@@ -138,6 +140,45 @@ S3 Buckets can be locked out by incorrect / inadvertent changes to the bucket po
       "Effect": "Allow",
       "Resource": [
         "arn:aws:s3:::mybucket/${cognito-identity.amazonaws.com:sub}/*"
+      ]
+    }
+  ]
+}
+```
+
+## Allow Another Account User Access To Bucket
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::AccountB:user/AccountBUserName"
+      },
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:PutObjectAcl"],
+      "Resource": ["arn:aws:s3:::AccountABucketName/*"]
+    }
+  ]
+}
+```
+
+## Allow Another Assumed Role Access To Bucket
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::AccountB:role/RoleName"
+      },
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:PutObjectAcl", "s3:List*"],
+      "Resource": [
+        "arn:aws:s3:::AccountABucketName/*",
+        "arn:aws:s3:::AccountABucketName"
       ]
     }
   ]

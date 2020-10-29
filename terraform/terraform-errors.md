@@ -37,3 +37,10 @@ resource "aws_api_gateway_integration" "options" {
   }
 }
 ```
+
+## Unsupported Attribute
+Instance data.aws_region.cross-account data could not be decoded from the
+state: unsupported attribute "current".
+
+in this case - had to do `terraform state rm data.aws_region.cross-account`
+and then run a new plan

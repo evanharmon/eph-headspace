@@ -50,3 +50,9 @@ aws-vault exec mycrossaccount -- aws s3 ls
 ```console
 aws-vault exec <profile> -- aws s3 ls
 ```
+
+### Remove Sessions
+
+```console
+aws-vault remove dev --sessions-only
+```

@@ -1,14 +1,29 @@
 # See Folder Tree 2 Levels Deep
-`$ tree -L 2`
 
-# List only directories
-`$ ls -d */`
+```console
+tree -L 2
+```
+
+# List Directories
+
+```console
+ls -d */
+```
 
 # Get the size of a folder
-`$ du -sh dist`
+
+```console
+du -sh dist
+```
 
 # list directory by time stamp
-`$ ls -lart`
+
+```console
+ls -lart
+```
 
 # view end of a file
-`$ tail log.txt`
+
+```console
+tail log.txt
+```

@@ -133,3 +133,13 @@ $util.toJson($ctx.result)
 ```vtl
 $util.typeOf("$context.identity.groups")
 ```
+
+## Return Null
+
+- [Appsync Directives](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-util-reference.html#aws-appsync-directives)
+
+```vtl
+#if ($context.result.isEmpty()
+  #return
+#fi
+```

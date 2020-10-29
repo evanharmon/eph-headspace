@@ -1,8 +1,9 @@
-# AWS COGNITO CLI
+# AWS COGNITO IDENTITY CLI
 
 ## Summary
 
-Notes on using the `aws cognito-identity` cli for AWS Cognito Federated Identities service
+Notes on using the `aws cognito-identity` cli for AWS Cognito Federated
+Identities service. Identity Pools.
 
 ## Create New Pool
 
@@ -27,4 +28,24 @@ aws iam create-role \
 aws iam create-role \
   --role-name hss-auth-authorized \
   --assume-role-policy-document file://policies/cognito-authorized-trust.json
+```
+
+## Unlink Identity
+
+Cognito User Group identity example:
+
+cli-input.json
+
+```json
+{
+  "IdentityId": "us-east-1:eeeeeeee-cccc-7777-8888-cccccccccccc",
+  "Logins": {
+    "cognito-idp.us-east-1.amazonaws.com/us-east-1_AAAAAAAAA": "ID_TOKEN"
+  },
+  "LoginsToRemove": ["cognito-idp.us-east-1.amazonaws.com/us-east-1_AAAAAAAAA"]
+}
+```
+
+```console
+aws cognito-identity unlink-identity --cli-input-json file://cli-input.json
 ```
