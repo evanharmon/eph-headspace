@@ -73,3 +73,11 @@ inside package.json
   }
 }
 ```
+
+### Run Only One Test / Single Test
+
+```javascript
+test.only('this will be the only test that runs', () => {
+  expect(true).toBe(false)
+})
+```

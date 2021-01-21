@@ -6,9 +6,10 @@ Notes on using elastic block storage
 
 ## Resources
 
-[Fast Snapshot Restore](https://aws.amazon.com/blogs/aws/new-amazon-ebs-fast-snapshot-restore-fsr/)
-[Initialize](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html)
-[Volume Monitoring](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html)
+- [Fast Snapshot Restore](https://aws.amazon.com/blogs/aws/new-amazon-ebs-fast-snapshot-restore-fsr/)
+- [Initialize](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html)
+- [Volume Monitoring](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html)
+- [Calculate IOPs used](https://onica.com/blog/managed-services/calculate-aws-ebs-volume-iops/)
 
 ## Summary
 

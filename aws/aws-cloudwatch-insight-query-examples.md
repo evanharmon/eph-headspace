@@ -40,3 +40,9 @@ stats count(*) by eventSource
 | sort eventSource asc
 | limit 2000
 ```
+
+## Find Lambdas with Errors
+
+```
+filter @message like /(?i)(Exception|error|fail)/| fields @timestamp, @message | sort @timestamp desc | limit 20
+```

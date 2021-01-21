@@ -80,3 +80,9 @@ located at `/private/var/run/docker.sock`
 ```console
 docker login | rg registry
 ```
+
+## Limit to # of Cpus
+
+```console
+--cpuset-cpus="" 	CPUs in which to allow execution (0-3, 0,1)
+```

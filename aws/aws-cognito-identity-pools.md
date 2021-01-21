@@ -8,6 +8,7 @@ facebook, google, and amazon
 ## Resources
 
 - [Identity Pool Auth Flow](https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html)
+- [Assume Preferred Role](https://docs.aws.amazon.com/cognito/latest/developerguide/role-based-access-control.html)
 
 ### Refresh Tokens
 

@@ -16,3 +16,9 @@ Notes on working with terragrunt
 ```console
 find . -maxdepth 3 -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;
 ```
+
+## Debug Error Codes
+
+```console
+terragrunt plan-all --detailed-exitcode
+```

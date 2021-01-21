@@ -11,7 +11,7 @@ facebook, google, and amazon
 - [Amplify Code Example](https://aws-amplify.github.io/docs/js/authentication)
 - [AWS Facebook Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-configuring-federation-with-social-idp.html)
 - [OAuth 2.0 Grants](https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/)
-- [Apple Id Setup](https://aws.amazon.com/blogs/security/how-to-set-up-sign-in-with-apple-for-amazon-cognito/)
+- [Sign In With Apple / Apple Id Setup](https://aws.amazon.com/blogs/security/how-to-set-up-sign-in-with-apple-for-amazon-cognito/)
 
 ## Facebook
 
