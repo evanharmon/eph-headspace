@@ -6,8 +6,8 @@ Notes on efficient (or not efficient) key strategies for DynamoDB
 
 ## Resources
 
-[Sort Keys Best Practices](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-sort-keys.html)
-[Overloading GSI](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-gsi-overloading.html)
+- [Sort Keys Best Practices](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-sort-keys.html)
+- [Overloading GSI](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-gsi-overloading.html)
 
 ## Composite Sort Keys For One
 

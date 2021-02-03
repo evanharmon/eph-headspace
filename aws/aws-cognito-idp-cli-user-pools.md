@@ -63,6 +63,14 @@ aws cognito-idp list-users \
   --filter 'email = "evan@email.com"'
 ```
 
+#### List Users By Sub
+
+```console
+aws cognito-idp list-users \
+  --user-pool-id us-east-1_aaaaaaaaa \
+  --filter 'sub = "1234"'
+```
+
 #### List Users And Filter By Domain Name
 
 ```console

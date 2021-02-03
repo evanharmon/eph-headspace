@@ -46,3 +46,11 @@ stats count(*) by eventSource
 ```
 filter @message like /(?i)(Exception|error|fail)/| fields @timestamp, @message | sort @timestamp desc | limit 20
 ```
+
+## Parse Inner JSON Fields
+
+```
+parse @message "user=*, method:*, latency := *" as @user,
+    @method, @latency | stats avg(@latency) by @method,
+    @user
+```
