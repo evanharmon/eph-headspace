@@ -28,6 +28,8 @@ The for...of statement iterates over values that the iterable object defines to 
 
 ## For Of With Await
 
+Requires the use of iterables
+
 ```javascript
 for await (variable of iterable) {
   statement

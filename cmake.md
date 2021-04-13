@@ -20,3 +20,9 @@ add_executable(person Person.cc Pirate.cc main.cc)
 ```console
 export DCMAKE_EXPORT_COMPILE_COMMANDS=1
 ```
+
+### Build With Debug Symbols
+
+```txt
+set(CMAKE_BUILD_TYPE Debug)
+```

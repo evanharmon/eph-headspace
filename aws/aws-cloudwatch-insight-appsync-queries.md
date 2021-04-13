@@ -34,3 +34,12 @@ stats count(*) as CNT by bin(60s)
 | filter logType = "RequestSummary"
 | sort CNT desc
 ```
+
+## Top 10 Resolvers By Duration
+
+```
+fields resolverArn, duration
+| filter logType = "Tracing"
+| sort duration desc
+| limit 10
+```

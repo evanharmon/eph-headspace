@@ -6,4 +6,6 @@ Notes on working with the javascript aws sdk and sns
 
 ## Resources
 
-[AWS Publish](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples-publishing-messages.html)
+- [AWS Publish](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples-publishing-messages.html)
+- [Docs](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html)
+

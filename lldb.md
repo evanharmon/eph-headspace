@@ -6,10 +6,19 @@
 lldb ./ex1
 ```
 
+## Run
+
+Remember this has to be entered after setting a breakpoint!
+Otherwise you'll see the error `error: invalid process`
+
+```console
+run
+```
+
 ## Set Breakpoint lldb
 
 ```console
-breakpoint set --file file.c --line 12
+breakpoint set --file main.c --line 12
 ```
 
 ## Set Breakpoint by function name lldb
@@ -65,4 +74,16 @@ memory read -s1 -fu -c10000 0xb0987654 --force
 
 ```console
 po blabhlah
+```
+
+## Step In
+
+```console
+step
+```
+
+## Step Over
+
+```console
+next
 ```

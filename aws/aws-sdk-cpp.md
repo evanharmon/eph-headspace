@@ -47,10 +47,33 @@ target_link_libraries(my-example ${AWSSDK_LINK_LIBRARIES})
 
 ```console
 mkdir build && cd build
-cmake3 .. -DBUILD_ONLY=s3 \
+cmake3 .. \
+  -DBUILD_ONLY=s3 \
   -DBUILD_SHARED_LIBS=OFF \
   -DENABLE_UNITY_BUILD=ON \
   -DCMAKE_BUILD_TYPE=Release \
   -DCMAKE_INSTALL_PREFIX="/root/install"
 make
+```
+
+multiple sdks
+
+```console
+cmake3 .. \
+  -DBUILD_ONLY="s3;sts" \
+  -DBUILD_SHARED_LIBS=OFF \
+  -DENABLE_UNITY_BUILD=ON \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_INSTALL_PREFIX="/root/install"
+make
+```
+
+Build from git project folder
+
+```
+cmake .. \
+-DBUILD_ONLY="s3;cognito-identity;cognito-idp;sts" \
+-DBUILD_SHARED_LIBS=OFF \
+-DENABLE_UNITY_BUILD=ON \
+-DCMAKE_BUILD_TYPE=debug
 ```

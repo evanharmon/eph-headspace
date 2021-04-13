@@ -46,7 +46,8 @@ Amplify.configure({
 
 ### Pass Custom Attributes
 
-Only the ID token has custom claims. Access token does NOT contain them
+Only the ID token has custom claims and given_name, surname.
+Access token does NOT contain them
 
 ```javascript
 API: {
