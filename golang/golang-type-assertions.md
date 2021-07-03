@@ -15,7 +15,7 @@ Notes on doing type assertions in Golang
 
 ## Assert Nested Interface
 
-[SO](https://stackoverflow.com/questions/12962634/type-assert-a-nested-interface)
+- [SO](https://stackoverflow.com/questions/12962634/type-assert-a-nested-interface)
 
 ## Catch Type Assertion Errors
 

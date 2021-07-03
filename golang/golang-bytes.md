@@ -27,3 +27,9 @@ func toBinaryBytes(s string) string {
 ```golang
 []byte(fmt.Spritnf("%v", struct))
 ```
+
+## Convert Byte Array To String
+
+```golang
+s := string(myBytes[:])
+```

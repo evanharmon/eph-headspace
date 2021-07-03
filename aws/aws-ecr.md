@@ -90,16 +90,21 @@ docker tag namespace/myapp aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namesp
 docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:latest
 ```
 
-### Re-tag ECR
+### Re-Tag ECR
 
-download old sha then re-tag via docker commands
+[Put Image Tag](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-retag.html)
 
 ```console
-docker pull \
-  aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp@sha256:11111
-docker tag \
-  aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp@sha256:11111 \
-  aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:dev
-docker push \
-  aws_account_id.dkr.ecr.us-east-1.amazonaws.com/namespace/myapp:dev
+MANIFEST=$(aws ecr batch-get-image --repository-name amazonlinux --image-ids imageTag=latest --query 'images[].imageManifest' --output text)
+aws ecr put-image --repository-name amazonlinux --image-tag 2017.03 --image-manifest "$MANIFEST"
+```
+
+### Query Label
+
+```
+aws ecr batch-get-image \
+  --repository-name <ecr-repository> \
+  --image-id imageTag=<tag-name> \
+  --accepted-media-types "application/vnd.docker.distribution.manifest.v1+json" \
+  --output json |jq -r '.images[].imageManifest' |jq -r '.history[0].v1Compatibility' |jq -r '.config.Labels'
 ```

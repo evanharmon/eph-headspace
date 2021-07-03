@@ -11,4 +11,5 @@ Notes on dealing with merge identities in a cognito identity pool
 
 ## Disabled Identity Id
 
-On future calls, GetCredentialsForIdentity, GetId, GetOpenIdToken, GetOpenIdTokenForDeveloperIdentity will all return the non-disabled identity ID.
+On future calls, GetCredentialsForIdentity, GetId, GetOpenIdToken, GetOpenIdTokenForDeveloperIdentity will all
+return the non-disabled identity ID.

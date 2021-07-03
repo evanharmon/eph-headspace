@@ -93,3 +93,9 @@ res := map[string]interface{}{"payload": map[string]interface{}{"item": "shirt",
 ```golang
 res := map[string]interface{}{"payload": []map[string]interface{}{map[string]interface{}{"item": "shirt", "orderType": "air"}}}
 ```
+
+#### Interpolate String
+
+```golang
+var payload = []byte(fmt.Sprintf(`{"foo":%q, "hello":%q}`, val1, val2))
+```

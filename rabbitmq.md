@@ -8,6 +8,7 @@ Notes on using running rabbit mq
 
 - [Tutorials](https://www.rabbitmq.com/tutorials/tutorial-one-go.html)
 - [Docker](https://hub.docker.com/_/rabbitmq)
+- [NodeJS Gist](https://gist.github.com/daliborgogic/37bcf51756cbd60190519c5c4394311e)
 
 ## Run Docker Image
 

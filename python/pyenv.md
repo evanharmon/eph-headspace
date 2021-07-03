@@ -1,7 +1,7 @@
 # PYENV
 
-[GITHUB](https://github.com/pyenv/pyenv)
-Install [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) as well
+- [GITHUB](https://github.com/pyenv/pyenv)
+  Install [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) as well
 
 ## ZSHRC
 
@@ -29,7 +29,7 @@ $ pyenv virtualenv 2.7.11 gcloud
 
 ### pyenv install fails
 
-[GH Issue](https://github.com/pyenv/pyenv/issues/1066)
+- [GH Issue](https://github.com/pyenv/pyenv/issues/1066)
 
 ModuleNotFoundError: No module named 'pyexpat'
 

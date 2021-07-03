@@ -29,3 +29,31 @@ for _, msg := range messages {
     list = append(list, msg.MessageId)
 }
 ```
+
+## String Pointer
+
+```golang
+myStr := "test"
+strPnt := &mystr
+```
+
+## Dereference String Pointer
+
+```golang
+func DerefString(s *string) string {
+    if s != nil {
+        return *s
+    }
+
+    return ""
+}
+```
+
+## Convert String to Bytes
+
+easy!
+
+```golang
+myStr := "Test"
+b := []byte(myStr)
+```

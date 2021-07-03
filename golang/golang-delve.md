@@ -30,7 +30,7 @@ Set breakpoint and run delve
 
 ## Running Delve
 
-[CLI](https://github.com/derekparker/delve/tree/master/Documentation/cli)
+- [CLI](https://github.com/derekparker/delve/tree/master/Documentation/cli)
 
 #### Run Debugger From Main.Go File Location
 

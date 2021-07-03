@@ -6,10 +6,10 @@ Notes on using cloudtrail for auditing, logging
 
 ## Resources
 
-[Receive Logs From Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
-[Turning On Cloudtrail In Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/turn-on-cloudtrail-in-additional-accounts.html)
-[S3 Server Access Logging vs CloudTrail](https://www.netskope.com/blog/aws-s3-logjam-server-access-logging-vs-object-level-logging)
-[S3 Bucket Policy For CloudTrail Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-set-bucket-policy-for-multiple-accounts.html)
+- [Receive Logs From Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
+- [Turning On Cloudtrail In Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/turn-on-cloudtrail-in-additional-accounts.html)
+- [S3 Server Access Logging vs CloudTrail](https://www.netskope.com/blog/aws-s3-logjam-server-access-logging-vs-object-level-logging)
+- [S3 Bucket Policy For CloudTrail Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-set-bucket-policy-for-multiple-accounts.html)
 
 ## Logging CloudTrails To Other Accounts
 
