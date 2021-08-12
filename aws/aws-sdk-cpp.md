@@ -77,3 +77,9 @@ cmake .. \
 -DENABLE_UNITY_BUILD=ON \
 -DCMAKE_BUILD_TYPE=debug
 ```
+
+## Build With Failing Tests
+
+```
+-DAUTORUN_UNIT_TESTS=OFF
+```
