@@ -43,7 +43,7 @@ aws iam attach-role-policy \
 ```console
 aws iam update-login-profile \
   --user-name myusername \
-  --password "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" \
+  --password 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' \
   --no-password-reset-required
 ```
 
