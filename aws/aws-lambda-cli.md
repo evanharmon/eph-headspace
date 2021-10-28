@@ -42,3 +42,9 @@ $ aws lambda update-function-configuration \
 aws lambda list-functions \|
   jq -r '.Functions[] | {name: .FunctionName, layerArns: .Layers[]? | select(.Arn | contains("mypkg"))}’
 ```
+
+### List Security Groups Used By Lambdas
+
+```console
+aws lambda list-functions | jq -c '.Functions[] | {FunctionArn, SecurityGroups: (.VpcConfig.SecurityGroupIds[]? // null) }'
+```

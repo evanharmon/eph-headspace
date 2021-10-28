@@ -73,15 +73,12 @@ metadata, then the cache is invalidated.
 Trailing slash is considered a directory
 `COPY hss-cfg/ .hss-cfg/`
 
-## Keep running
-
-in a shell file do:
-
+## Keep Container Running
+extend to a docker run with entrypoint flag
 ```
-While true
-do
-    tail -f /dev/null & wait ${!}
-done
+FROM ubuntu:latest
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 ```
 
 ## Extend \$PATH
