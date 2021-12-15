@@ -22,6 +22,11 @@ find . -maxdepth 3 -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;
 ```console
 terragrunt plan-all --detailed-exitcode
 ```
+
+## Debug Vars
+```console
+terragrunt plan --terragrunt-debug
+```
 ## Destroy
 do NOT use the `terragrunt run-all plan -destroy` syntax. Terragrunt will not examine the
 dependency ordering for destruction. Instead of uses dependency ordering based on creation.
