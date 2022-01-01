@@ -8,6 +8,7 @@ General notes on using reactjs
 
 - [React Snippets 30 seconds of code](https://www.30secondsofcode.org/react/p/1/)
 - [Synthetic Events](https://reactjs.org/docs/events.html)
+- [Babel React JSX Repl](https://babeljs.io/repl/)
 
 ## use font-awesome
 
