@@ -1,5 +1,12 @@
 # SASS
 
+## Summary
+Notes on using SASS and the SCSS syntax
+
+## Resources
+
+- [Docs](https://sass-lang.com/documentation)
+
 ## Only top level SCSS files need to be compiled
 ### Otherwise you'll see errors such as Undefined Variable: $
 
@@ -14,4 +21,11 @@
     font-family: 'icomoon';
     src:url('/assets/icons/fonts/icomoon.woff');
 }
+```
+
+## Variable
+
+
+```scss
+$base-color: #c6538c;
 ```
