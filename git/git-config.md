@@ -54,7 +54,7 @@ git config --local -e
 ```
 
 ### Automatically Set Upstream
-avoids having to set upstream
+avoids having to set upstream when pushing to new branches
 
 ```console
 git config --global branch.autosetupmerge always
