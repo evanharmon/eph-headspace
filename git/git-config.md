@@ -47,7 +47,15 @@ git config --local http.proxy http://1.1.1.1:80
 ```
 
 ### Edit Local Config In Editor
+edit git config in vim
 
 ```console
 git config --local -e
+```
+
+### Automatically Set Upstream
+avoids having to set upstream
+
+```console
+git config --global branch.autosetupmerge always
 ```
