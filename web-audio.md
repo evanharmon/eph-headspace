@@ -17,6 +17,10 @@ Notes on working with the web audio api
 - [MDN Guides / Tutorials](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#guides_and_tutorials)
 - [BoomBox](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Step Sequencer](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques)
+- [Spectrogram](https://dzone.com/articles/exploring-html5-web-audio)
 
 ## Buffers
 - planar NOT interleaved
+
+## AudioBufferSourceNode
+one time only use only! can only call start / stop once
