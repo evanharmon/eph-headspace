@@ -5,7 +5,7 @@ Requires stateful component
 Notes on the use of refs in React
 
 ## Resources
-[React Doc](https://reactjs.org/docs/refs-and-the-dom.html)
+- [React Doc](https://reactjs.org/docs/refs-and-the-dom.html)
 
 ## Get DOM Node of component
 ```
