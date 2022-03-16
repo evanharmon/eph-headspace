@@ -20,3 +20,8 @@ Multipart upload etags are two parts. Example
     "Key": "large_test_file"
 }
 ```
+
+## Restore previous version
+- [AWS Docs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/RestoringPreviousVersions.html)
+
+Either via console or AWS SDK's. Involves multiple steps.
