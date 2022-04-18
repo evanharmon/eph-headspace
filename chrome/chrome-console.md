@@ -1,23 +1,33 @@
 # CHROME CONSOLE
 
 ## Copy object
-`copy($($0).scope().address);`
+```javascript
+copy($($0).scope().address);
+```
 
 ## Shortcut document.querySelector()
-`$()`
+```javascript
+$()
+```
 
 ## Shortcut document.querySelectorAll()
-`$$()`
+```javascript
+$$()
+```
 
 ## Five Recent DOM Elements
-`$0 - $4`
+```javascript
+$0 - $4
+```
 
 ## Print out entire function text
 while paused for debugging
-`functionName.toString()`
+```javascript
+functionName.toString()
+```
 
 ## Group Console Logs
-```
+```javascript
 for (var i = 0; i < 100; i++) {
     const num = Math.random() * 100;
     console.group('picking a random number");
@@ -28,7 +38,7 @@ for (var i = 0; i < 100; i++) {
 ```
 
 ## Console Logging Types
-```
+```javascript
 console.log()
 console.warn()
 console.error()
@@ -37,7 +47,7 @@ console.debug()
 ```
 
 ## Console Log Timing Events
-```
+```javascript
 console.time('createObjects');
 let array = [];
 for (var i = 0; i < 1000000; i++) {
@@ -48,7 +58,7 @@ console.timeEnd('createObjects');
 ```
 
 ## Console Log Pretty Print Tabular Data
-```
+```javascript
 function Character(name, power) {
     this.name = name;
     this.power = power;
@@ -64,7 +74,7 @@ console.table(chars);
 ```
 
 ## Fetch with custom headers
-```
+```javascript
 const request = new Request('https://apiendpoint/test/?id=1234', {
   method: 'GET',
   mode: 'cors',

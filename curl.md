@@ -37,6 +37,7 @@ curl -XPOST -d'{"s":"hello, world"}' localhost:8080/uppercase
 ```
 
 ## JSON Data As Payload
+use json file
 ```console
 curl -vX POST \
     http://server/api/v1/places.json \

@@ -29,3 +29,9 @@ substitute for `getent`
 ```console
 dscacheutil -q user -a name evan
 ```
+
+## PBaste CD
+pbpaste to change directories
+```console
+cd $(pbpaste)
+```

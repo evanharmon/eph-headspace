@@ -6,6 +6,7 @@ Notes on lovely cors
 
 ## Resources
 
+- [Fireship CORS in 100 seconds](https://youtu.be/4KHiSt0oLJ0)
 - [CORS Survival Guide](https://www.serverless.com/blog/cors-api-gateway-survival-guide/)
 
 ### Common Errors

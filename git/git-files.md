@@ -145,3 +145,21 @@ git ls-tree -r --name-only HEAD ./| while read filename; do
   echo "$(git log -1 --format="%ad" -- $filename) $filename"
 done
 ```
+
+### List all files ever tracked in git
+
+```console
+git log --pretty=format: --name-only | cut -f2- | sort -u
+```
+
+### Remove file from all git history and force push
+
+```console
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch PATH_TO_FILE" --prune-empty --tag-name-filter cat -- --all
+```
+
+### Remove Folder from all git history and force push
+
+```console
+git filter-branch --force --index-filter "git rm -r --cached --ignore-unmatch PATH_TO_FOLDER" --prune-empty --tag-name-filter cat -- --all
+```
