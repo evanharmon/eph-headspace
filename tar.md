@@ -52,3 +52,8 @@ tar -xjf
 ```console
 tar zcvf file.tar file1.txt file2.txt
 ```
+
+### List files in archive
+```console
+tar tvf myarchiuve.tgz
+```
