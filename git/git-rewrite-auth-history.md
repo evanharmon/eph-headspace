@@ -1,7 +1,14 @@
 # GIT REWRITE AUTHOR HISTORY
 
-## Script
+## Rebase Single Command
+
+```console
+git rebase --root --exec "git commit --amend --author='Evan Harmon <evan.p.harmon@gmail.com>' --no-edit"
 ```
+
+## Script
+
+```shell
 #!/bin/sh
 
 git filter-branch --env-filter '
