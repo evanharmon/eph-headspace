@@ -58,6 +58,16 @@ DO NOT use this lazy initialization of state for cheap computations bc it will a
 ### useMemo
 
 - cache expensive computations
+- avoids a useEffect call for sideeffect
+
+example:
+
+```tsx
+const filesLoaded = useMemo(() => {
+  // code here
+  return true || false
+}, [filesToLoad, files])
+```
 
 ### useCallback
 
